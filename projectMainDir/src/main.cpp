@@ -1,5 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include "SnakeDetails.h"
 
 using namespace std;
 //g++ ../../src/main.cpp -lsfml-graphics -lsfml-window -lsfml-system -o run
