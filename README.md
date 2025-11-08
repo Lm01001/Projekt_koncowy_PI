@@ -1,4 +1,17 @@
-# ***Projekt końcowy Podstawy informatyki*** <img src="https://www.agh.edu.pl/home/ckim/multimedia/znak_graficzny/znak_bez_nazwy/agh_znk_wbr_rgb_150ppi.jpg" width="100" height="100" align="left"/>
+<p>
+    <img src="PROJEKT_KONCOWY_PI/projectMainDir/resources/snakeIconREADME.png" width="400" height="300" text-align="center"/>
+    <a href="https://github.com/laskowskajustyna-crypto">
+        <img src="https://github.com/laskowskajustyna-crypto" width="60">
+    </a>
+    <a href="https://github.com/zofiamikoda">
+        <img src="https://github.com/zofiamikoda" width="60">
+    </a>
+    <a href="https://github.com/Lm01001">
+        <img src="https://github.com/Lm01001" width="60">
+    </a>
+<p>
 
+ 
 
+# ***Projekt końcowy Podstawy informatyki***
 Gra snake stworzona na potrzeby uzyskania oceny końcowej z laboratoriów podstawy informatyki.
