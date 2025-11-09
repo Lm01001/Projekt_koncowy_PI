@@ -1,11 +1,13 @@
 #ifndef SNAKEDETAILS_H
 #define SNAKEDETAILS_H
 
+#include <string>
+
 class SnakeDetails{
-    int wynik, dlugosc, level;
-    string powerUp;
     public:
-        SnakeDetails(int wynik, int dlugosc, int lvl, string powerUp); //fabularny
+        int wynik, dlugosc, lvl;
+        std::string powerUp;
+        SnakeDetails(int wynik, int dlugosc, int lvl, std::string powerUp); //fabularny
         /*SnakeDetails(string a, int wynik, int dl, int r); //timed
         //SnakeDetails(string a, int wynik, int dl, string p); //powerupy*/
 
@@ -15,7 +17,6 @@ class SnakeDetails{
         int losowaniePowerUpa();
         void przegranaGracza(int wynik, int dlugosc, int lvl); //???
         void wyswietlStatystyki(int wynik, int dlugosc, int lvl);
-
-}
+};
 
 #endif
