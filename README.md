@@ -1,17 +1,6 @@
 <p align="center">
-    <img src="projectMainDir/resources/snakeIconREADME.png" width="600" height="250" align="center"/><br><br>
-    <div align="left">
-        Autorzy:<br>
-        <a href="https://github.com/laskowskajustyna-crypto" align="left">
-        <img src="https://github.com/laskowskajustyna-crypto.png" width="60">
-    </a>&nbsp;&nbsp;
-        <a href="https://github.com/zofiamikoda">
-        <img src="https://github.com/zofiamikoda.png" width="60">
-    </a>&nbsp;&nbsp;
-    <a href="https://github.com/Lm01001">
-        <img src="https://github.com/Lm01001.png" width="60">
-    </a>
-    </div> 
+    <strong><em>Snake ...</em></strong><br>
+    <img src="projectMainDir/resources/snakeIconREADME.png" width="600" height="250"/><br>
 <p>
 
 # ***1. Projekt końcowy Podstawy informatyki***
@@ -23,3 +12,16 @@ Nasz projekt jest właściwie naszą własną interpretacją gry Snake, który b
 # ***3. Szczegóły projektu - gry.***
 Gra wykorzystuje bibliotekę graficzną SFML-3.0.2 . Po przejściu do gry przez wciśnięcie przycisku generowana, wyświetlana jest strona, główne okno z planszą gry. Na bazie założeń jest to gra mająca 7 poziomów, co odpowiada 7-miu dniom tygodnia. W grze są obecne power-upy, a po uzsykaniu określonej liczby punktów i ukończeniu poziomu pojawia się przejście do kolejnego.
 Szczegóły, mechaniki:
+
+<div align="left">
+        Autorzy:<br>
+        <a href="https://github.com/laskowskajustyna-crypto" align="left">
+            <img src="https://github.com/laskowskajustyna-crypto.png" width="60">
+        </a>&nbsp;&nbsp;
+        <a href="https://github.com/zofiamikoda">
+            <img src="https://github.com/zofiamikoda.png" width="60">
+        </a>&nbsp;&nbsp;
+        <a href="https://github.com/Lm01001">
+            <img src="https://github.com/Lm01001.png" width="60">
+        </a>
+    </div>
