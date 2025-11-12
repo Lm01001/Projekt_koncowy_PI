@@ -1,0 +1,3 @@
+[submodule "projectMainDir/projectMainDir/libs/SFML-Button"]
+	path = projectMainDir/projectMainDir/libs/SFML-Button
+	url = https://github.com/Pyromagne/SFML-Button.git
