@@ -5,23 +5,17 @@
 
 #include "SnakeDetails.h"
 #include "SnakeGUI.h"
-#include "Button.hpp"
-#include "RectButton.hpp"
 
 using namespace std;
 using namespace sf; 
 
-//g++ src/*.cpp -I include -lsfml-graphics -lsfml-window -lsfml-system -o run
+//g++ src/*.cpp -I include -lsfml-graphics -lsfml-window -lsfml-system -o run 
 
 int main() {
 	SnakeGui instForGui = SnakeGui();
 	SnakeGui buttonObj = SnakeGui();
-	RectButton button = RectButton(Vector2f(170,70), Vector2f(190, 415));
 	Vector2i pozycjaMyszy;
 
-
-	button.setButtonLabel(10, "abcde");
-	//button.setLabelColor(Color(89,43,66));
 	/*
 	* Zmienna typu RenderWindow - wyswietlane okno, RectangleShape pod stworzenie przycisku
 	*/
@@ -37,17 +31,22 @@ int main() {
 	//sf::RectangleShape gornyPasekOkna = instForGui.stworzPasekOkna(800, 50, sf::Color(168, 168, 168));
 	RectangleShape mainButtonFrame = instForGui.stworzPrzycisk(175, 400, 200, 100, Color(89,43,66));
 	RectangleShape mainButton = buttonObj.stworzPrzycisk(190, 415, 170, 70, Color(192, 192, 192));
-	buttonObj.xWspolrzedna = 190;
-	buttonObj.yWspolrzedna = 415;
+	buttonObj.xWspolrzedna = x + 190;
+	buttonObj.yWspolrzedna = y + 415;
 
 	/*
 	*
 	*/
-
-	//Sprite sprite;
-	//sprite.setPosition(0, 0);
+	const string text = "Graj";
+	Text text1;
+	text1.setString(text);
+	text1.setPosition(Vector2f(buttonObj.xWspolrzedna + 30,  buttonObj.yWspolrzedna + 30));
+	text1.setFillColor(Color::Black);
+	text1.setCharacterSize(30);
 	while(window.isOpen()){
 		Event event;
+		mainButton.setOutlineColor(Color(89,43,66));
+		mainButton.setOutlineThickness(5);
 		mainButton.setFillColor(Color(192, 192, 192));
 		buttonObj.isMouseOn = false;
 
@@ -56,25 +55,40 @@ int main() {
 				window.close();
 		}
 
-		pozycjaMyszy = Mouse::getPosition(window);
-		if(pozycjaMyszy.x <= buttonObj.xWspolrzedna && pozycjaMyszy.y <= buttonObj.yWspolrzedna &&
-			pozycjaMyszy.x >= buttonObj.xWspolrzedna + 170 && pozycjaMyszy.y >= buttonObj.yWspolrzedna + 70){
+		pozycjaMyszy = Mouse::getPosition();
+		if(pozycjaMyszy.x >= buttonObj.xWspolrzedna && pozycjaMyszy.y >= buttonObj.yWspolrzedna &&
+			(pozycjaMyszy.x <= buttonObj.xWspolrzedna + 170) && (pozycjaMyszy.y <= buttonObj.yWspolrzedna + 70) &&
+			Mouse::isButtonPressed(Mouse::Left)){
 				buttonObj.isMouseOn = true;
+				//window.close();				
 		}
+	
 		window.clear();
-		//window.draw(sprite);
 		instForGui.ustawTloOkna(window, Color(222, 216, 194));
-		window.draw(mainButtonFrame);
-		button.draw(window);
-
-		if(!buttonObj.isClicked){
+		window.draw(mainButton);
+		/*if(buttonObj.isMouseOn){
 			mainButton.setPosition(Vector2f(buttonObj.xWspolrzedna, buttonObj.yWspolrzedna));
 			window.draw(mainButton);
+		}*/
+		
+
+		/*
+		*	dla pauzy
+		*/
+		if(Keyboard::isKeyPressed(Keyboard::Escape)){
+				window.close();
+		}
+		
+
+		/*if(!buttonObj.isClicked){
+			mainButton.setPosition(Vector2f(buttonObj.xWspolrzedna, buttonObj.yWspolrzedna));
+			//window.draw(mainButton);
 		}
 		if(buttonObj.isClicked){
 			mainButton.setFillColor(Color(128,128,128));
-		}
-		
+		}*/
+
+
 		window.display();
 	}
 
