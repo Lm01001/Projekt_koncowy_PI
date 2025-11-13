@@ -37,24 +37,37 @@ int main() {
 	*/
 	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass(gui ,"Graj", 190, 435, 170, 70, 
 		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
-	/*
-	*	Przycisk do przejscia do ustawien rozgrywki
-	*/
-	ButtonScenesPropertiesClass buttonSettings = ButtonScenesPropertiesClass(gui, 20, 510, 20, 20, tgui::Color(89, 43, 66), 3);
-	//buttonSettings->getRenderer()->setTexture("resources/ikonaUstwien.png");
-
-	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
-	//sceneManager.menuPanel
-
-
 	auto mainButton = buttonObj1.getButton();
-
 	mainButton->onPress([]() {
 		cout<<"dziala przycisk"<<endl;
 	});
+	/*
+	*	Przycisk do przejscia do ustawien rozgrywki
+	*/
+	ButtonScenesPropertiesClass buttonSettings = ButtonScenesPropertiesClass(gui, 495, 30, 35, 35, tgui::Color(89, 43, 66), 0);
+	auto settingsButton = buttonSettings.getButton();
+	settingsButton->getRenderer()->setTexture("../resources/ikonaUstawien.png");
+	settingsButton->onPress([](){
+		cout<<"ustawienia"<<endl;
+	});
+	/*
+	*	Przycisk do powrotu do menu glownego
+	*/
+	ButtonScenesPropertiesClass buttonBackToMenu = ButtonScenesPropertiesClass(gui, 510, 20, 20, 20, tgui::Color(89, 43, 66), 3);
+	auto menuButton = buttonBackToMenu.getButton();
+	menuButton->onPress([](){
+		cout<<"powrot do menu"<<endl;
+	});
+
+	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
+	sceneManager.updateAllScenes(mainButton, settingsButton, menuButton, sceneManager.menuPanel, sceneManager.pausePanel,
+			sceneManager.resultPanel, sceneManager.settingsPanel, sceneManager.gamePanel);
 
 
-	gui.add(mainButton);
+	
+
+
+	//gui.add(mainButton);
 
 	while(window.isOpen()){
 		Event event;

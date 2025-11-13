@@ -6,6 +6,7 @@ set(CMAKE_CXX_STANDARD 17)
 # Zastepuje -I w pierwotnej wersji budowy w terminalu
 include_directories(include)
 include_directories(libs/TGUI-1.11/install/include)
+include_directories(resources)
 
 # Zastepuje -L przy linkowaniu w komendzie
 link_directories(libs/TGUI-1.11/build/lib)
