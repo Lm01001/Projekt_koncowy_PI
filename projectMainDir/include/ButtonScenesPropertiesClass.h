@@ -16,7 +16,7 @@ class ButtonScenesPropertiesClass{
 
         tgui::Button::Ptr getButton();
 
-        
+
         tgui::Panel::Ptr menuPanel;
         tgui::Panel::Ptr gamePanel;
         tgui::Panel::Ptr resultPanel;
@@ -24,11 +24,11 @@ class ButtonScenesPropertiesClass{
         tgui::Panel::Ptr settingsPanel;
         tgui::Panel::Ptr nextRoundPopup;
 
-        void createMenuScene();
-        void createGameScene();
-        void createResultScene();
-        void createPauseScene();
-        void createSettingsScene();
+        void createMenuScene(tgui::Button::Ptr startButton);
+        void createGameScene(tgui::Button::Ptr backToMainMenu);
+        void createResultScene(tgui::Button::Ptr backToMainMenu);
+        void createPauseScene(tgui::Button::Ptr backToMainMenu);
+        void createSettingsScene(tgui::Button::Ptr backToMainMenu);
         void createNextRoundPopup();
 
         void showMenuScene();
