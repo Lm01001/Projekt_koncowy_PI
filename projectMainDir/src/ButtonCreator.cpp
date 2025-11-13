@@ -3,14 +3,16 @@
 #include <iostream>
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
+#include <string>
 
     /*
     *   Konstruktor do szybszego tworzenia przycisku i od razu przypisywanie
-    *   mu jego wlasnosci; w celu zmniejszenia ilosci kodu w f. main()
+    *   mu jego wlasnosci; w celu zmniejszenia ilosci kodu w f. main().
     */
-    ButtonScenesPropertiesClass::ButtonScenesPropertiesClass(const std::string& text , int x, int y, int width, int height, tgui::Color bgColor, 
-            tgui::Color bgColorHover, tgui::Color borderColor, int border, int textSize){
-                button = tgui::Button::create(text);
+    ButtonScenesPropertiesClass::ButtonScenesPropertiesClass(tgui::Gui& gui, const std::string& text , int x, int y, int width, int height, tgui::Color bgColor, 
+            tgui::Color bgColorHover, tgui::Color borderColor, int border, int textSize) : gui(gui){
+                button = tgui::Button::create();
+                button->setText(text);
                 button->setPosition(x, y);
                 button->setSize(width, height);
                 button->getRenderer()->setBackgroundColor(bgColor);
@@ -18,12 +20,28 @@
 	            button->getRenderer()->setBorderColor(borderColor);
 	            button->getRenderer()->setBorders(border);
                 button->setTextSize(textSize);
-    }   
+    }  
+    /*
+    *   Konstruktor do szybszego tworzenia przyciskow, ale bez tekstu
+    *   oraz koloru tla przeznaczony do tworzenia przyciskow
+    *   z obrazami, grafikami jako tlo.
+    */
+    ButtonScenesPropertiesClass::ButtonScenesPropertiesClass(tgui::Gui& gui, int x, int y, int width, int height,  
+        tgui::Color borderColor, int border) : gui(gui){
+                button = tgui::Button::create();
+                button->setPosition(x, y);
+                button->setSize(width, height);
+                button->getRenderer()->setBackgroundColor(bgColor);
+                button->getRenderer()->setBackgroundColorHover(bgColorHover);
+	            button->getRenderer()->setBorderColor(borderColor);
+	            button->getRenderer()->setBorders(border);
+    } 
+    
 
     /*
     *   Getter do uzyskania utworzonego wczesniej przycisku konstruktorem
     */
-    tgui::Button::Ptr ButtonPropertiesClass::getButton(){
+    tgui::Button::Ptr ButtonScenesPropertiesClass::getButton(){
         return button;
     }
 
@@ -39,8 +57,6 @@
         createPauseScene();
         createSettingsScene();
         createNextRoundPopup();
-
-        showMenuScene();
     }
 
     /*
@@ -50,58 +66,63 @@
     *   parametr wczesniej utworzone przyciski glownie do powrotu => uniwersalny dla wszystkich.
     *   Jedynie poza tym panelem do pokazywania rund
     */
-    void ButtonScenesPropertiesClass::createMenuScene(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton){
+   void ButtonScenesPropertiesClass::createMenuScene(){
         menuPanel = tgui::Panel::create();
-        menuPanel->setSize(100%, 100%);
+        menuPanel->setSize(550, 650);
 
+        gui.add(menuPanel);
+    }
+    void ButtonScenesPropertiesClass::appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton){
         menuPanel->add(startButton);
         menuPanel->add(settingsButton);
 
         gui.add(menuPanel);
     }
 
-    void ButtonScenesPropertiesClass::createGameScene(tgui::Button::Ptr backToMainMenu){
+    void ButtonScenesPropertiesClass::createGameScene(){
         gamePanel = tgui::Panel::create();
-        gamePanel->setSize(100%, 100%);
+        gamePanel->setSize(550, 650);
         gamePanel->setVisible(false);
-
-        gamePanel->add(backToMainMenu);
 
         gui.add(gamePanel);
     }
 
-    void ButtonScenesPropertiesClass::createResultScene(tgui::Button::Ptr backToMainMenu){
+    void ButtonScenesPropertiesClass::createResultScene(){
         resultPanel = tgui::Panel::create();
-        resultPanel->setSize(100%, 100%);
+        resultPanel->setSize(550, 650);
         resultPanel->setVisible(false);
-
-        resultPanel->add(backToMainMenu);
 
         gui.add(resultPanel);
     }
 
-    void ButtonScenesPropertiesClass::createPauseScene(tgui::Button::Ptr backToMainMenu){
+    void ButtonScenesPropertiesClass::createPauseScene(){
         pausePanel = tgui::Panel::create();
-        pausePanel->setSize(100%, 100%);
+        pausePanel->setSize(550, 650);
         pausePanel->setVisible(false);
-
-        pausePanel->add(backToMainMenu);
 
         gui.add(pausePanel);
     }
 
-    void ButtonScenesPropertiesClass::createSettingsScene(tgui::Button::Ptr backToMainMenu){
+    void ButtonScenesPropertiesClass::createSettingsScene(){
         settingsPanel = tgui::Panel::create();
-        settingsPanel->setSize(100%, 100%);
+        settingsPanel->setSize(550, 650);
         settingsPanel->setVisible(false);
+
+        gui.add(settingsPanel);
     }
 
     void ButtonScenesPropertiesClass::createNextRoundPopup(){
         nextRoundPopup = tgui::Panel::create();
-        nextRoundPopup->setSize(100%, 100%);
+        nextRoundPopup->setSize(550, 650);
         nextRoundPopup->setVisible(false);
 
         gui.add(nextRoundPopup);
+    }
+
+
+    void ButtonScenesPropertiesClass::appendBackToMainMenuButton(tgui::Panel::Ptr panel, tgui::Button::Ptr backToMainMenu){
+        panel->add(backToMainMenu);
+        gui.add(panel);
     }
 
     /*

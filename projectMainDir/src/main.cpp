@@ -30,41 +30,27 @@ int main() {
 	window.setPosition(sf::Vector2i(x, y));
 	window.setVerticalSyncEnabled(true);
 	
-
 	tgui::Gui gui{window};
 
-	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass("Graj", 190, 435, 170, 70, 
+	/*
+	*	Glowny przycisk do przejscia do ekranu gry
+	*/
+	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass(gui ,"Graj", 190, 435, 170, 70, 
 		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
-	
-	
-		/*auto mainButton = tgui::Button::create("Graj");
-	mainButton->setPosition(190, 435);
-	mainButton->setSize(170, 70);
-	mainButton->getRenderer()->setBackgroundColor(tgui::Color(192, 192, 192));
-	mainButton->getRenderer()->setBackgroundColorHover(tgui::Color(200, 200, 200));
-	mainButton->getRenderer()->setBorderColor(tgui::Color(89, 43, 66));
-	mainButton->getRenderer()->setBorders(5);
-	mainButton->setTextSize(28);*/
+	/*
+	*	Przycisk do przejscia do ustawien rozgrywki
+	*/
+	ButtonScenesPropertiesClass buttonSettings = ButtonScenesPropertiesClass(gui, 20, 510, 20, 20, tgui::Color(89, 43, 66), 3);
+	//buttonSettings->getRenderer()->setTexture("resources/ikonaUstwien.png");
+
+	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
+
+
 	auto mainButton = buttonObj1.getButton();
 
 	mainButton->onPress([]() {
 		cout<<"dziala przycisk"<<endl;
 	});
-	//sf::RectangleShape gornyPasekOkna = instForGui.stworzPasekOkna(800, 50, sf::Color(168, 168, 168));
-	/*RectangleShape mainButtonFrame = instForGui.stworzPrzycisk(175, 400, 200, 100, Color(89,43,66));
-	RectangleShape mainButton = buttonObj.stworzPrzycisk(190, 415, 170, 70, Color(192, 192, 192));
-	buttonObj.xWspolrzedna = x + 190;
-	buttonObj.yWspolrzedna = y + 415;
-
-	/*
-	*
-	
-	const string text = "Graj";
-	Text text1;
-	text1.setString(text);
-	text1.setPosition(Vector2f(buttonObj.xWspolrzedna + 30,  buttonObj.yWspolrzedna + 30));
-	text1.setFillColor(Color::Black);
-	text1.setCharacterSize(30);*/
 
 
 	gui.add(mainButton);
