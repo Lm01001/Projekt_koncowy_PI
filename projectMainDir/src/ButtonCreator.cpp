@@ -182,3 +182,13 @@
         pausePanel->setVisible(false);
         settingsPanel->setVisible(false);
     }
+
+    void ButtonScenesPropertiesClass::updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr backToMainMenu,
+            tgui::Panel::Ptr menuPanel, tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel, tgui::Panel::Ptr gamePanel){
+                appendToMenuScene(menuPanel, startButton, settingsButton);
+                appendBackToMainMenuButton(gamePanel, backToMainMenu);
+                appendBackToMainMenuButton(pausePanel, backToMainMenu);
+                appendBackToMainMenuButton(resultPanel, backToMainMenu);
+                appendBackToMainMenuButton(settingsPanel, backToMainMenu);
+                showMenuScene();
+    }

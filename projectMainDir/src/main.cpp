@@ -44,6 +44,7 @@ int main() {
 	//buttonSettings->getRenderer()->setTexture("resources/ikonaUstwien.png");
 
 	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
+	//sceneManager.menuPanel
 
 
 	auto mainButton = buttonObj1.getButton();
