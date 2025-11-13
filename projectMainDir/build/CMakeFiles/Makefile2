@@ -85,12 +85,12 @@ clean: CMakeFiles/projektGra.dir/clean
 CMakeFiles/projektGra.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=1,2,3 "Built target projektGra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=1,2,3,4 "Built target projektGra"
 .PHONY : CMakeFiles/projektGra.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/projektGra.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" 3
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/projektGra.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" 0
 .PHONY : CMakeFiles/projektGra.dir/rule
@@ -102,7 +102,7 @@ projektGra: CMakeFiles/projektGra.dir/rule
 # codegen rule for target.
 CMakeFiles/projektGra.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=1,2,3 "Finished codegen for target projektGra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=1,2,3,4 "Finished codegen for target projektGra"
 .PHONY : CMakeFiles/projektGra.dir/codegen
 
 # clean rule for target.

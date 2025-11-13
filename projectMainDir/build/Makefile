@@ -129,6 +129,30 @@ projektGra/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/build
 .PHONY : projektGra/fast
 
+src/ButtonCreator.o: src/ButtonCreator.cpp.o
+.PHONY : src/ButtonCreator.o
+
+# target to build an object file
+src/ButtonCreator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o
+.PHONY : src/ButtonCreator.cpp.o
+
+src/ButtonCreator.i: src/ButtonCreator.cpp.i
+.PHONY : src/ButtonCreator.i
+
+# target to preprocess a source file
+src/ButtonCreator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.i
+.PHONY : src/ButtonCreator.cpp.i
+
+src/ButtonCreator.s: src/ButtonCreator.cpp.s
+.PHONY : src/ButtonCreator.s
+
+# target to generate assembly for a file
+src/ButtonCreator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.s
+.PHONY : src/ButtonCreator.cpp.s
+
 src/SnakeDetails.o: src/SnakeDetails.cpp.o
 .PHONY : src/SnakeDetails.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... projektGra"
+	@echo "... src/ButtonCreator.o"
+	@echo "... src/ButtonCreator.i"
+	@echo "... src/ButtonCreator.s"
 	@echo "... src/SnakeDetails.o"
 	@echo "... src/SnakeDetails.i"
 	@echo "... src/SnakeDetails.s"

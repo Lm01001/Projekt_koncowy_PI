@@ -8,16 +8,16 @@
 
 #include "SnakeDetails.h"
 #include "SnakeGUI.h"
+#include "ButtonScenesPropertiesClass.h"
 
 using namespace std;
 using namespace sf;
 
-//g++ src/*.cpp -I include -lsfml-graphics -lsfml-window -lsfml-system -o run 
-//git submodule add https://github.com/texus/TGUI.git projectMainDir/libs/SFML-Button
 
 int main() {
-	SnakeGui instForGui = SnakeGui();
-	SnakeGui buttonObj = SnakeGui();
+	//SnakeGui instForGui = SnakeGui();
+	//SnakeGui buttonObj = SnakeGui();
+
 
 	/*
 	* Zmienna typu RenderWindow - wyswietlane okno, RectangleShape pod stworzenie przycisku
@@ -32,19 +32,20 @@ int main() {
 	
 
 	tgui::Gui gui{window};
-	/*
-	*
-	*	wrzucic to jako funkcje do klasy ustawianie tego wszystkiego
-	*
-	*/
-	auto mainButton = tgui::Button::create("Graj");
+
+	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass("Graj", 190, 435, 170, 70, 
+		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
+	
+	
+		/*auto mainButton = tgui::Button::create("Graj");
 	mainButton->setPosition(190, 435);
 	mainButton->setSize(170, 70);
 	mainButton->getRenderer()->setBackgroundColor(tgui::Color(192, 192, 192));
 	mainButton->getRenderer()->setBackgroundColorHover(tgui::Color(200, 200, 200));
 	mainButton->getRenderer()->setBorderColor(tgui::Color(89, 43, 66));
 	mainButton->getRenderer()->setBorders(5);
-	mainButton->setTextSize(28);
+	mainButton->setTextSize(28);*/
+	auto mainButton = buttonObj1.getButton();
 
 	mainButton->onPress([]() {
 		cout<<"dziala przycisk"<<endl;
