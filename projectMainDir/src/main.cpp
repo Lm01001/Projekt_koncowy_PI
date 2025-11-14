@@ -91,7 +91,7 @@ int main() {
 				window.close();
 		}
 
-		window.clear(Color(222, 216, 194));
+		//???window.clear(Color(222, 216, 194));
 		gui.draw();
 
 		window.display();
