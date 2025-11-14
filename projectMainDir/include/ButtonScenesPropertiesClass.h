@@ -30,7 +30,8 @@ class ButtonScenesPropertiesClass{
         tgui::Panel::Ptr nextRoundPopup;
 
         void appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton);
-        void appendBackToMainMenuButton(tgui::Panel::Ptr panel, tgui::Button::Ptr backToMainMenu);
+        void appendBackToMainMenuButton(tgui::Panel::Ptr panel);
+        tgui::Button::Ptr createNewBackToMainMenuButton();
         void appendToNextRoundPopup();
 
         void createMenuScene();
@@ -47,9 +48,8 @@ class ButtonScenesPropertiesClass{
         void showSettingsScene();
         void showNextRoundPopup();
 
-        void updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr backToMainMenu,
-                tgui::Panel::Ptr menuPanel, tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel,
-                tgui::Panel::Ptr gamePanel);
+        void updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,tgui::Panel::Ptr menuPanel, 
+                tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel, tgui::Panel::Ptr gamePanel);
 };
 
 #endif

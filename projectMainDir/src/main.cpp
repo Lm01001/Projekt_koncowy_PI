@@ -32,42 +32,53 @@ int main() {
 	
 	tgui::Gui gui{window};
 
+
 	/*
 	*	Glowny przycisk do przejscia do ekranu gry
 	*/
 	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass(gui ,"Graj", 190, 435, 170, 70, 
 		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
 	auto mainButton = buttonObj1.getButton();
-	mainButton->onPress([]() {
-		cout<<"dziala przycisk"<<endl;
-	});
+	
 	/*
 	*	Przycisk do przejscia do ustawien rozgrywki
 	*/
 	ButtonScenesPropertiesClass buttonSettings = ButtonScenesPropertiesClass(gui, 495, 30, 35, 35, tgui::Color(89, 43, 66), 0);
 	auto settingsButton = buttonSettings.getButton();
-	settingsButton->getRenderer()->setTexture("../resources/ikonaUstawien.png");
-	settingsButton->onPress([](){
-		cout<<"ustawienia"<<endl;
-	});
-	/*
-	*	Przycisk do powrotu do menu glownego
-	*/
-	ButtonScenesPropertiesClass buttonBackToMenu = ButtonScenesPropertiesClass(gui, 510, 20, 20, 20, tgui::Color(89, 43, 66), 3);
-	auto menuButton = buttonBackToMenu.getButton();
-	menuButton->onPress([](){
-		cout<<"powrot do menu"<<endl;
-	});
-
-	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
-	sceneManager.updateAllScenes(mainButton, settingsButton, menuButton, sceneManager.menuPanel, sceneManager.pausePanel,
-			sceneManager.resultPanel, sceneManager.settingsPanel, sceneManager.gamePanel);
-
-
 	
+	/*
+	*	
+	*/
+	ButtonScenesPropertiesClass pauseButtonGenerated = ButtonScenesPropertiesClass(gui, 495, 30, 35, 35, tgui::Color(89, 43, 66), 0);
+	auto pauseButton = pauseButtonGenerated.getButton();
+	
+	/*
+	*	Tworzenie bazowych scen dla projektu
+	*/
+	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
+	sceneManager.updateAllScenes(mainButton, settingsButton, pauseButton, sceneManager.menuPanel, sceneManager.pausePanel,
+			sceneManager.resultPanel, sceneManager.settingsPanel, sceneManager.gamePanel);
+	
+	
+	/*
+	*	Ustawianie zmian scen przycisku
+	*/
+	mainButton->onPress([&sceneManager]() {
+		/*
+		*
+		*/
+		sceneManager.showGameScene();
+	});
+	settingsButton->getRenderer()->setTexture("../resources/ikonaUstawien.png");
+	settingsButton->onPress([&sceneManager](){
+		sceneManager.showSettingsScene();
 
+	});
+	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
+	pauseButton->onPress([&sceneManager](){
+		sceneManager.showPauseScene();
+	});
 
-	//gui.add(mainButton);
 
 	while(window.isOpen()){
 		Event event;

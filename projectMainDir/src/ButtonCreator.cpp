@@ -70,21 +70,26 @@
         menuPanel = tgui::Panel::create();
         menuPanel->setSize(550, 650);
 
-        gui.add(menuPanel);
+        gui.add(menuPanel, "Menu panel");
     }
     void ButtonScenesPropertiesClass::appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton){
         menuPanel->add(startButton);
         menuPanel->add(settingsButton);
+        auto label = tgui::Label::create("Snake");
+        label->setTextSize(60);
+        label->getRenderer()->setTextColor(sf::Color(0, 1, 40));
+        label->setPosition(175,180);
+        menuPanel->add(label);
 
-        gui.add(menuPanel);
+        gui.add(menuPanel, "Menu panel");
     }
 
     void ButtonScenesPropertiesClass::createGameScene(){
         gamePanel = tgui::Panel::create();
         gamePanel->setSize(550, 650);
         gamePanel->setVisible(false);
-
-        gui.add(gamePanel);
+        
+        gui.add(gamePanel, "Game panel");
     }
 
     void ButtonScenesPropertiesClass::createResultScene(){
@@ -92,7 +97,7 @@
         resultPanel->setSize(550, 650);
         resultPanel->setVisible(false);
 
-        gui.add(resultPanel);
+        gui.add(resultPanel, "Result panel");
     }
 
     void ButtonScenesPropertiesClass::createPauseScene(){
@@ -100,7 +105,7 @@
         pausePanel->setSize(550, 650);
         pausePanel->setVisible(false);
 
-        gui.add(pausePanel);
+        gui.add(pausePanel, "Pause panel");
     }
 
     void ButtonScenesPropertiesClass::createSettingsScene(){
@@ -108,7 +113,7 @@
         settingsPanel->setSize(550, 650);
         settingsPanel->setVisible(false);
 
-        gui.add(settingsPanel);
+        gui.add(settingsPanel, "Settings panel");
     }
 
     void ButtonScenesPropertiesClass::createNextRoundPopup(){
@@ -116,13 +121,56 @@
         nextRoundPopup->setSize(550, 650);
         nextRoundPopup->setVisible(false);
 
-        gui.add(nextRoundPopup);
+        gui.add(nextRoundPopup, "NextRound Popup");
     }
 
+    /*
+    *   Dodatkowa metoda do utworzenia nowego guzika powrotu dla kazdej ze scen
+    *   uzywanie tego samego dodawalo tylko do tej dla, ktorej ostatniej
+    *   byla wywolana funkcja
+    */
+    tgui::Button::Ptr ButtonScenesPropertiesClass::createNewBackToMainMenuButton(){
+        auto button = tgui::Button::create();
+        button->setPosition(495, 30);
+        button->setSize(35, 35);	        
+        button->getRenderer()->setBorderColor(tgui::Color(89, 43, 66));
+        button->getRenderer()->setBorders(0);
+        button->getRenderer()->setTexture("../resources/ikonaPowrotuDoMenu.png");
+        button->onPress([this](){
+            showMenuScene();
+        });
+        return button;
+    }
 
-    void ButtonScenesPropertiesClass::appendBackToMainMenuButton(tgui::Panel::Ptr panel, tgui::Button::Ptr backToMainMenu){
-        panel->add(backToMainMenu);
-        gui.add(panel);
+    void ButtonScenesPropertiesClass::appendBackToMainMenuButton(tgui::Panel::Ptr panel){
+        if(gui.get("Game panel") == panel){
+            panel->getRenderer()->setBackgroundColor(sf::Color(163, 150, 135));
+            auto label = tgui::Label::create("Level");
+            label->setTextSize(45);
+            label->setPosition(200, 30);
+            label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
+            panel->add(label);
+        }else if(panel->getWidgetName() == "Pause panel"){
+            panel->getRenderer()->setBackgroundColor(sf::Color(122, 113, 101));
+            auto label = tgui::Label::create("Pauza");
+            label->setTextSize(45);
+            label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
+            label->setPosition(200, 90);
+            panel->add(label);
+        }else if(panel->getWidgetName() == "Result panel"){
+            panel->getRenderer()->setBackgroundColor(sf::Color(136, 0, 23));
+            auto label = tgui::Label::create("Wynik:");
+            label->setTextSize(30);
+            label->setPosition(100, 45);
+            panel->add(label);
+        }else if(panel->getWidgetName() == "Settings panel"){
+            panel->getRenderer()->setBackgroundColor(sf::Color(136, 89, 102));
+            auto label = tgui::Label::create("Ustawienia");
+            label->setTextSize(45);
+            label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
+            label->setPosition(150, 45);
+            panel->add(label);
+        }
     }
 
     /*
@@ -139,7 +187,7 @@
     }
 
     void ButtonScenesPropertiesClass::showGameScene(){
-        gamePanel->setVisible(false);
+        gamePanel->setVisible(true);
         menuPanel->setVisible(false);
         resultPanel->setVisible(false);
         pausePanel->setVisible(false);
@@ -148,7 +196,7 @@
     }
 
     void ButtonScenesPropertiesClass::showResultScene(){
-        resultPanel->setVisible(false);
+        resultPanel->setVisible(true);
         menuPanel->setVisible(false);
         gamePanel->setVisible(false);
         pausePanel->setVisible(false);
@@ -183,12 +231,22 @@
         settingsPanel->setVisible(false);
     }
 
-    void ButtonScenesPropertiesClass::updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr backToMainMenu,
-            tgui::Panel::Ptr menuPanel, tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel, tgui::Panel::Ptr gamePanel){
+    void ButtonScenesPropertiesClass::updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,
+        tgui::Panel::Ptr menuPanel, 
+            tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel, tgui::Panel::Ptr gamePanel){
                 appendToMenuScene(menuPanel, startButton, settingsButton);
-                appendBackToMainMenuButton(gamePanel, backToMainMenu);
-                appendBackToMainMenuButton(pausePanel, backToMainMenu);
-                appendBackToMainMenuButton(resultPanel, backToMainMenu);
-                appendBackToMainMenuButton(settingsPanel, backToMainMenu);
+                
+                appendBackToMainMenuButton(gamePanel);
+                gamePanel->add(pauseButton);
+
+                appendBackToMainMenuButton(settingsPanel);
+                settingsPanel->add(createNewBackToMainMenuButton());
+
+                appendBackToMainMenuButton(pausePanel);
+                pausePanel->add(createNewBackToMainMenuButton());
+
+                appendBackToMainMenuButton(resultPanel);
+                resultPanel->add(createNewBackToMainMenuButton()); 
+
                 showMenuScene();
     }
