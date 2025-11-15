@@ -1,8 +1,13 @@
 #include <iostream>
+#include <bits/stdc++.h>
+#include <thread>
+#include <chrono>
+//#include <windows.h>
+#include <unistd.h>
+#include <stdlib.h>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
-#include <bits/stdc++.h>
-
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
 
@@ -61,14 +66,35 @@ int main() {
 	
 	
 	/*
+	*	Segment na zmienne pod nextRoundPopup
+	*/
+	bool gameStartClick = false;
+	Clock c;
+	int counterHelper = 3;
+	auto labelCount = tgui::Label::create();
+		labelCount->setTextSize(100);
+		labelCount->setPosition("(&.width - width) / 2", "(&.height - height) / 2");		
+		labelCount->getRenderer()->setTextColor(sf::Color::Black);
+		labelCount->getRenderer()->setTextOutlineThickness(3);
+	sf::Vector2u winSize = window.getSize();
+	sf::CircleShape circle(100.f);
+		circle.setFillColor(sf::Color(122, 113, 101));
+		float circleXPos = circle.getRadius() * 2;
+		float circleYPos = circle.getRadius() * 2;
+		circle.setPosition((winSize.x - circleXPos) / 2, (winSize.y - circleYPos) / 2);		
+
+	/*
 	*	Ustawianie zmian scen przycisku
 	*/
-	mainButton->onPress([&sceneManager]() {
+	mainButton->onPress([&sceneManager, &gameStartClick]() {
 		/*
 		*
-		*/
+		*/	
 		sceneManager.showGameScene();
+		gameStartClick = true;
 	});
+
+	
 	settingsButton->getRenderer()->setTexture("../resources/ikonaUstawien.png");
 	settingsButton->onPress([&sceneManager](){
 		sceneManager.showSettingsScene();
@@ -79,7 +105,7 @@ int main() {
 		sceneManager.showPauseScene();
 	});
 
-
+	
 	while(window.isOpen()){
 		Event event;
 		while(window.pollEvent(event)){
@@ -90,11 +116,49 @@ int main() {
 			if(event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
 				window.close();
 		}
-
-		//???window.clear(Color(222, 216, 194));
 		gui.draw();
-
 		window.display();
+		
+		/*
+		*	Wczytywanie gry => Odliczanie, zeby nie odpalic gry
+		*	bezposrednio po kliknieciu przycisku i zmiany
+		*	sceny.
+		*/
+		if(gameStartClick){
+			if(counterHelper == 3){
+				labelCount->setText("3");
+				labelCount->moveToFront();
+				window.draw(circle);
+				sceneManager.nextRoundPopup->add(labelCount);
+				sceneManager.showNextRoundPopup();
+				counterHelper--;
+			}
+			
+			if(c.getElapsedTime().asSeconds() > 2.5 && counterHelper == 2){
+				labelCount->setText("2");
+				labelCount->moveToFront();
+				window.draw(circle);
+				sceneManager.nextRoundPopup->add(labelCount);
+				sceneManager.showNextRoundPopup();					
+				counterHelper--;
+			}
+
+			if(c.getElapsedTime().asSeconds() > 4.5 && counterHelper == 1){
+				labelCount->setText("1");
+				labelCount->moveToFront();
+				window.draw(circle);
+				sceneManager.nextRoundPopup->add(labelCount);
+				sceneManager.showNextRoundPopup();
+				counterHelper--;
+			}
+
+			if(c.getElapsedTime().asSeconds() > 6){
+				if(counterHelper == 0){
+					gameStartClick = false;
+					sceneManager.showGameScene();
+				}		
+			}
+		}
 	}
 
 	return 0;

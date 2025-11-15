@@ -120,7 +120,9 @@
         nextRoundPopup = tgui::Panel::create();
         nextRoundPopup->setSize(550, 650);
         nextRoundPopup->setVisible(false);
-
+        nextRoundPopup->getRenderer()->setBackgroundColor(sf::Color::Transparent);
+		nextRoundPopup->getRenderer()->setBorders(0);
+        
         gui.add(nextRoundPopup, "NextRound Popup");
     }
 

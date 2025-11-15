@@ -1315,6 +1315,7 @@ CMakeFiles/projektGra.dir/src/main.cpp.o: /mnt/c/Users/Maksymilian/OneDrive\ -\ 
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stack \
   /usr/include/c++/13/stdexcept \
+  /usr/include/c++/13/stdlib.h \
   /usr/include/c++/13/streambuf \
   /usr/include/c++/13/string \
   /usr/include/c++/13/string_view \
@@ -1596,8 +1597,6 @@ im.:
 /usr/include/c++/13/bits/specfun.h:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Scrollbar.hpp:
-
-/usr/include/c++/13/bits/requires_hosted.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h:
 
@@ -1940,6 +1939,10 @@ im.:
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ContextMenuRenderer.hpp:
 
 /usr/include/alloca.h:
+
+/usr/include/c++/13/bits/requires_hosted.h:
+
+/usr/include/c++/13/stdlib.h:
 
 /usr/lib/x86_64-linux-gnu/libsfml-window.so:
 
@@ -2473,6 +2476,10 @@ Górniczo-Hutnicza:
 
 /usr/include/unistd.h:
 
+folder:
+
+/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
+
 /usr/include/c++/13/ext/atomicity.h:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Sprite.hpp:
@@ -2770,10 +2777,6 @@ CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o:
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/SnakeDetails.h:
 
 /lib/x86_64-linux-gnu/libXfixes.so.3:
-
-/usr/include/x86_64-linux-gnu/bits/types/stack_t.h:
-
-folder:
 
 /usr/include/c++/13/bits/parse_numbers.h:
 
