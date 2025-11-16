@@ -4,6 +4,7 @@
 #include <iostream>
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <string>
 
     /*
@@ -81,6 +82,7 @@
         label->getRenderer()->setTextColor(sf::Color(0, 1, 40));
         label->setPosition(175,180);
         menuPanel->add(label);
+        menuPanel->getRenderer()->setBackgroundColor(sf::Color(115, 115, 98));
 
         gui.add(menuPanel, "Menu panel");
     }
@@ -149,10 +151,52 @@
         if(gui.get("Game panel") == panel){
             panel->getRenderer()->setBackgroundColor(sf::Color(163, 150, 135));
             auto label = tgui::Label::create("Level");
-            label->setTextSize(45);
-            label->setPosition(200, 30);
+            label->setTextSize(28);
+            label->getRenderer()->setTextColor(sf::Color::Black);
+            label->setPosition(235, 25);
             label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
             panel->add(label);
+
+            auto planszaCanvas = tgui::CanvasSFML::create();
+            planszaCanvas->setSize(550, 650);
+            planszaCanvas->setPosition(0, 0);
+            planszaCanvas->moveToBack();
+            gui.add(planszaCanvas);
+            sf::RectangleShape linia(sf::Vector2f(550, 1));
+            linia.setPosition(0, 550);
+            linia.setOutlineColor(sf::Color::Black);
+            linia.setOutlineThickness(2);
+            planszaCanvas->draw(linia);
+            
+            sf::RectangleShape planszaGry(sf::Vector2f(500, 500));
+            planszaGry.setPosition(25, 25);
+            planszaGry.setFillColor(sf::Color(38, 117, 31));
+            planszaGry.setOutlineColor(sf::Color(22, 69, 18));
+            planszaGry.setOutlineThickness(8);
+            planszaCanvas->draw(planszaGry);
+            panel->add(planszaCanvas);
+
+            //
+                sf::Clock c;
+                std::string czas = std::to_string(c.getElapsedTime().asSeconds());
+
+
+            //
+
+            auto timer = tgui::Label::create("Time: " + czas);
+            auto wynik = tgui::Label::create("Wynik:");
+            std::string serceE = u8"♡";
+            auto zycia = tgui::Label::create("n x " + serceE);
+            timer->setPosition(30, 70);
+            wynik->setPosition(210, 70);
+            zycia->setPosition(440, 70);
+            timer->setTextSize(14);
+            wynik->setTextSize(14);
+            wynik->setTextSize(14);
+            panel->add(timer);
+            panel->add(wynik);
+            panel->add(zycia);
+
         }else if(panel->getWidgetName() == "Pause panel"){
             panel->getRenderer()->setBackgroundColor(sf::Color(122, 113, 101));
             auto label = tgui::Label::create("Pauza");
@@ -366,10 +410,20 @@
 
         checkboxLatwy->onChange([&](){
             if(checkboxLatwy->isChecked())
+                checkboxTrudny->setChecked(false);
+            else
                 checkboxTrudny->setChecked(true);
         });
         checkboxTrudny->onChange([&](){
             if(checkboxTrudny->isChecked())
+                checkboxLatwy->setChecked(false);
+            else
                 checkboxLatwy->setChecked(true);
         });
+    }
+
+    void SlidersAndCheckbox::usunCheckboxy(tgui::Gui& gui){
+        gui.remove(checkboxLatwy);
+        gui.remove(checkboxTrudny);
+        gui.remove(labelCheckBoxSection);
     }

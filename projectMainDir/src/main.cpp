@@ -50,7 +50,7 @@ int main() {
 	/*
 	*	
 	*/
-	ButtonScenesPropertiesClass pauseButtonGenerated = ButtonScenesPropertiesClass(gui, 495, 30, 35, 35, tgui::Color(89, 43, 66), 0);
+	ButtonScenesPropertiesClass pauseButtonGenerated = ButtonScenesPropertiesClass(gui, 495, 20, 35, 35, tgui::Color(89, 43, 66), 0);
 	auto pauseButton = pauseButtonGenerated.getButton();
 	
 	/*
@@ -81,7 +81,9 @@ int main() {
 		labelCount->getRenderer()->setTextOutlineThickness(3);
 	sf::Vector2u winSize = window.getSize();
 	sf::CircleShape circle(100.f);
-		circle.setFillColor(sf::Color(122, 113, 101));
+		circle.setFillColor(sf::Color(21, 61, 117));
+		circle.setOutlineColor(sf::Color(13, 39, 74));
+		circle.setOutlineThickness(5);
 		float circleXPos = circle.getRadius() * 2;
 		float circleYPos = circle.getRadius() * 2;
 		circle.setPosition((winSize.x - circleXPos) / 2, (winSize.y - circleYPos) / 2);		
@@ -113,8 +115,11 @@ int main() {
 	*	Przycisk ustawien
 	*/
 	settingsButton->getRenderer()->setTexture("../resources/ikonaUstawien.png");
-	settingsButton->onPress([&sceneManager, &inSettingsMenu](){
+	settingsButton->onPress([&sceneManager, &inSettingsMenu, &settingsVolumeSlider, &gui, &checkboxy](){
 		inSettingsMenu = true;
+		settingsVolumeSlider.dodajDoGui(gui);
+		checkboxy.dodajCheckbox(gui);
+		gui.add(checkboxy.labelCheckBoxSection);
 		sceneManager.showSettingsScene();
 
 	});
@@ -182,18 +187,10 @@ int main() {
 			}
 		}
 
-
-		if(inSettingsMenu){
-			settingsVolumeSlider.dodajDoGui(gui);
-			checkboxy.dodajCheckbox(gui);
-			gui.add(checkboxy.labelCheckBoxSection);
-		}
 		if(inSettingsMenu && !sceneManager.settingsPanel->isVisible()){
 			inSettingsMenu = false;
 			settingsVolumeSlider.usunZGui(gui);
-			gui.remove(gui.get("Latwy"));
-			gui.remove(gui.get("labelCheckbox"));
-			gui.remove(gui.get("Trudny"));
+			checkboxy.usunCheckboxy(gui);
 		}
 	}
 

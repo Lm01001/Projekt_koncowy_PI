@@ -31,6 +31,7 @@
             SlidersAndCheckbox(int x, int y, int textSize);
             void customLabelCreator(int x, int y);
             void dodajCheckbox(tgui::Gui& gui);
+            void usunCheckboxy(tgui::Gui& gui);
     };
 
 #endif
