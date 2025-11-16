@@ -1,4 +1,5 @@
 #include "ButtonScenesPropertiesClass.h"
+#include "SlidersAndCheckbox.h"
 
 #include <iostream>
 #include <TGUI/TGUI.hpp>
@@ -251,4 +252,124 @@
                 resultPanel->add(createNewBackToMainMenuButton()); 
 
                 showMenuScene();
+    }
+
+  /**************************/
+ /*  Sekcja na slidery    */    
+/************************/
+
+    SlidersAndCheckbox::SlidersAndCheckbox(int x, int y){
+        slider = tgui::Slider::create();
+        slider->setWidgetName("slider");
+        slider->setPosition(x, y);
+        slider->setSize(200, 20);
+        
+        labelName = tgui::Label::create("Glosnosc efektow");
+        labelName->setTextSize(24);
+        labelName->getRenderer()->setTextOutlineThickness(3);
+        labelName->getRenderer()->setTextColor(sf::Color::White);
+        labelName->setPosition(x - 15, y - 40);
+        labelName->setWidgetName("labelName");
+
+        labelVal = tgui::Label::create("0");
+        labelVal->setTextSize(20);
+        labelVal->getRenderer()->setTextColor(sf::Color::Black);
+        labelVal->setPosition(x + 85, y + 25);
+        labelVal->setWidgetName("labelVal");
+
+        labelMin = tgui::Label::create("0");
+        labelMin->setTextSize(18);
+        labelMin->setPosition(x - 5, y + 25);
+        labelMin->setWidgetName("labelMin");
+
+        labelMax = tgui::Label::create("0");
+        labelMax->setTextSize(18);
+        labelMax->setPosition(x + 180, y + 25);
+        labelMax->setWidgetName("labelMax");
+    }
+
+    void SlidersAndCheckbox::createSlider(int min, int max){
+        sliderVal = min;
+        minVal = min;
+        maxVal = max;
+
+        slider->setMinimum(min);
+        slider->setMaximum(max);
+        slider->setValue(min);
+
+        labelMin->setText(std::to_string(min));
+        labelMax->setText(std::to_string(max));
+    }
+
+    float SlidersAndCheckbox::getSliderVal(){
+        return sliderVal;
+    }
+
+    void SlidersAndCheckbox::setSliderValue(float val){
+        if(val >= minVal && val <= maxVal){
+            sliderVal = val;
+            slider->setValue(val);
+            labelVal->setText(std::to_string((int)val));
+        }
+    }
+
+    void SlidersAndCheckbox::dodajDoGui(tgui::Gui& gui){
+        gui.add(slider);
+        gui.add(labelName);
+        gui.add(labelVal);
+        gui.add(labelMin);
+        gui.add(labelMax);
+        
+        slider->onValueChange([this](float val){
+            sliderVal = val;
+            labelVal->setText(std::to_string((int)val));
+        });
+    }
+
+    void SlidersAndCheckbox::usunZGui(tgui::Gui& gui){
+        gui.remove(gui.get("slider"));
+        gui.remove(gui.get("labelName"));
+        gui.remove(gui.get("labelVal"));
+        gui.remove(gui.get("labelMin"));
+        gui.remove(gui.get("labelMax"));
+    }
+
+   /***************************/
+  /*  Sekcja na checkboxy    */    
+ /***************************/
+
+    SlidersAndCheckbox::SlidersAndCheckbox(int x, int y, int textSize){
+        checkboxLatwy = tgui::CheckBox::create("Latwy");
+        checkboxLatwy->setWidgetName("Latwy");
+        checkboxLatwy->setPosition(x, y);
+        checkboxLatwy->setTextSize(textSize);
+        checkboxLatwy->setChecked(true);
+        checkboxTrudny = tgui::CheckBox::create("Trudny");
+        checkboxTrudny->setWidgetName("Trudny");
+        checkboxTrudny->setPosition(x + 105, y);
+        checkboxTrudny->setTextSize(textSize);
+        checkboxTrudny->setChecked(false);
+    }
+
+    void SlidersAndCheckbox::customLabelCreator(int x, int y){
+        labelCheckBoxSection = tgui::Label::create();
+        labelCheckBoxSection->setText("Poziom trudnosci");
+        labelCheckBoxSection->setWidgetName("labelCheckbox");
+        labelCheckBoxSection->setTextSize(24);
+        labelCheckBoxSection->setPosition(x, y);
+        labelCheckBoxSection->getRenderer()->setTextOutlineThickness(3);
+        labelCheckBoxSection->getRenderer()->setTextColor(sf::Color::White);
+    }
+    void SlidersAndCheckbox::dodajCheckbox(tgui::Gui& gui){
+        gui.add(checkboxLatwy);
+        gui.add(checkboxTrudny);
+
+        checkboxLatwy->onChange([&](){
+            if(checkboxLatwy->isChecked())
+                checkboxTrudny->setChecked(true);
+        });
+        checkboxTrudny->onChange([&](){
+            if(checkboxTrudny->isChecked())
+                checkboxLatwy->setChecked(true);
+        });
     }

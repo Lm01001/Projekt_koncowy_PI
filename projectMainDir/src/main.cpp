@@ -14,21 +14,18 @@
 #include "SnakeDetails.h"
 #include "SnakeGUI.h"
 #include "ButtonScenesPropertiesClass.h"
+#include "SlidersAndCheckbox.h"
 
 using namespace std;
 using namespace sf;
 
 
 int main() {
-	//SnakeGui instForGui = SnakeGui();
-	//SnakeGui buttonObj = SnakeGui();
-
-
 	/*
 	* Zmienna typu RenderWindow - wyswietlane okno, RectangleShape pod stworzenie przycisku
 	*/
 	RenderWindow window(VideoMode(550, 650), "Gra Snake", Style::Default);
-
+	window.setFramerateLimit(60);
 	VideoMode desktopScreen = VideoMode::getDesktopMode();
 	int x = (desktopScreen.width - 550) / 2;
 	int y = (desktopScreen.height - 650) / 2;
@@ -36,7 +33,6 @@ int main() {
 	window.setVerticalSyncEnabled(true);
 	
 	tgui::Gui gui{window};
-
 
 	/*
 	*	Glowny przycisk do przejscia do ekranu gry
@@ -64,13 +60,20 @@ int main() {
 	sceneManager.updateAllScenes(mainButton, settingsButton, pauseButton, sceneManager.menuPanel, sceneManager.pausePanel,
 			sceneManager.resultPanel, sceneManager.settingsPanel, sceneManager.gamePanel);
 	
+	/*
+	*	Wznawianie gry z menu pauzy
+	*/
+	ButtonScenesPropertiesClass resumeButtonGenerated = ButtonScenesPropertiesClass(gui ,"Wznow", 190, 360, 170, 70, 
+		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
+	auto resumeButton = resumeButtonGenerated.getButton();
+	sceneManager.pausePanel->add(resumeButton);
 	
 	/*
 	*	Segment na zmienne pod nextRoundPopup
 	*/
 	bool gameStartClick = false;
 	Clock c;
-	int counterHelper = 3;
+	int counterHelper;
 	auto labelCount = tgui::Label::create();
 		labelCount->setTextSize(100);
 		labelCount->setPosition("(&.width - width) / 2", "(&.height - height) / 2");		
@@ -86,23 +89,41 @@ int main() {
 	/*
 	*	Ustawianie zmian scen przycisku
 	*/
-	mainButton->onPress([&sceneManager, &gameStartClick]() {
+	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper]() {
 		/*
 		*
 		*/	
-		sceneManager.showGameScene();
 		gameStartClick = true;
+		counterHelper = 3;
+		sceneManager.showGameScene();
 	});
 
-	
+	/*
+	*	Tworzenie slidera
+	*/
+	bool inSettingsMenu = false;
+		SlidersAndCheckbox settingsVolumeSlider(195, 250);
+		settingsVolumeSlider.createSlider(0, 100);
+	/*
+	*	Tworzenie checkbox'ow
+	*/
+	SlidersAndCheckbox checkboxy(200, 400, 20);
+	checkboxy.customLabelCreator(185, 360);
+	/*
+	*	Przycisk ustawien
+	*/
 	settingsButton->getRenderer()->setTexture("../resources/ikonaUstawien.png");
-	settingsButton->onPress([&sceneManager](){
+	settingsButton->onPress([&sceneManager, &inSettingsMenu](){
+		inSettingsMenu = true;
 		sceneManager.showSettingsScene();
 
 	});
 	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
 	pauseButton->onPress([&sceneManager](){
 		sceneManager.showPauseScene();
+	});
+	resumeButton->onPress([&sceneManager](){
+		sceneManager.showGameScene();
 	});
 
 	
@@ -126,6 +147,7 @@ int main() {
 		*/
 		if(gameStartClick){
 			if(counterHelper == 3){
+				c.restart();
 				labelCount->setText("3");
 				labelCount->moveToFront();
 				window.draw(circle);
@@ -134,7 +156,7 @@ int main() {
 				counterHelper--;
 			}
 			
-			if(c.getElapsedTime().asSeconds() > 2.5 && counterHelper == 2){
+			if(c.getElapsedTime().asSeconds() > 1.5 && counterHelper == 2){
 				labelCount->setText("2");
 				labelCount->moveToFront();
 				window.draw(circle);
@@ -143,7 +165,7 @@ int main() {
 				counterHelper--;
 			}
 
-			if(c.getElapsedTime().asSeconds() > 4.5 && counterHelper == 1){
+			if(c.getElapsedTime().asSeconds() > 3 && counterHelper == 1){
 				labelCount->setText("1");
 				labelCount->moveToFront();
 				window.draw(circle);
@@ -152,12 +174,26 @@ int main() {
 				counterHelper--;
 			}
 
-			if(c.getElapsedTime().asSeconds() > 6){
+			if(c.getElapsedTime().asSeconds() > 4){
 				if(counterHelper == 0){
 					gameStartClick = false;
 					sceneManager.showGameScene();
 				}		
 			}
+		}
+
+
+		if(inSettingsMenu){
+			settingsVolumeSlider.dodajDoGui(gui);
+			checkboxy.dodajCheckbox(gui);
+			gui.add(checkboxy.labelCheckBoxSection);
+		}
+		if(inSettingsMenu && !sceneManager.settingsPanel->isVisible()){
+			inSettingsMenu = false;
+			settingsVolumeSlider.usunZGui(gui);
+			gui.remove(gui.get("Latwy"));
+			gui.remove(gui.get("labelCheckbox"));
+			gui.remove(gui.get("Trudny"));
 		}
 	}
 
