@@ -1,8 +1,10 @@
 #include "ButtonScenesPropertiesClass.h"
+#include "SlidersAndCheckbox.h"
 
 #include <iostream>
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
+#include <SFML/Graphics.hpp>
 #include <string>
 
     /*
@@ -80,6 +82,7 @@
         label->getRenderer()->setTextColor(sf::Color(0, 1, 40));
         label->setPosition(175,180);
         menuPanel->add(label);
+        menuPanel->getRenderer()->setBackgroundColor(sf::Color(115, 115, 98));
 
         gui.add(menuPanel, "Menu panel");
     }
@@ -148,10 +151,46 @@
         if(gui.get("Game panel") == panel){
             panel->getRenderer()->setBackgroundColor(sf::Color(163, 150, 135));
             auto label = tgui::Label::create("Level");
-            label->setTextSize(45);
-            label->setPosition(200, 30);
+            label->setTextSize(28);
+            label->getRenderer()->setTextColor(sf::Color::Black);
+            label->setPosition(235, 25);
             label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
             panel->add(label);
+
+            auto planszaCanvas = tgui::CanvasSFML::create();
+            planszaCanvas->setSize(550, 650);
+            planszaCanvas->setPosition(0, 0);
+            planszaCanvas->moveToBack();
+            gui.add(planszaCanvas);
+            sf::RectangleShape linia(sf::Vector2f(550, 1));
+            linia.setPosition(0, 550);
+            linia.setOutlineColor(sf::Color::Black);
+            linia.setOutlineThickness(2);
+            planszaCanvas->draw(linia);
+            
+            sf::RectangleShape planszaGry(sf::Vector2f(400, 400));
+            planszaGry.setPosition(75, 50);
+            planszaGry.setFillColor(sf::Color(38, 117, 31));
+            planszaGry.setOutlineColor(sf::Color(22, 69, 18));
+            planszaGry.setOutlineThickness(8);
+            planszaCanvas->draw(planszaGry);
+            panel->add(planszaCanvas);
+
+            timeLabelGame = tgui::Label::create("Time: 0:00");
+            timeLabelGame->setWidgetName("timeLabelGame");
+            auto wynik = tgui::Label::create("Wynik:");
+            std::string serceE = u8"♡";
+            auto zycia = tgui::Label::create("n x " + serceE);
+            timeLabelGame->setPosition(30, 70);
+            wynik->setPosition(210, 70);
+            zycia->setPosition(440, 70);
+            timeLabelGame->setTextSize(14);
+            wynik->setTextSize(14);
+            wynik->setTextSize(14);
+            panel->add(timeLabelGame);
+            panel->add(wynik);
+            panel->add(zycia);
+
         }else if(panel->getWidgetName() == "Pause panel"){
             panel->getRenderer()->setBackgroundColor(sf::Color(122, 113, 101));
             auto label = tgui::Label::create("Pauza");
@@ -186,6 +225,8 @@
         pausePanel->setVisible(false);
         settingsPanel->setVisible(false);
         nextRoundPopup->setVisible(false);
+        timeLabelGame->setText("Time: 0:00");
+
     }
 
     void ButtonScenesPropertiesClass::showGameScene(){
@@ -251,4 +292,134 @@
                 resultPanel->add(createNewBackToMainMenuButton()); 
 
                 showMenuScene();
+    }
+
+  /**************************/
+ /*  Sekcja na slidery    */    
+/************************/
+
+    SlidersAndCheckbox::SlidersAndCheckbox(int x, int y){
+        slider = tgui::Slider::create();
+        slider->setWidgetName("slider");
+        slider->setPosition(x, y);
+        slider->setSize(200, 20);
+        
+        labelName = tgui::Label::create("Glosnosc efektow");
+        labelName->setTextSize(24);
+        labelName->getRenderer()->setTextOutlineThickness(3);
+        labelName->getRenderer()->setTextColor(sf::Color::White);
+        labelName->setPosition(x - 15, y - 40);
+        labelName->setWidgetName("labelName");
+
+        labelVal = tgui::Label::create("0");
+        labelVal->setTextSize(20);
+        labelVal->getRenderer()->setTextColor(sf::Color::Black);
+        labelVal->setPosition(x + 85, y + 25);
+        labelVal->setWidgetName("labelVal");
+
+        labelMin = tgui::Label::create("0");
+        labelMin->setTextSize(18);
+        labelMin->setPosition(x - 5, y + 25);
+        labelMin->setWidgetName("labelMin");
+
+        labelMax = tgui::Label::create("0");
+        labelMax->setTextSize(18);
+        labelMax->setPosition(x + 180, y + 25);
+        labelMax->setWidgetName("labelMax");
+    }
+
+    void SlidersAndCheckbox::createSlider(int min, int max){
+        sliderVal = min;
+        minVal = min;
+        maxVal = max;
+
+        slider->setMinimum(min);
+        slider->setMaximum(max);
+        slider->setValue(min);
+
+        labelMin->setText(std::to_string(min));
+        labelMax->setText(std::to_string(max));
+    }
+
+    float SlidersAndCheckbox::getSliderVal(){
+        return sliderVal;
+    }
+
+    void SlidersAndCheckbox::setSliderValue(float val){
+        if(val >= minVal && val <= maxVal){
+            sliderVal = val;
+            slider->setValue(val);
+            labelVal->setText(std::to_string((int)val));
+        }
+    }
+
+    void SlidersAndCheckbox::dodajDoGui(tgui::Gui& gui){
+        gui.add(slider);
+        gui.add(labelName);
+        gui.add(labelVal);
+        gui.add(labelMin);
+        gui.add(labelMax);
+        
+        slider->onValueChange([this](float val){
+            sliderVal = val;
+            labelVal->setText(std::to_string((int)val));
+        });
+    }
+
+    void SlidersAndCheckbox::usunZGui(tgui::Gui& gui){
+        gui.remove(gui.get("slider"));
+        gui.remove(gui.get("labelName"));
+        gui.remove(gui.get("labelVal"));
+        gui.remove(gui.get("labelMin"));
+        gui.remove(gui.get("labelMax"));
+    }
+
+   /***************************/
+  /*  Sekcja na checkboxy    */    
+ /***************************/
+
+    SlidersAndCheckbox::SlidersAndCheckbox(int x, int y, int textSize){
+        checkboxLatwy = tgui::CheckBox::create("Latwy");
+        checkboxLatwy->setWidgetName("Latwy");
+        checkboxLatwy->setPosition(x, y);
+        checkboxLatwy->setTextSize(textSize);
+        checkboxLatwy->setChecked(true);
+        checkboxTrudny = tgui::CheckBox::create("Trudny");
+        checkboxTrudny->setWidgetName("Trudny");
+        checkboxTrudny->setPosition(x + 105, y);
+        checkboxTrudny->setTextSize(textSize);
+        checkboxTrudny->setChecked(false);
+    }
+
+    void SlidersAndCheckbox::customLabelCreator(int x, int y){
+        labelCheckBoxSection = tgui::Label::create();
+        labelCheckBoxSection->setText("Poziom trudnosci");
+        labelCheckBoxSection->setWidgetName("labelCheckbox");
+        labelCheckBoxSection->setTextSize(24);
+        labelCheckBoxSection->setPosition(x, y);
+        labelCheckBoxSection->getRenderer()->setTextOutlineThickness(3);
+        labelCheckBoxSection->getRenderer()->setTextColor(sf::Color::White);
+    }
+    void SlidersAndCheckbox::dodajCheckbox(tgui::Gui& gui){
+        gui.add(checkboxLatwy);
+        gui.add(checkboxTrudny);
+
+        checkboxLatwy->onChange([&](){
+            if(checkboxLatwy->isChecked())
+                checkboxTrudny->setChecked(false);
+            else
+                checkboxTrudny->setChecked(true);
+        });
+        checkboxTrudny->onChange([&](){
+            if(checkboxTrudny->isChecked())
+                checkboxLatwy->setChecked(false);
+            else
+                checkboxLatwy->setChecked(true);
+        });
+    }
+
+    void SlidersAndCheckbox::usunCheckboxy(tgui::Gui& gui){
+        gui.remove(checkboxLatwy);
+        gui.remove(checkboxTrudny);
+        gui.remove(labelCheckBoxSection);
     }

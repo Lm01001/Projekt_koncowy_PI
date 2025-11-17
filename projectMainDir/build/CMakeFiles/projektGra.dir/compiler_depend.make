@@ -3,6 +3,7 @@
 
 CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o: /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp \
   /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/ButtonScenesPropertiesClass.h \
+  /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/SlidersAndCheckbox.h \
   /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/AbsoluteOrRelativeValue.hpp \
   /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/AllWidgets.hpp \
   /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Animation.hpp \
@@ -854,6 +855,7 @@ CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o: /mnt/c/Users/Maksymilian/OneDr
 
 CMakeFiles/projektGra.dir/src/main.cpp.o: /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/src/main.cpp \
   /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/ButtonScenesPropertiesClass.h \
+  /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/SlidersAndCheckbox.h \
   /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/SnakeDetails.h \
   /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/SnakeGUI.h \
   /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/AbsoluteOrRelativeValue.hpp \
@@ -1820,10 +1822,6 @@ im.:
 
 /usr/include/SFML/Graphics/Glsl.inl:
 
-/usr/include/c++/13/bits/stl_raw_storage_iter.h:
-
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/Theme.hpp:
-
 /usr/include/c++/13/tr1/beta_function.tcc:
 
 /usr/include/SFML/Graphics/VertexArray.hpp:
@@ -1978,8 +1976,6 @@ im.:
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/SpinButtonRenderer.hpp:
-
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
 
 /usr/include/c++/13/bits/hash_bytes.h:
@@ -2000,6 +1996,8 @@ im.:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
 
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/SpinButtonRenderer.hpp:
+
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Layout.hpp:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/BackendGui.hpp:
@@ -2007,6 +2005,8 @@ im.:
 /usr/include/c++/13/valarray:
 
 /usr/include/SFML/Graphics/Export.hpp:
+
+/usr/include/linux/limits.h:
 
 /usr/include/c++/13/bits/concept_check.h:
 
@@ -2056,9 +2056,21 @@ im.:
 
 /usr/include/x86_64-linux-gnu/bits/ss_flags.h:
 
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ButtonBase.hpp:
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Core.hpp:
 
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SFML-Graphics/BackendTextureSFML.hpp:
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Variant.hpp:
+
+/usr/include/SFML/Config.hpp:
+
+/usr/include/c++/13/bits/stl_multiset.h:
+
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/ButtonScenesPropertiesClass.h:
+
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/SubwidgetContainer.hpp:
+
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/SlidersAndCheckbox.h:
+
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Exception.hpp:
 
 /usr/include/c++/13/bits/stl_function.h:
 
@@ -2076,11 +2088,9 @@ im.:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
-/usr/include/SFML/System/Lock.hpp:
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ButtonBase.hpp:
 
-/usr/include/sched.h:
-
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ChatBox.hpp:
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SFML-Graphics/BackendTextureSFML.hpp:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/SpinControl.hpp:
 
@@ -2092,19 +2102,11 @@ im.:
 
 /usr/include/c++/13/backward/auto_ptr.h:
 
-/usr/include/linux/limits.h:
+/usr/include/SFML/System/Lock.hpp:
 
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Core.hpp:
+/usr/include/sched.h:
 
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Variant.hpp:
-
-/usr/include/SFML/Config.hpp:
-
-/usr/include/c++/13/bits/stl_multiset.h:
-
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/include/ButtonScenesPropertiesClass.h:
-
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/SubwidgetContainer.hpp:
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ChatBox.hpp:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Config.hpp:
 
@@ -2134,17 +2136,19 @@ im.:
 
 /usr/include/c++/13/bits/locale_facets_nonio.tcc:
 
-/usr/include/c++/13/bits/stl_list.h:
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/SvgImage.hpp:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/TextStyle.hpp:
 
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/SvgImage.hpp:
-
-/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Exception.hpp:
+/usr/include/c++/13/bits/stl_list.h:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ChildWindow.hpp:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/RangeSlider.hpp:
+
+/mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/Theme.hpp:
+
+/usr/include/c++/13/bits/stl_raw_storage_iter.h:
 
 /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/TabsRenderer.hpp:
 
@@ -2489,6 +2493,10 @@ folder:
 /usr/include/c++/13/ext/numeric_traits.h:
 
 /usr/include/c++/13/climits:
+
+Staszica:
+
+/usr/include/c++/13/filesystem:
 
 /usr/include/c++/13/functional:
 
@@ -2981,7 +2989,3 @@ CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o:
 Krakowie/Pulpit/Nowy:
 
 Stanisława:
-
-/usr/include/c++/13/filesystem:
-
-Staszica:
