@@ -91,12 +91,18 @@ int main() {
 	/*
 	*	Ustawianie zmian scen przycisku
 	*/
-	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper]() {
+	float sekundy = c.getElapsedTime().asSeconds();
+	int minuty = 0;
+	bool roundInProgress = false, gamePaused = false;
+	int czasWSekundach, sekundySkrocone;
+	sceneManager.gameInProgressTimeVar = 0;
+	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper, &c]() {
 		/*
 		*
 		*/	
 		gameStartClick = true;
 		counterHelper = 3;
+		c.restart();
 		sceneManager.showGameScene();
 	});
 
@@ -124,10 +130,15 @@ int main() {
 
 	});
 	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
-	pauseButton->onPress([&sceneManager](){
+	pauseButton->onPress([&sceneManager, &c, &gamePaused](){
+		gamePaused = true;
+		sceneManager.gameInProgressTimeVar += c.getElapsedTime().asSeconds();
+		c.restart();
 		sceneManager.showPauseScene();
 	});
-	resumeButton->onPress([&sceneManager](){
+	resumeButton->onPress([&sceneManager, &c, &gamePaused](){	
+		gamePaused = false;
+		c.restart();
 		sceneManager.showGameScene();
 	});
 
@@ -152,7 +163,6 @@ int main() {
 		*/
 		if(gameStartClick){
 			if(counterHelper == 3){
-				c.restart();
 				labelCount->setText("3");
 				labelCount->moveToFront();
 				window.draw(circle);
@@ -182,6 +192,8 @@ int main() {
 			if(c.getElapsedTime().asSeconds() > 4){
 				if(counterHelper == 0){
 					gameStartClick = false;
+					roundInProgress = true;
+					c.restart();
 					sceneManager.showGameScene();
 				}		
 			}
@@ -191,6 +203,35 @@ int main() {
 			inSettingsMenu = false;
 			settingsVolumeSlider.usunZGui(gui);
 			checkboxy.usunCheckboxy(gui);
+		}
+
+		if(roundInProgress && !gamePaused){
+			/*
+			*	static_cast sluzy do konwersji z float na int tutaj.
+			*	c.getElapsedTime() przypisuje do zmiennej typu float, 
+			*	czyli robimy sobie static_cast co powinno być bezpieczniejsze
+			*	niz konwersja (int)zmiennaTypuString
+			*/
+			sekundy = sceneManager.gameInProgressTimeVar + c.getElapsedTime().asSeconds();
+			czasWSekundach = static_cast<int>(sekundy);
+			minuty = czasWSekundach / 60;
+			sekundySkrocone = czasWSekundach % 60;
+			/*
+			*	Używamy do zapisu danych do wyświetlenia strumienia
+			*	tekstowego, czyli strumien dla stringow. Innymi
+			*	przykladowymi sa cout, cin albo chociaz cerr, ktorego
+			*	uzywamy do wyswietlania bledow przy operacjach na plikach.
+			*	Tu tez do przekazywania uzywa sie << co logiczne.
+			*/
+			std::stringstream streamTimeUpdate;
+			/*if(sekundySkrocone < 10)
+				streamTimeUpdate << std::fixed << std::setprecision(0) << "Time: "<< minuty << ":0" << sekundySkrocone;
+			else
+				streamTimeUpdate << std::fixed << std::setprecision(0) << "Time: "<< minuty << ":" << sekundySkrocone;
+			*/
+			streamTimeUpdate << std::fixed <<  "Time: "<< minuty << ":" <<std::setw(2) << std::setfill('0') << sekundySkrocone;
+			sceneManager.timeLabelGame->setText(streamTimeUpdate.str());
+			sceneManager.gamePanel->add(sceneManager.timeLabelGame);
 		}
 	}
 

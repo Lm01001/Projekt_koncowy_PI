@@ -168,32 +168,26 @@
             linia.setOutlineThickness(2);
             planszaCanvas->draw(linia);
             
-            sf::RectangleShape planszaGry(sf::Vector2f(500, 500));
-            planszaGry.setPosition(25, 25);
+            sf::RectangleShape planszaGry(sf::Vector2f(400, 400));
+            planszaGry.setPosition(75, 50);
             planszaGry.setFillColor(sf::Color(38, 117, 31));
             planszaGry.setOutlineColor(sf::Color(22, 69, 18));
             planszaGry.setOutlineThickness(8);
             planszaCanvas->draw(planszaGry);
             panel->add(planszaCanvas);
 
-            //
-                sf::Clock c;
-                std::string czas = std::to_string(c.getElapsedTime().asSeconds());
-
-
-            //
-
-            auto timer = tgui::Label::create("Time: " + czas);
+            timeLabelGame = tgui::Label::create("Time: 0:00");
+            timeLabelGame->setWidgetName("timeLabelGame");
             auto wynik = tgui::Label::create("Wynik:");
             std::string serceE = u8"♡";
             auto zycia = tgui::Label::create("n x " + serceE);
-            timer->setPosition(30, 70);
+            timeLabelGame->setPosition(30, 70);
             wynik->setPosition(210, 70);
             zycia->setPosition(440, 70);
-            timer->setTextSize(14);
+            timeLabelGame->setTextSize(14);
             wynik->setTextSize(14);
             wynik->setTextSize(14);
-            panel->add(timer);
+            panel->add(timeLabelGame);
             panel->add(wynik);
             panel->add(zycia);
 
@@ -231,6 +225,8 @@
         pausePanel->setVisible(false);
         settingsPanel->setVisible(false);
         nextRoundPopup->setVisible(false);
+        timeLabelGame->setText("Time: 0:00");
+
     }
 
     void ButtonScenesPropertiesClass::showGameScene(){

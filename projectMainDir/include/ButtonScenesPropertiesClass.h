@@ -29,6 +29,9 @@ class ButtonScenesPropertiesClass{
         tgui::Panel::Ptr settingsPanel;
         tgui::Panel::Ptr nextRoundPopup;
 
+        tgui::Label::Ptr timeLabelGame;
+        int gameInProgressTimeVar;
+
         void appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton);
         void appendBackToMainMenuButton(tgui::Panel::Ptr panel);
         tgui::Button::Ptr createNewBackToMainMenuButton();
