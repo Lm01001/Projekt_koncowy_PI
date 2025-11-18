@@ -5,11 +5,22 @@
 
 class SnakeDetails{
     public:
-        int wynik, dlugosc, lvl;
+        int wynik, dlugosc, lvl, zjedzonePrzedmioty;
         std::string powerUp;
-        SnakeDetails(int wynik, int dlugosc, int lvl, std::string powerUp); //fabularny
-        /*SnakeDetails(string a, int wynik, int dl, int r); //timed
-        //SnakeDetails(string a, int wynik, int dl, string p); //powerupy*/
+        SnakeDetails(int wynik, int dlugosc, int lvl, std::string powerUp); // ???????
+
+
+        std::vector<sf::Vector2i> wazCialo;
+        sf::Vector2i kierunekRuchu;
+        float predkoscRuchu, timerRuchu;
+        bool kolizja;
+
+        SnakeDetails();
+        void ustawKierunek(sf::Vector2i kierunek);
+        void movementAktualizujWeza(float czasOdPoprzedniejKlatki);
+        void draw(tgui::CanvasSFML& planszaGry);
+        void czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy);
+        void kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama);
 
         void aktualizujWynik(int wynik);
         void aktualizujDlugosc(int dlugosc);
