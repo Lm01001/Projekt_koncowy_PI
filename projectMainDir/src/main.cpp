@@ -21,6 +21,7 @@ using namespace sf;
 
 
 int main() {
+	
 	/*
 	* Zmienna typu RenderWindow - wyswietlane okno, RectangleShape pod stworzenie przycisku
 	*/
