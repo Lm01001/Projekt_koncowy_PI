@@ -74,6 +74,13 @@
 
         gui.add(menuPanel, "Menu panel");
     }
+    /*
+    *   Funkcja do dodawania elementow do sceny
+    *   poczatkowej/menu, czyli ustawienie ekranu
+    *   poczatkowego i dodanie przycisku do
+    *   przejscia do ustawien oraz rozpoczecia
+    *   gry.
+    */
     void ButtonScenesPropertiesClass::appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton){
         menuPanel->add(startButton);
         menuPanel->add(settingsButton);
@@ -87,6 +94,9 @@
         gui.add(menuPanel, "Menu panel");
     }
 
+      /**************************************/
+     /*  Sekcja tworzenia baz/sampli scen  */
+    /**************************************/
     void ButtonScenesPropertiesClass::createGameScene(){
         gamePanel = tgui::Panel::create();
         gamePanel->setSize(550, 650);
@@ -214,6 +224,11 @@
         }
     }
 
+
+    /*******************************/
+    /*  Sekcja wyswietlania scen  */
+    /*****************************/
+
     /*
     *   Wyswietlanie opiera sie na tym ze ustawiamy scene przez to ze 
     *   pozostale dostepne sceny ustawiane sa jako niewidzialne, niewidoczne
@@ -274,6 +289,13 @@
         settingsPanel->setVisible(false);
     }
 
+    /*
+    *   Aktualizacja wszystkich scen, czyli
+    *   dodawanie przyciskow przede wszystkim
+    *   i ustawienia dotyczace kwestii
+    *   wizualnych bazujac na wczesnie utworzonych
+    *   samplach.
+    */
     void ButtonScenesPropertiesClass::updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,
         tgui::Panel::Ptr menuPanel, 
             tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel, tgui::Panel::Ptr gamePanel){
@@ -294,9 +316,9 @@
                 showMenuScene();
     }
 
-  /**************************/
- /*  Sekcja na slidery    */    
-/************************/
+      /*************************/
+     /*  Sekcja na slidery    */    
+    /*************************/
 
     SlidersAndCheckbox::SlidersAndCheckbox(int x, int y){
         slider = tgui::Slider::create();
@@ -374,9 +396,9 @@
         gui.remove(gui.get("labelMax"));
     }
 
-   /***************************/
-  /*  Sekcja na checkboxy    */    
- /***************************/
+      /***************************/
+     /*  Sekcja na checkboxy    */    
+    /***************************/
 
     SlidersAndCheckbox::SlidersAndCheckbox(int x, int y, int textSize){
         checkboxLatwy = tgui::CheckBox::create("Latwy");

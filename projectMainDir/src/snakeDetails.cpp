@@ -7,7 +7,6 @@
 #include <ctime>
 
     SnakeDetails::SnakeDetails(int w, int dl, int l, std::string p) : wynik(w), dlugosc(dl), lvl(l), powerUp(p) {} 
-    SnakeGui::SnakeGui() {}
     
     
     /*
@@ -79,6 +78,12 @@
     */
     
 
+    /*
+    *   Ustawianie kwestii zwiazanych z GUI
+    *   wygladem wizualnych scen, czyli nie
+    *   bezposrednio z obiektem weza samego
+    *   w sobie.
+    */
     void SnakeGui::ustawTloOkna(sf::RenderWindow& window, sf::Color kolor){
         window.clear(kolor);
     }

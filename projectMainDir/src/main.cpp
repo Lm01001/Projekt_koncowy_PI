@@ -21,6 +21,7 @@ using namespace sf;
 
 
 int main() {
+	
 	/*
 	* Zmienna typu RenderWindow - wyswietlane okno, RectangleShape pod stworzenie przycisku
 	*/
@@ -35,33 +36,38 @@ int main() {
 	tgui::Gui gui{window};
 
 	/*
-	*	Glowny przycisk do przejscia do ekranu gry
+	*	Glowny przycisk do przejscia do ekranu gry.
 	*/
 	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass(gui ,"Graj", 190, 435, 170, 70, 
 		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
 	auto mainButton = buttonObj1.getButton();
 	
 	/*
-	*	Przycisk do przejscia do ustawien rozgrywki
+	*	Przycisk do przejscia do ustawien rozgrywki w
+	*	menu glownym i ustawienia poziomu trudnosci
+	*	oraz efektow dzwiekowych
 	*/
 	ButtonScenesPropertiesClass buttonSettings = ButtonScenesPropertiesClass(gui, 495, 30, 35, 35, tgui::Color(89, 43, 66), 0);
 	auto settingsButton = buttonSettings.getButton();
 	
 	/*
-	*	
+	*	Przycisk do zatrzymywania gry w rogu
+	*	juz w trakcie rozgrywki.
 	*/
 	ButtonScenesPropertiesClass pauseButtonGenerated = ButtonScenesPropertiesClass(gui, 495, 20, 35, 35, tgui::Color(89, 43, 66), 0);
 	auto pauseButton = pauseButtonGenerated.getButton();
 	
 	/*
-	*	Tworzenie bazowych scen dla projektu
+	*	Tworzenie bazowych scen dla projektu oraz dodawanie 
+	*	do nich koniecznych elementow ze wzgledu na to,
+	*	ze w konstruktorze sa funkcje bez argumentow.
 	*/
 	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
 	sceneManager.updateAllScenes(mainButton, settingsButton, pauseButton, sceneManager.menuPanel, sceneManager.pausePanel,
 			sceneManager.resultPanel, sceneManager.settingsPanel, sceneManager.gamePanel);
 	
 	/*
-	*	Wznawianie gry z menu pauzy
+	*	Wznawianie gry z menu pauzy, przycisk sluzacy do tego.
 	*/
 	ButtonScenesPropertiesClass resumeButtonGenerated = ButtonScenesPropertiesClass(gui ,"Wznow", 190, 360, 170, 70, 
 		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
@@ -69,7 +75,12 @@ int main() {
 	sceneManager.pausePanel->add(resumeButton);
 	
 	/*
-	*	Segment na zmienne pod nextRoundPopup
+	*	Segment na zmienne pod nextRoundPopup.
+	*	Czyli wszystko potrzebne pod to, zeby 
+	*	bylo odliczanie przed poczatkiem i cyfry
+	*	w kolach + zmienna pomocnicza do tego,
+	*	czy uzytkownik rozpoczal gre przez 
+	*	wcisniecie glownego przycisku.
 	*/
 	bool gameStartClick = false;
 	Clock c;
@@ -89,7 +100,11 @@ int main() {
 		circle.setPosition((winSize.x - circleXPos) / 2, (winSize.y - circleYPos) / 2);		
 
 	/*
-	*	Ustawianie zmian scen przycisku
+	*	Ustawianie wszystkie przygotowujacego do rozgrywki
+	*	inicjalizacja wszystkiego zwiazanego z 
+	*	rozgrywka w tym odpalenie timera oraz
+	*	ustawianie stanow przez zmienne pomocnicze,
+	*	np. czy pauza lub czy gra w trakcie.
 	*/
 	float sekundy = c.getElapsedTime().asSeconds();
 	int minuty = 0;
@@ -98,7 +113,8 @@ int main() {
 	sceneManager.gameInProgressTimeVar = 0;
 	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper, &c]() {
 		/*
-		*
+		* 	Miejsce na reszte kodu do dodania juz
+		*	po implementacji funkcjonalnosci weza
 		*/	
 		gameStartClick = true;
 		counterHelper = 3;
@@ -107,18 +123,25 @@ int main() {
 	});
 
 	/*
-	*	Tworzenie slidera
+	*	Tworzenie slidera do ustawienia poziomu
+	*	glosnosci efektow dzwiekowych 
+	*	domyslnie ustawione na 0, czyli wylaczone.
 	*/
 	bool inSettingsMenu = false;
 		SlidersAndCheckbox settingsVolumeSlider(195, 250);
 		settingsVolumeSlider.createSlider(0, 100);
 	/*
-	*	Tworzenie checkbox'ow
+	*	Tworzenie checkbox'ow sluzacych do wyboru,
+	*	zaznaczenia poziomu trudnosci.
 	*/
 	SlidersAndCheckbox checkboxy(200, 400, 20);
 	checkboxy.customLabelCreator(185, 360);
 	/*
-	*	Przycisk ustawien
+	*	Przycisk ustawien z ikona z dir z zasobami
+	*	po nacisnieciu otwiera okno gdzie mozna ustawic
+	*	glosnosc efektow dzwiekowych i wybrac poziom
+	*	trudnosci. Defaultowo to latwy, wiaze sie to tylko
+	*	z predkoscia poruszania weza.
 	*/
 	settingsButton->getRenderer()->setTexture("../resources/ikonaUstawien.png");
 	settingsButton->onPress([&sceneManager, &inSettingsMenu, &settingsVolumeSlider, &gui, &checkboxy](){
@@ -129,6 +152,12 @@ int main() {
 		sceneManager.showSettingsScene();
 
 	});
+	/*
+	*	Zatrzymuje rozgrywke i timer, mozna albo wznowic
+	*	rozgrywke albo wyjsc do menu. W celu przerwania
+	*	zakonczenia gry przed jej ukonczeniem jeszcze
+	*	lub przegrana => to to jedyne miejsce.
+	*/
 	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
 	pauseButton->onPress([&sceneManager, &c, &gamePaused](){
 		gamePaused = true;
@@ -136,13 +165,23 @@ int main() {
 		c.restart();
 		sceneManager.showPauseScene();
 	});
+	/*
+	*	Przycisk do wznawiania gry, wyjscia z ekranu ustawien
+	*	resetuje timer, ale przechowuje wartosc czasu
+	*	w momencie zatrzymania, wiec po wznowieniu jest
+	*	wznawiany i nie resetuje się wizualnie.
+	*/
 	resumeButton->onPress([&sceneManager, &c, &gamePaused](){	
 		gamePaused = false;
 		c.restart();
 		sceneManager.showGameScene();
 	});
 
-	
+	/*
+	*	Glowna petla, ktorej sa fragmenty kodu odpowiedzialne
+	*	za wszystkie interakcje typu rozpoczecie gry,
+	*	zmiany w ustawieniach, czy pauzowanie gry.
+	*/
 	while(window.isOpen()){
 		Event event;
 		while(window.pollEvent(event)){
@@ -199,12 +238,21 @@ int main() {
 			}
 		}
 
+		/*
+		*	Wylaczanie menu ustawien, a raczej ustawien z okna
+		*	bez tej instrukcji po wyjsciu z ustawien zostawaly 
+		*	one na ekranie
+		*/
 		if(inSettingsMenu && !sceneManager.settingsPanel->isVisible()){
 			inSettingsMenu = false;
 			settingsVolumeSlider.usunZGui(gui);
 			checkboxy.usunCheckboxy(gui);
 		}
 
+		/*
+		*	Obsluga timera znajdujacego sie na gornym
+		*	pasku w trakcie rozgrywki.
+		*/
 		if(roundInProgress && !gamePaused){
 			/*
 			*	static_cast sluzy do konwersji z float na int tutaj.
@@ -224,11 +272,6 @@ int main() {
 			*	Tu tez do przekazywania uzywa sie << co logiczne.
 			*/
 			std::stringstream streamTimeUpdate;
-			/*if(sekundySkrocone < 10)
-				streamTimeUpdate << std::fixed << std::setprecision(0) << "Time: "<< minuty << ":0" << sekundySkrocone;
-			else
-				streamTimeUpdate << std::fixed << std::setprecision(0) << "Time: "<< minuty << ":" << sekundySkrocone;
-			*/
 			streamTimeUpdate << std::fixed <<  "Time: "<< minuty << ":" <<std::setw(2) << std::setfill('0') << sekundySkrocone;
 			sceneManager.timeLabelGame->setText(streamTimeUpdate.str());
 			sceneManager.gamePanel->add(sceneManager.timeLabelGame);
