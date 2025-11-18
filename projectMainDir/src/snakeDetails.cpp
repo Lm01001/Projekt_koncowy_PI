@@ -21,6 +21,18 @@
         //ustawienie ciala weza
         //przypisanie wartosci do wektora z kierunkiem
         //przypisanie wartosci zmiennym od predkosci ruchu i ustawienie timera
+
+        //uwzglednic wczytanie dzwiekow plikow z dir resources
+        //.loadFromFile("/")  => SoundBuffer
+        //a nastepnie przypisanie ich
+        //.setBuffer()  => Sound
+
+        loadEatSoundBuffer.loadFromFile("../resources/soundEffects/eatSound.wav");
+        loadHitSoundBuffer.loadFromFile("../resources/soundEffects/hitSound.wav");
+        loadNextLevelSoundBuffer.loadFromFile("../resources/soundEffects/nextLevelSound.wav");
+        eatSound.setBuffer(loadEatSoundBuffer);
+        hitSound.setBuffer(loadHitSoundBuffer);
+        nextLevelSound.setBuffer(loadNextLevelSoundBuffer);
     }
 
     void SnakeDetails::ustawKierunek(sf::Vector2i kierunek){
@@ -77,6 +89,17 @@
     }
     */
     
+    void SnakeDetails::playEatSound(){
+        eatSound.play();
+    }
+
+    void SnakeDetails::playHitSound(){
+        hitSound.play();
+    }
+
+    void SnakeDetails::playNextLevelSound(){
+        nextLevelSound.play();
+    }
 
     /*
     *   Ustawianie kwestii zwiazanych z GUI
