@@ -15,18 +15,18 @@ Szczegóły, mechaniki:
 
 
 # ***4. Techniki programistyczne i biblioteki w projekcie.***
-Zaawansowane techniki programistyczne:
--Wykorzystywanie wskaźników
--Programowanie obiektowe
--Wykorzystywanie plików ".h" (header files) do deklaracji funkcji, czy typów zmiennych - do zdefiniowania w utworzonym pliku ".cpp"
-Wykorzystywane biblioteki:
--SFML
--TGUI (stworzona dla SFML, z większą ilością wbudowanych funkcjonalności)
+*Zaawansowane techniki programistyczne:
+    *Wykorzystywanie wskaźników
+    *Programowanie obiektowe
+    *Wykorzystywanie plików ".h" (header files) do deklaracji funkcji, czy typów zmiennych - do zdefiniowania w utworzonym pliku ".cpp"
+*Wykorzystywane biblioteki:
+    *SFML
+    *TGUI (stworzona dla SFML, z większą ilością wbudowanych funkcjonalności)
 ... podstawowe tez??
 
 
 # ***5. Instrukcja uruchomienia gry.***
-W celu uruchomienia gry należy przejść do lokalizacji folderu "build", path to "Projekt_koncowy_PI/projectMainDir/build/" tam następnie w terminalu wpisać:<br>
+W celu uruchomienia gry należy przejść do lokalizacji folderu **build**, path to *Projekt_koncowy_PI/projectMainDir/build/* tam następnie w terminalu wpisać:<br>
 `./projektGra`<br>
 Ewnetualnie, opcjonalnie można zrobić kolejno:<br>
 `make` <br> `./projektGra`
