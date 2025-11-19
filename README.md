@@ -25,11 +25,11 @@ Wykorzystywane biblioteki:
 ... podstawowe tez??
 
 
-# ***5. Instrukcja uruchomienia gry.
+# ***5. Instrukcja uruchomienia gry.***
 W celu uruchomienia gry należy przejść do lokalizacji folderu "build", path to "Projekt_koncowy_PI/projectMainDir/build/" tam następnie w terminalu wpisać:<br>
 `./projektGra`<br>
 Ewnetualnie, opcjonalnie można zrobić kolejno:<br>
-`make` `./projektGra`
+`make` <br> `./projektGra`
 
 <div align="left">
         Autorzy:<br>
