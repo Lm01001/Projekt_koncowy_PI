@@ -13,6 +13,24 @@ Nasz projekt jest właściwie naszą własną interpretacją gry Snake, który b
 Gra wykorzystuje bibliotekę graficzną SFML-3.0.2 . Po przejściu do gry przez wciśnięcie przycisku generowana, wyświetlana jest strona, główne okno z planszą gry. Na bazie założeń jest to gra mająca 7 poziomów, co odpowiada 7-miu dniom tygodnia. W grze są obecne power-upy, a po uzsykaniu określonej liczby punktów i ukończeniu poziomu pojawia się przejście do kolejnego.
 Szczegóły, mechaniki:
 
+
+# ***4. Techniki programistyczne i biblioteki w projekcie.***
+Zaawansowane techniki programistyczne:
+-Wykorzystywanie wskaźników
+-Programowanie obiektowe
+-Wykorzystywanie plików ".h" (header files) do deklaracji funkcji, czy typów zmiennych - do zdefiniowania w utworzonym pliku ".cpp"
+Wykorzystywane biblioteki:
+-SFML
+-TGUI (stworzona dla SFML, z większą ilością wbudowanych funkcjonalności)
+... podstawowe tez??
+
+
+# ***5. Instrukcja uruchomienia gry.
+W celu uruchomienia gry należy przejść do lokalizacji folderu "build", path to "Projekt_koncowy_PI/projectMainDir/build/" tam następnie w terminalu wpisać:<br>
+`./projektGra`<br>
+Ewnetualnie, opcjonalnie można zrobić kolejno:<br>
+`make` `./projektGra`
+
 <div align="left">
         Autorzy:<br>
         <a href="https://github.com/laskowskajustyna-crypto" align="left">
