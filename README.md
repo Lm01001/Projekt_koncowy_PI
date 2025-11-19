@@ -15,13 +15,13 @@ Szczegóły, mechaniki:
 
 
 # ***4. Techniki programistyczne i biblioteki w projekcie.***
-*Zaawansowane techniki programistyczne:
-    *Wykorzystywanie wskaźników
-    *Programowanie obiektowe
-    *Wykorzystywanie plików ".h" (header files) do deklaracji funkcji, czy typów zmiennych - do zdefiniowania w utworzonym pliku ".cpp"
-*Wykorzystywane biblioteki:
-    *SFML
-    *TGUI (stworzona dla SFML, z większą ilością wbudowanych funkcjonalności)
+* Zaawansowane techniki programistyczne:
+    * Wykorzystywanie wskaźników
+    * Programowanie obiektowe
+    * Wykorzystywanie plików ".h" (header files) do deklaracji funkcji, czy typów zmiennych - do zdefiniowania w utworzonym pliku ".cpp"
+* Wykorzystywane biblioteki:
+    * SFML
+    * TGUI (stworzona dla SFML, z większą ilością wbudowanych funkcjonalności)
 ... podstawowe tez??
 
 
