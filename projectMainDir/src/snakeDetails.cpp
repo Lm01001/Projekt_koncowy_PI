@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <string>
-//#include <windows.h>
 #include <ctime>
 
     SnakeDetails::SnakeDetails(int w, int dl, int l, std::string p) : wynik(w), dlugosc(dl), lvl(l), powerUp(p) {} 
