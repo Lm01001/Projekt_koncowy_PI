@@ -4,6 +4,9 @@
 #include <string>
 #include <SFML/Audio/Sound.hpp>
 #include <SFML/Audio/SoundBuffer.hpp>
+#include <SFML/Graphics.hpp>
+#include <TGUI/TGUI.hpp>
+#include <TGUI/Backend/Renderer/SFML-Graphics/CanvasSFML.hpp>
 
 class SnakeDetails{
     public:

@@ -14,7 +14,7 @@ link_directories(libs/TGUI-1.11/build/lib)
 add_executable(projektGra src/main.cpp src/SnakeDetails.cpp src/ButtonCreator.cpp)
 
 
-target_link_libraries(projektGra sfml-graphics sfml-window sfml-system tgui)
+target_link_libraries(projektGra sfml-graphics sfml-window sfml-system sfml-audio tgui)
 
 set_target_properties(projektGra PROPERTIES
     BUILD_RPATH "${CMAKE_SOURCE_DIR}/libs/TGUI-1.11/build/lib"
