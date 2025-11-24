@@ -183,7 +183,6 @@
             planszaGry.setFillColor(sf::Color(25, 153, 39));
             planszaGry.setOutlineColor(sf::Color(7, 43, 11));
             planszaGry.setOutlineThickness(9);
-            planszaGry.
             planszaCanvas->draw(planszaGry);
             panel->add(planszaCanvas);
 
