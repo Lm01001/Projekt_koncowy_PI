@@ -180,9 +180,10 @@
             
             sf::RectangleShape planszaGry(sf::Vector2f(400, 400));
             planszaGry.setPosition(75, 50);
-            planszaGry.setFillColor(sf::Color(38, 117, 31));
-            planszaGry.setOutlineColor(sf::Color(22, 69, 18));
-            planszaGry.setOutlineThickness(8);
+            planszaGry.setFillColor(sf::Color(25, 153, 39));
+            planszaGry.setOutlineColor(sf::Color(7, 43, 11));
+            planszaGry.setOutlineThickness(9);
+            planszaGry.
             planszaCanvas->draw(planszaGry);
             panel->add(planszaCanvas);
 
