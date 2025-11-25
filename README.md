@@ -26,10 +26,17 @@ Szczegóły, mechaniki:
 
 
 # ***5. Instrukcja uruchomienia gry.***
-W celu uruchomienia gry należy przejść do lokalizacji folderu **build**, path to *Projekt_koncowy_PI/projectMainDir/build/* tam następnie w terminalu wpisać:<br>
+* W celu uruchomienia gry należy przejść do lokalizacji folderu **build**, path to *Projekt_koncowy_PI/projectMainDir/build/* tam następnie w terminalu wpisać:<br>
 `./projektGra`<br>
-Ewnetualnie, opcjonalnie można zrobić kolejno:<br>
-`make` <br> `./projektGra`
+Ewentualnie, opcjonalnie można zrobić kolejno:<br>    `make` <br>    `./projektGra`
+* Jeśli chcemy włączyć grę na systemie operacyjnym na Linuxie, trzeba wykonać poniższe kroki:<br>
+    * Na samym początku, jeśli nie ma się cmake to należy go pobrać: `sudo snap install cmake --classic`<br>
+    * Dodać permisje do egzekucji pliku z grą<br>    `chmod +x projektGra`
+    * Następnie pobrać biblioteki wymagane<br>    `sudo apt install libsfml-dev`<br>    
+    * Kolejno przejść do folderu **~/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build** i wpisać:<br>`cmake -DTGUI_SHARED_LIBS=ON -DTGUI_BACKEND=SFML_GRAPHICS ..`<br>
+    * Następnie:<br>`sudo make install`
+    * Po wykonaniu powyższych instrukcji przejść do folderu **~/Projekt_koncowy_PI/projectMainDir/buildLinux** i wykonać:<br>    `cmake ..`    `make`    `./projektGra`
+    * Gra powinna zostać uruchomiona bez problemu, w przypadku problemu usunąć folder *buildLinux* i utworzyć ponownie i tam instrukcje z powyższego punktu:<br>    `rm -rf buildLinux`    `mkdir buildLinux`    `cd buildLinux`    i wewnątrz wszystkie instrukcje po kolei z powyższego punktu.
 
 <div align="left">
         Autorzy:<br>
