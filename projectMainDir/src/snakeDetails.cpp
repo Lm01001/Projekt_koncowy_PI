@@ -1,4 +1,4 @@
-#include "SnakeDetails.h"
+#include "snakeDetails.h"
 #include "SnakeGUI.h"
 
 #include <iostream>

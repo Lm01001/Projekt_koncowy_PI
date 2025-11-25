@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/maksymilian/Projekt_koncowy_PI/projectMainDir/buildLinux/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

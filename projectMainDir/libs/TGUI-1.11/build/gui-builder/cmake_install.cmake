@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/gui-builder
+# Install script for directory: /home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/gui-builder
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,11 +43,11 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gui-builder" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications" TYPE FILE FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/gui-builder/tgui-gui-builder.desktop")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/applications" TYPE FILE FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/gui-builder/tgui-gui-builder.desktop")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gui-builder" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/48x48/apps" TYPE FILE FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/cmake/gui-builder/TexusGUI.png")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/icons/hicolor/48x48/apps" TYPE FILE FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/cmake/gui-builder/TexusGUI.png")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gui-builder" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -57,12 +57,12 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "gui-builder" OR NOT CMAKE_INSTALL_COMPONENT
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder/gui-builder"
          RPATH "\$ORIGIN/../../../lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder" TYPE EXECUTABLE FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/gui-builder/gui-builder")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder" TYPE EXECUTABLE FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/gui-builder/gui-builder")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder/gui-builder" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder/gui-builder")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder/gui-builder"
-         OLD_RPATH "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/lib:"
+         OLD_RPATH "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/lib:"
          NEW_RPATH "\$ORIGIN/../../../lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder/gui-builder")
@@ -71,16 +71,16 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "gui-builder" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gui-builder" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder" TYPE DIRECTORY FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/gui-builder/resources")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder" TYPE DIRECTORY FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/gui-builder/resources")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "gui-builder" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder" TYPE DIRECTORY FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/themes")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/tgui-1/gui-builder" TYPE DIRECTORY FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/themes")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/gui-builder/install_local_manifest.txt"
+  file(WRITE "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/gui-builder/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

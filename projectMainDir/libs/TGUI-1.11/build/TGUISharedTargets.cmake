@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.3")
    message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.3...3.31)
+cmake_policy(VERSION 2.8.3...4.0)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -52,14 +52,14 @@ add_library(TGUI::TGUI SHARED IMPORTED)
 set_target_properties(TGUI::TGUI PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "TGUI_DYNAMIC"
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
-  INTERFACE_INCLUDE_DIRECTORIES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/include"
   INTERFACE_LINK_LIBRARIES "sfml-graphics"
 )
 
 # Import target "TGUI::TGUI" for configuration "Release"
 set_property(TARGET TGUI::TGUI APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(TGUI::TGUI PROPERTIES
-  IMPORTED_LOCATION_RELEASE "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/lib/libtgui.so.1.11.0"
+  IMPORTED_LOCATION_RELEASE "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/lib/libtgui.so.1.11.0"
   IMPORTED_SONAME_RELEASE "libtgui.so.1.11.0"
   )
 

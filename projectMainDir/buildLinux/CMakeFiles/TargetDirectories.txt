@@ -1,0 +1,3 @@
+/home/maksymilian/Projekt_koncowy_PI/projectMainDir/buildLinux/CMakeFiles/projektGra.dir
+/home/maksymilian/Projekt_koncowy_PI/projectMainDir/buildLinux/CMakeFiles/edit_cache.dir
+/home/maksymilian/Projekt_koncowy_PI/projectMainDir/buildLinux/CMakeFiles/rebuild_cache.dir

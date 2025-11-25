@@ -11,7 +11,7 @@ include_directories(resources)
 # Zastepuje -L przy linkowaniu w komendzie
 link_directories(libs/TGUI-1.11/build/lib)
 
-add_executable(projektGra src/main.cpp src/SnakeDetails.cpp src/ButtonCreator.cpp)
+add_executable(projektGra src/main.cpp src/snakeDetails.cpp src/ButtonCreator.cpp)
 
 
 target_link_libraries(projektGra sfml-graphics sfml-window sfml-system sfml-audio tgui)

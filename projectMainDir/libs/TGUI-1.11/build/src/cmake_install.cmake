@@ -1,8 +1,8 @@
-# Install script for directory: /mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/src
+# Install script for directory: /home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,7 +49,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtgui.so.1.11.0"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/lib/libtgui.so.1.11.0")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/lib/libtgui.so.1.11.0")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtgui.so.1.11.0" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libtgui.so.1.11.0")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -59,14 +59,14 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "bin" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/lib/libtgui.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/lib/libtgui.so")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/TGUI/TGUISharedTargets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/TGUI/TGUISharedTargets.cmake"
-         "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/src/CMakeFiles/Export/36a674cdf324870c851ff74a1da5415f/TGUISharedTargets.cmake")
+         "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/src/CMakeFiles/Export/36a674cdf324870c851ff74a1da5415f/TGUISharedTargets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/TGUI/TGUISharedTargets-*.cmake")
       if(_cmake_old_config_files)
@@ -79,22 +79,22 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TGUI" TYPE FILE FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/src/CMakeFiles/Export/36a674cdf324870c851ff74a1da5415f/TGUISharedTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TGUI" TYPE FILE FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/src/CMakeFiles/Export/36a674cdf324870c851ff74a1da5415f/TGUISharedTargets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TGUI" TYPE FILE FILES "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/src/CMakeFiles/Export/36a674cdf324870c851ff74a1da5415f/TGUISharedTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TGUI" TYPE FILE FILES "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/src/CMakeFiles/Export/36a674cdf324870c851ff74a1da5415f/TGUISharedTargets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/TGUI" TYPE FILE FILES
-    "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/TGUIConfig.cmake"
-    "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/TGUIConfigVersion.cmake"
+    "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/TGUIConfig.cmake"
+    "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/TGUIConfigVersion.cmake"
     )
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/src/install_local_manifest.txt"
+  file(WRITE "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build/src/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

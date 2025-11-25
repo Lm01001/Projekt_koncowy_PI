@@ -11,7 +11,7 @@
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
 
-#include "SnakeDetails.h"
+#include "snakeDetails.h"
 #include "SnakeGUI.h"
 #include "ButtonScenesPropertiesClass.h"
 #include "SlidersAndCheckbox.h"

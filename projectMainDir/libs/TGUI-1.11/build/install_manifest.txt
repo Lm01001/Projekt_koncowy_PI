@@ -1,446 +1,446 @@
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/lib/libtgui.so.1.11.0
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/lib/libtgui.so
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/lib/cmake/TGUI/TGUISharedTargets.cmake
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/lib/cmake/TGUI/TGUISharedTargets-release.cmake
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/lib/cmake/TGUI/TGUIConfig.cmake
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/lib/cmake/TGUI/TGUIConfigVersion.cmake
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/applications/tgui-gui-builder.desktop
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/icons/hicolor/48x48/apps/TexusGUI.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/gui-builder
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/ArrowDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/ArrowUp.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/DefaultPicture.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/About.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/EditingScreen.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/EditThemes.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/KeyboardShortcuts.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/SetChildWindowTitleButtons.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/SetEditBoxInputValidator.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/SetListViewColumns.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/SetMultilineString.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/SetOutline.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/SetStringList.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/SetTextStyle.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/SetTexture.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/forms/StartScreen.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/Icon.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/Info.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/LoadFile.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/NewFile.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/SelectionSquare.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/SelectionSquare.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/Transparent.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/Trash.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/BitmapButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Button.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ChatBox.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/CheckBox.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ChildWindow.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ClickableWidget.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ComboBox.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/EditBox.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/EditBoxSlider.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Group.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/GrowHorizontalLayout.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/GrowVerticalLayout.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/HorizontalLayout.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/HorizontalWrap.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Knob.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Label.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ListBox.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ListView.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/MenuBar.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/MessageBox.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Panel.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/PanelListBox.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Picture.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ProgressBar.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/RadioButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/RangeSlider.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/RichTextLabel.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ScrollablePanel.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Scrollbar.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/SeparatorLine.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Slider.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/SpinButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/SpinControl.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/SplitContainer.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/Tabs.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/TextArea.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/ToggleButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/TreeView.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/resources/widget-icons/VerticalLayout.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/BabyBlue.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/BabyBlue.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/Black.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/Black.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/.gitignore
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/Black.txt.in
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/generate.py
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ArrowDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ArrowDownHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ArrowUp.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ArrowUpHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/Background.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ButtonBackground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ButtonBackgroundDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ButtonBackgroundFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ButtonBackgroundHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxChecked.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxCheckedFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxCheckedHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxUnchecked.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxUncheckedFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxUncheckedHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CloseButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CloseButtonDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/CloseButtonHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ComboBoxArrow.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ComboBoxArrowHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/EditBoxBackground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/EditBoxBackgroundFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/EditBoxBackgroundHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MaximizeButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MaximizeButtonDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MaximizeButtonHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MenuBarItem.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MenuBarItemSelected.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MenuBarMenu.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MinimizeButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MinimizeButtonDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/MinimizeButtonHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ProgressBarBackground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ProgressBarForeground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonChecked.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonCheckedFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonCheckedHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonUnchecked.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonUncheckedFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonUncheckedHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ScrollbarThumb.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ScrollbarThumbHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ScrollbarTrack.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/ScrollbarTrackHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/SliderThumb.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/SliderTrack.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/SliderTrackHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/TabBackground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/TabBackgroundSelected.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/images/TitleBar.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/development/Black/README.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/More themes.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/themes/TransparentGrey.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/lib/pkgconfig/tgui.pc
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/AbsoluteOrRelativeValue.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/AllWidgets.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Animation.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Any.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Font/BackendFont.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Font/BackendFontFactory.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Font/FreeType/BackendFontFreeType.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Font/Raylib/BackendFontRaylib.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Font/SDL_ttf/BackendFontSDLttf.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Font/SFML-Graphics/BackendFontSFML.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/GLFW-GLES2.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/GLFW-OpenGL3.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/raylib.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/BackendRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/BackendRenderTarget.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/BackendText.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/BackendTexture.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/GLES2/BackendRendererGLES2.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/GLES2/BackendRenderTargetGLES2.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/GLES2/BackendTextureGLES2.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/GLES2/CanvasGLES2.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/OpenGL.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/OpenGL3/BackendRendererOpenGL3.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/OpenGL3/BackendRenderTargetOpenGL3.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/OpenGL3/BackendTextureOpenGL3.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/OpenGL3/CanvasOpenGL3.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/Raylib/BackendRendererRaylib.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/Raylib/BackendRenderTargetRaylib.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/Raylib/BackendTextureRaylib.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/Raylib/CanvasRaylib.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SDL_GPU/BackendRendererSDLGPU.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SDL_GPU/BackendRenderTargetSDLGPU.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SDL_GPU/BackendTextureSDLGPU.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SDL_GPU/CanvasSDLGPU.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SDL_Renderer/BackendRendererSDL.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SDL_Renderer/BackendRenderTargetSDL.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SDL_Renderer/BackendTextureSDL.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SDL_Renderer/CanvasSDL.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SFML-Graphics/BackendRendererSFML.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SFML-Graphics/BackendRenderTargetSFML.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SFML-Graphics/BackendTextureSFML.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Renderer/SFML-Graphics/CanvasSFML.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/SDL-GLES2.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/SDL-GPU.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/SDL-OpenGL3.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/SDL-Renderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/SDL-TTF-GLES2.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/SDL-TTF-OpenGL3.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/SFML-Graphics.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/SFML-OpenGL3.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/Backend.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/BackendGui.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/GLFW/BackendGLFW.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/GLFW/BackendGuiGLFW.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/Raylib/BackendGuiRaylib.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/Raylib/BackendRaylib.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/SDL/BackendGuiSDL.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/SDL/BackendSDL.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/SFML/BackendGuiSFML.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Backend/Window/SFML/BackendSFML.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Base64.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Color.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Components.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Config.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Container.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/CopiedPtr.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/CopiedSharedPtr.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Core.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Cursor.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/CustomWidgetForBindings.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/DefaultBackendWindow.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/DefaultFont.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Duration.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Event.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Exception.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Config.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Dispatch/Detail/DoubleDispatcher.inl
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Dispatch/Detail/SingleDispatcher.inl
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Dispatch/DispatchTraits.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Dispatch/DoubleDispatcher.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Dispatch/SingleDispatcher.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Dispatch.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/License.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Meta/Preprocessor.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Meta/Templates.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Meta/Tuple.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Meta/Variadic.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Meta.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/README.md
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/SmartPtr/ClonersAndDeleters.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/SmartPtr/CopiedPtr.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/SmartPtr/Detail/Factories.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/SmartPtr/Detail/PtrOwner.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/SmartPtr/MakeUnique.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/SmartPtr.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/Algorithms.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/Any.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/Downcast.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/Exceptions.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/ForEach.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/Hash.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/NamedTuple.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/NonCopyable.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/Optional.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/PImpl.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/SafeBool.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/Swap.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools/Typeid.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/Aurora/Tools.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/glad/gl.h
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/glad/LICENSE
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/IncludeNanoSVG.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/IncludeSDL.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/IncludeStbImage.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/IncludeStbImageWrite.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/IncludeWindows.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/nanosvg/LICENSE.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/nanosvg/nanosvg.h
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/nanosvg/nanosvgrast.h
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/nanosvg/README.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/stb/LICENSE
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/stb/stb_image.h
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/extlibs/stb/stb_image_write.h
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/FileDialogIconLoader.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Filesystem.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Font.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Global.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Keyboard.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Layout.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/DataIO.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/Deserializer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/ImageLoader.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/Serializer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/Theme.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/ThemeLoader.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Loading/WidgetFactory.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/ObjectConverter.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Optional.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Outline.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Rect.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/RelFloatRect.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/RendererDefines.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/BoxLayoutRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ButtonRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ChatBoxRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/CheckBoxRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ChildWindowRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ColorPickerRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ComboBoxRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ContextMenuRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/EditBoxRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/FileDialogRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/GroupRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/KnobRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/LabelRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ListBoxRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ListViewRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/MenuBarRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/MenuWidgetBaseRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/MessageBoxRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/PanelListBoxRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/PanelRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/PictureRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ProgressBarRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/RadioButtonRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/RangeSliderRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ScrollablePanelRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/ScrollbarRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/SeparatorLineRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/SliderRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/SpinButtonRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/SplitContainerRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/TabsRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/TextAreaRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/TextBoxRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/TreeViewRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Renderers/WidgetRenderer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/RenderStates.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Signal.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/SignalManager.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Sprite.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/String.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/StringView.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/SubwidgetContainer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/SvgImage.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Text.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/TextStyle.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Texture.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/TextureData.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/TextureManager.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/TGUI.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Timer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/ToolTip.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Transform.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/TwoFingerScrollDetect.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Utf.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Variant.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Vector2.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Vertex.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widget.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/BitmapButton.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/BoxLayout.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/BoxLayoutRatios.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Button.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ButtonBase.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/CanvasBase.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ChatBox.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/CheckBox.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ChildWindow.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ClickableWidget.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ColorPicker.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ComboBox.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ContextMenu.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/EditBox.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/EditBoxSlider.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/FileDialog.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Grid.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Group.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/GrowHorizontalLayout.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/GrowVerticalLayout.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/HorizontalLayout.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/HorizontalWrap.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Knob.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Label.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ListBox.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ListView.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/MenuBar.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/MenuWidgetBase.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/MessageBox.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Panel.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/PanelListBox.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Picture.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ProgressBar.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/RadioButton.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/RadioButtonGroup.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/RangeSlider.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/RichTextLabel.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ScrollablePanel.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Scrollbar.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/SeparatorLine.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Slider.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/SpinButton.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/SpinControl.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/SplitContainer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/TabContainer.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/Tabs.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/TextArea.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/ToggleButton.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/TreeView.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/Widgets/VerticalLayout.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include/TGUI/WindowsIMM.hpp
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/doc/TGUI/license.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/doc/TGUI/README.md
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/BabyBlue.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/BabyBlue.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/Black.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/Black.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/.gitignore
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/Black.txt.in
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/generate.py
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ArrowDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ArrowDownHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ArrowUp.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ArrowUpHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/Background.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ButtonBackground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ButtonBackgroundDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ButtonBackgroundFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ButtonBackgroundHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CheckBoxChecked.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CheckBoxCheckedFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CheckBoxCheckedHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CheckBoxUnchecked.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CheckBoxUncheckedFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CheckBoxUncheckedHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CloseButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CloseButtonDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/CloseButtonHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ComboBoxArrow.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ComboBoxArrowHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/EditBoxBackground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/EditBoxBackgroundFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/EditBoxBackgroundHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MaximizeButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MaximizeButtonDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MaximizeButtonHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MenuBarItem.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MenuBarItemSelected.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MenuBarMenu.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MinimizeButton.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MinimizeButtonDown.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/MinimizeButtonHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ProgressBarBackground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ProgressBarForeground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/RadioButtonChecked.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/RadioButtonCheckedFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/RadioButtonCheckedHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/RadioButtonUnchecked.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/RadioButtonUncheckedFocused.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/RadioButtonUncheckedHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ScrollbarThumb.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ScrollbarThumbHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ScrollbarTrack.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/ScrollbarTrackHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/SliderThumb.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/SliderTrack.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/SliderTrackHover.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/TabBackground.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/TabBackgroundSelected.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/images/TitleBar.png
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/development/Black/README.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/More themes.txt
-/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/themes/TransparentGrey.txt
+/usr/local/lib/libtgui.so.1.11.0
+/usr/local/lib/libtgui.so
+/usr/local/lib/cmake/TGUI/TGUISharedTargets.cmake
+/usr/local/lib/cmake/TGUI/TGUISharedTargets-release.cmake
+/usr/local/lib/cmake/TGUI/TGUIConfig.cmake
+/usr/local/lib/cmake/TGUI/TGUIConfigVersion.cmake
+/usr/local/share/applications/tgui-gui-builder.desktop
+/usr/local/share/icons/hicolor/48x48/apps/TexusGUI.png
+/usr/local/share/tgui-1/gui-builder/gui-builder
+/usr/local/share/tgui-1/gui-builder/resources/LoadFile.png
+/usr/local/share/tgui-1/gui-builder/resources/SelectionSquare.txt
+/usr/local/share/tgui-1/gui-builder/resources/Icon.png
+/usr/local/share/tgui-1/gui-builder/resources/Transparent.png
+/usr/local/share/tgui-1/gui-builder/resources/ArrowUp.png
+/usr/local/share/tgui-1/gui-builder/resources/SelectionSquare.png
+/usr/local/share/tgui-1/gui-builder/resources/NewFile.png
+/usr/local/share/tgui-1/gui-builder/resources/Trash.png
+/usr/local/share/tgui-1/gui-builder/resources/forms/SetMultilineString.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/SetChildWindowTitleButtons.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/SetStringList.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/StartScreen.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/About.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/KeyboardShortcuts.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/SetEditBoxInputValidator.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/SetTexture.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/SetTextStyle.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/EditThemes.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/EditingScreen.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/SetListViewColumns.txt
+/usr/local/share/tgui-1/gui-builder/resources/forms/SetOutline.txt
+/usr/local/share/tgui-1/gui-builder/resources/ArrowDown.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Slider.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/SpinControl.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/PanelListBox.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/RichTextLabel.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/RangeSlider.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Scrollbar.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/RadioButton.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/SeparatorLine.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/GrowVerticalLayout.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/MenuBar.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Tabs.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Panel.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/TextArea.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ListBox.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ScrollablePanel.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ChildWindow.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ClickableWidget.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ListView.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/HorizontalWrap.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/BitmapButton.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Button.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/SpinButton.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/TreeView.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/VerticalLayout.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Picture.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Label.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ProgressBar.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/CheckBox.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Group.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/EditBox.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ToggleButton.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/SplitContainer.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/EditBoxSlider.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ComboBox.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/Knob.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/HorizontalLayout.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/ChatBox.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/MessageBox.png
+/usr/local/share/tgui-1/gui-builder/resources/widget-icons/GrowHorizontalLayout.png
+/usr/local/share/tgui-1/gui-builder/resources/DefaultPicture.png
+/usr/local/share/tgui-1/gui-builder/resources/Info.png
+/usr/local/share/tgui-1/gui-builder/themes/BabyBlue.png
+/usr/local/share/tgui-1/gui-builder/themes/More themes.txt
+/usr/local/share/tgui-1/gui-builder/themes/Black.txt
+/usr/local/share/tgui-1/gui-builder/themes/Black.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/README.txt
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/generate.py
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/Black.txt.in
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MaximizeButton.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/SliderThumb.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ButtonBackground.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonUncheckedFocused.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ProgressBarForeground.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxUncheckedFocused.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ProgressBarBackground.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/SliderTrackHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxChecked.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MinimizeButtonHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ScrollbarTrack.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonCheckedHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ButtonBackgroundHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonCheckedFocused.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/TabBackgroundSelected.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/EditBoxBackgroundFocused.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ButtonBackgroundDown.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ArrowUp.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxCheckedFocused.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/TitleBar.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MenuBarItemSelected.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/SliderTrack.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxCheckedHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MaximizeButtonDown.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ButtonBackgroundFocused.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MinimizeButton.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ArrowUpHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MenuBarMenu.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ArrowDownHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CloseButtonHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ScrollbarThumbHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxUnchecked.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonChecked.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MaximizeButtonHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ScrollbarTrackHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ArrowDown.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CloseButton.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ComboBoxArrowHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ComboBoxArrow.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonUnchecked.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MenuBarItem.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/MinimizeButtonDown.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/EditBoxBackgroundHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/EditBoxBackground.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/RadioButtonUncheckedHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CloseButtonDown.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/ScrollbarThumb.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/TabBackground.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/Background.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/images/CheckBoxUncheckedHover.png
+/usr/local/share/tgui-1/gui-builder/themes/development/Black/.gitignore
+/usr/local/share/tgui-1/gui-builder/themes/TransparentGrey.txt
+/usr/local/share/tgui-1/gui-builder/themes/BabyBlue.txt
+/usr/local/lib/pkgconfig/tgui.pc
+/usr/local/include/TGUI/Text.hpp
+/usr/local/include/TGUI/Signal.hpp
+/usr/local/include/TGUI/Optional.hpp
+/usr/local/include/TGUI/TextureManager.hpp
+/usr/local/include/TGUI/Components.hpp
+/usr/local/include/TGUI/CopiedPtr.hpp
+/usr/local/include/TGUI/Rect.hpp
+/usr/local/include/TGUI/Base64.hpp
+/usr/local/include/TGUI/Container.hpp
+/usr/local/include/TGUI/SignalManager.hpp
+/usr/local/include/TGUI/Timer.hpp
+/usr/local/include/TGUI/TwoFingerScrollDetect.hpp
+/usr/local/include/TGUI/RendererDefines.hpp
+/usr/local/include/TGUI/StringView.hpp
+/usr/local/include/TGUI/Sprite.hpp
+/usr/local/include/TGUI/Cursor.hpp
+/usr/local/include/TGUI/Utf.hpp
+/usr/local/include/TGUI/Renderers/SpinButtonRenderer.hpp
+/usr/local/include/TGUI/Renderers/RangeSliderRenderer.hpp
+/usr/local/include/TGUI/Renderers/TabsRenderer.hpp
+/usr/local/include/TGUI/Renderers/SplitContainerRenderer.hpp
+/usr/local/include/TGUI/Renderers/ListBoxRenderer.hpp
+/usr/local/include/TGUI/Renderers/TextBoxRenderer.hpp
+/usr/local/include/TGUI/Renderers/ChildWindowRenderer.hpp
+/usr/local/include/TGUI/Renderers/MenuWidgetBaseRenderer.hpp
+/usr/local/include/TGUI/Renderers/GroupRenderer.hpp
+/usr/local/include/TGUI/Renderers/ChatBoxRenderer.hpp
+/usr/local/include/TGUI/Renderers/PictureRenderer.hpp
+/usr/local/include/TGUI/Renderers/SliderRenderer.hpp
+/usr/local/include/TGUI/Renderers/MessageBoxRenderer.hpp
+/usr/local/include/TGUI/Renderers/MenuBarRenderer.hpp
+/usr/local/include/TGUI/Renderers/FileDialogRenderer.hpp
+/usr/local/include/TGUI/Renderers/ProgressBarRenderer.hpp
+/usr/local/include/TGUI/Renderers/RadioButtonRenderer.hpp
+/usr/local/include/TGUI/Renderers/ScrollablePanelRenderer.hpp
+/usr/local/include/TGUI/Renderers/ListViewRenderer.hpp
+/usr/local/include/TGUI/Renderers/EditBoxRenderer.hpp
+/usr/local/include/TGUI/Renderers/ScrollbarRenderer.hpp
+/usr/local/include/TGUI/Renderers/TextAreaRenderer.hpp
+/usr/local/include/TGUI/Renderers/PanelListBoxRenderer.hpp
+/usr/local/include/TGUI/Renderers/CheckBoxRenderer.hpp
+/usr/local/include/TGUI/Renderers/PanelRenderer.hpp
+/usr/local/include/TGUI/Renderers/ColorPickerRenderer.hpp
+/usr/local/include/TGUI/Renderers/LabelRenderer.hpp
+/usr/local/include/TGUI/Renderers/BoxLayoutRenderer.hpp
+/usr/local/include/TGUI/Renderers/TreeViewRenderer.hpp
+/usr/local/include/TGUI/Renderers/ContextMenuRenderer.hpp
+/usr/local/include/TGUI/Renderers/ComboBoxRenderer.hpp
+/usr/local/include/TGUI/Renderers/ButtonRenderer.hpp
+/usr/local/include/TGUI/Renderers/SeparatorLineRenderer.hpp
+/usr/local/include/TGUI/Renderers/WidgetRenderer.hpp
+/usr/local/include/TGUI/Renderers/KnobRenderer.hpp
+/usr/local/include/TGUI/Animation.hpp
+/usr/local/include/TGUI/Variant.hpp
+/usr/local/include/TGUI/Texture.hpp
+/usr/local/include/TGUI/Event.hpp
+/usr/local/include/TGUI/Widgets/TextArea.hpp
+/usr/local/include/TGUI/Widgets/FileDialog.hpp
+/usr/local/include/TGUI/Widgets/CanvasBase.hpp
+/usr/local/include/TGUI/Widgets/TreeView.hpp
+/usr/local/include/TGUI/Widgets/SplitContainer.hpp
+/usr/local/include/TGUI/Widgets/BoxLayoutRatios.hpp
+/usr/local/include/TGUI/Widgets/ScrollablePanel.hpp
+/usr/local/include/TGUI/Widgets/ComboBox.hpp
+/usr/local/include/TGUI/Widgets/ChildWindow.hpp
+/usr/local/include/TGUI/Widgets/Tabs.hpp
+/usr/local/include/TGUI/Widgets/ChatBox.hpp
+/usr/local/include/TGUI/Widgets/ClickableWidget.hpp
+/usr/local/include/TGUI/Widgets/RichTextLabel.hpp
+/usr/local/include/TGUI/Widgets/ToggleButton.hpp
+/usr/local/include/TGUI/Widgets/MenuBar.hpp
+/usr/local/include/TGUI/Widgets/ColorPicker.hpp
+/usr/local/include/TGUI/Widgets/RadioButtonGroup.hpp
+/usr/local/include/TGUI/Widgets/Grid.hpp
+/usr/local/include/TGUI/Widgets/HorizontalLayout.hpp
+/usr/local/include/TGUI/Widgets/EditBoxSlider.hpp
+/usr/local/include/TGUI/Widgets/EditBox.hpp
+/usr/local/include/TGUI/Widgets/ListBox.hpp
+/usr/local/include/TGUI/Widgets/Slider.hpp
+/usr/local/include/TGUI/Widgets/Panel.hpp
+/usr/local/include/TGUI/Widgets/MessageBox.hpp
+/usr/local/include/TGUI/Widgets/Group.hpp
+/usr/local/include/TGUI/Widgets/GrowVerticalLayout.hpp
+/usr/local/include/TGUI/Widgets/BoxLayout.hpp
+/usr/local/include/TGUI/Widgets/SpinControl.hpp
+/usr/local/include/TGUI/Widgets/ContextMenu.hpp
+/usr/local/include/TGUI/Widgets/GrowHorizontalLayout.hpp
+/usr/local/include/TGUI/Widgets/ProgressBar.hpp
+/usr/local/include/TGUI/Widgets/Label.hpp
+/usr/local/include/TGUI/Widgets/TabContainer.hpp
+/usr/local/include/TGUI/Widgets/PanelListBox.hpp
+/usr/local/include/TGUI/Widgets/Picture.hpp
+/usr/local/include/TGUI/Widgets/Scrollbar.hpp
+/usr/local/include/TGUI/Widgets/ButtonBase.hpp
+/usr/local/include/TGUI/Widgets/HorizontalWrap.hpp
+/usr/local/include/TGUI/Widgets/ListView.hpp
+/usr/local/include/TGUI/Widgets/VerticalLayout.hpp
+/usr/local/include/TGUI/Widgets/SpinButton.hpp
+/usr/local/include/TGUI/Widgets/SeparatorLine.hpp
+/usr/local/include/TGUI/Widgets/MenuWidgetBase.hpp
+/usr/local/include/TGUI/Widgets/RangeSlider.hpp
+/usr/local/include/TGUI/Widgets/Button.hpp
+/usr/local/include/TGUI/Widgets/RadioButton.hpp
+/usr/local/include/TGUI/Widgets/CheckBox.hpp
+/usr/local/include/TGUI/Widgets/BitmapButton.hpp
+/usr/local/include/TGUI/Widgets/Knob.hpp
+/usr/local/include/TGUI/CustomWidgetForBindings.hpp
+/usr/local/include/TGUI/TGUI.hpp
+/usr/local/include/TGUI/Color.hpp
+/usr/local/include/TGUI/TextStyle.hpp
+/usr/local/include/TGUI/Loading/ThemeLoader.hpp
+/usr/local/include/TGUI/Loading/ImageLoader.hpp
+/usr/local/include/TGUI/Loading/Serializer.hpp
+/usr/local/include/TGUI/Loading/DataIO.hpp
+/usr/local/include/TGUI/Loading/Deserializer.hpp
+/usr/local/include/TGUI/Loading/WidgetFactory.hpp
+/usr/local/include/TGUI/Loading/Theme.hpp
+/usr/local/include/TGUI/WindowsIMM.hpp
+/usr/local/include/TGUI/CopiedSharedPtr.hpp
+/usr/local/include/TGUI/ObjectConverter.hpp
+/usr/local/include/TGUI/Outline.hpp
+/usr/local/include/TGUI/String.hpp
+/usr/local/include/TGUI/Vertex.hpp
+/usr/local/include/TGUI/SubwidgetContainer.hpp
+/usr/local/include/TGUI/AbsoluteOrRelativeValue.hpp
+/usr/local/include/TGUI/Backend/SDL-TTF-GLES2.hpp
+/usr/local/include/TGUI/Backend/SFML-Graphics.hpp
+/usr/local/include/TGUI/Backend/SDL-Renderer.hpp
+/usr/local/include/TGUI/Backend/SDL-OpenGL3.hpp
+/usr/local/include/TGUI/Backend/SDL-GLES2.hpp
+/usr/local/include/TGUI/Backend/GLFW-GLES2.hpp
+/usr/local/include/TGUI/Backend/SDL-TTF-OpenGL3.hpp
+/usr/local/include/TGUI/Backend/SFML-OpenGL3.hpp
+/usr/local/include/TGUI/Backend/GLFW-OpenGL3.hpp
+/usr/local/include/TGUI/Backend/SDL-GPU.hpp
+/usr/local/include/TGUI/Backend/Window/SDL/BackendSDL.hpp
+/usr/local/include/TGUI/Backend/Window/SDL/BackendGuiSDL.hpp
+/usr/local/include/TGUI/Backend/Window/BackendGui.hpp
+/usr/local/include/TGUI/Backend/Window/GLFW/BackendGuiGLFW.hpp
+/usr/local/include/TGUI/Backend/Window/GLFW/BackendGLFW.hpp
+/usr/local/include/TGUI/Backend/Window/SFML/BackendSFML.hpp
+/usr/local/include/TGUI/Backend/Window/SFML/BackendGuiSFML.hpp
+/usr/local/include/TGUI/Backend/Window/Raylib/BackendGuiRaylib.hpp
+/usr/local/include/TGUI/Backend/Window/Raylib/BackendRaylib.hpp
+/usr/local/include/TGUI/Backend/Window/Backend.hpp
+/usr/local/include/TGUI/Backend/Font/SFML-Graphics/BackendFontSFML.hpp
+/usr/local/include/TGUI/Backend/Font/BackendFont.hpp
+/usr/local/include/TGUI/Backend/Font/FreeType/BackendFontFreeType.hpp
+/usr/local/include/TGUI/Backend/Font/SDL_ttf/BackendFontSDLttf.hpp
+/usr/local/include/TGUI/Backend/Font/BackendFontFactory.hpp
+/usr/local/include/TGUI/Backend/Font/Raylib/BackendFontRaylib.hpp
+/usr/local/include/TGUI/Backend/raylib.hpp
+/usr/local/include/TGUI/Backend/Renderer/SFML-Graphics/BackendTextureSFML.hpp
+/usr/local/include/TGUI/Backend/Renderer/SFML-Graphics/BackendRendererSFML.hpp
+/usr/local/include/TGUI/Backend/Renderer/SFML-Graphics/BackendRenderTargetSFML.hpp
+/usr/local/include/TGUI/Backend/Renderer/SFML-Graphics/CanvasSFML.hpp
+/usr/local/include/TGUI/Backend/Renderer/OpenGL3/BackendTextureOpenGL3.hpp
+/usr/local/include/TGUI/Backend/Renderer/OpenGL3/BackendRenderTargetOpenGL3.hpp
+/usr/local/include/TGUI/Backend/Renderer/OpenGL3/BackendRendererOpenGL3.hpp
+/usr/local/include/TGUI/Backend/Renderer/OpenGL3/CanvasOpenGL3.hpp
+/usr/local/include/TGUI/Backend/Renderer/BackendRenderer.hpp
+/usr/local/include/TGUI/Backend/Renderer/GLES2/BackendRendererGLES2.hpp
+/usr/local/include/TGUI/Backend/Renderer/GLES2/BackendRenderTargetGLES2.hpp
+/usr/local/include/TGUI/Backend/Renderer/GLES2/BackendTextureGLES2.hpp
+/usr/local/include/TGUI/Backend/Renderer/GLES2/CanvasGLES2.hpp
+/usr/local/include/TGUI/Backend/Renderer/BackendRenderTarget.hpp
+/usr/local/include/TGUI/Backend/Renderer/BackendText.hpp
+/usr/local/include/TGUI/Backend/Renderer/SDL_GPU/BackendRenderTargetSDLGPU.hpp
+/usr/local/include/TGUI/Backend/Renderer/SDL_GPU/CanvasSDLGPU.hpp
+/usr/local/include/TGUI/Backend/Renderer/SDL_GPU/BackendTextureSDLGPU.hpp
+/usr/local/include/TGUI/Backend/Renderer/SDL_GPU/BackendRendererSDLGPU.hpp
+/usr/local/include/TGUI/Backend/Renderer/OpenGL.hpp
+/usr/local/include/TGUI/Backend/Renderer/BackendTexture.hpp
+/usr/local/include/TGUI/Backend/Renderer/Raylib/CanvasRaylib.hpp
+/usr/local/include/TGUI/Backend/Renderer/Raylib/BackendRenderTargetRaylib.hpp
+/usr/local/include/TGUI/Backend/Renderer/Raylib/BackendRendererRaylib.hpp
+/usr/local/include/TGUI/Backend/Renderer/Raylib/BackendTextureRaylib.hpp
+/usr/local/include/TGUI/Backend/Renderer/SDL_Renderer/BackendTextureSDL.hpp
+/usr/local/include/TGUI/Backend/Renderer/SDL_Renderer/CanvasSDL.hpp
+/usr/local/include/TGUI/Backend/Renderer/SDL_Renderer/BackendRenderTargetSDL.hpp
+/usr/local/include/TGUI/Backend/Renderer/SDL_Renderer/BackendRendererSDL.hpp
+/usr/local/include/TGUI/RelFloatRect.hpp
+/usr/local/include/TGUI/RenderStates.hpp
+/usr/local/include/TGUI/Duration.hpp
+/usr/local/include/TGUI/ToolTip.hpp
+/usr/local/include/TGUI/Layout.hpp
+/usr/local/include/TGUI/Core.hpp
+/usr/local/include/TGUI/DefaultBackendWindow.hpp
+/usr/local/include/TGUI/SvgImage.hpp
+/usr/local/include/TGUI/Vector2.hpp
+/usr/local/include/TGUI/Transform.hpp
+/usr/local/include/TGUI/DefaultFont.hpp
+/usr/local/include/TGUI/Any.hpp
+/usr/local/include/TGUI/extlibs/IncludeWindows.hpp
+/usr/local/include/TGUI/extlibs/Aurora/README.md
+/usr/local/include/TGUI/extlibs/Aurora/SmartPtr.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Dispatch/Detail/DoubleDispatcher.inl
+/usr/local/include/TGUI/extlibs/Aurora/Dispatch/Detail/SingleDispatcher.inl
+/usr/local/include/TGUI/extlibs/Aurora/Dispatch/DoubleDispatcher.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Dispatch/SingleDispatcher.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Dispatch/DispatchTraits.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Dispatch.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Meta.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/NonCopyable.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/Optional.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/Downcast.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/Algorithms.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/PImpl.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/Exceptions.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/ForEach.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/Hash.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/NamedTuple.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/Swap.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/Typeid.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/SafeBool.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools/Any.hpp
+/usr/local/include/TGUI/extlibs/Aurora/SmartPtr/CopiedPtr.hpp
+/usr/local/include/TGUI/extlibs/Aurora/SmartPtr/Detail/PtrOwner.hpp
+/usr/local/include/TGUI/extlibs/Aurora/SmartPtr/Detail/Factories.hpp
+/usr/local/include/TGUI/extlibs/Aurora/SmartPtr/ClonersAndDeleters.hpp
+/usr/local/include/TGUI/extlibs/Aurora/SmartPtr/MakeUnique.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Tools.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Meta/Preprocessor.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Meta/Variadic.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Meta/Tuple.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Meta/Templates.hpp
+/usr/local/include/TGUI/extlibs/Aurora/Config.hpp
+/usr/local/include/TGUI/extlibs/Aurora/License.txt
+/usr/local/include/TGUI/extlibs/nanosvg/README.txt
+/usr/local/include/TGUI/extlibs/nanosvg/nanosvgrast.h
+/usr/local/include/TGUI/extlibs/nanosvg/nanosvg.h
+/usr/local/include/TGUI/extlibs/nanosvg/LICENSE.txt
+/usr/local/include/TGUI/extlibs/stb/stb_image.h
+/usr/local/include/TGUI/extlibs/stb/stb_image_write.h
+/usr/local/include/TGUI/extlibs/stb/LICENSE
+/usr/local/include/TGUI/extlibs/IncludeNanoSVG.hpp
+/usr/local/include/TGUI/extlibs/IncludeSDL.hpp
+/usr/local/include/TGUI/extlibs/glad/gl.h
+/usr/local/include/TGUI/extlibs/glad/LICENSE
+/usr/local/include/TGUI/extlibs/IncludeStbImageWrite.hpp
+/usr/local/include/TGUI/extlibs/IncludeStbImage.hpp
+/usr/local/include/TGUI/Widget.hpp
+/usr/local/include/TGUI/Font.hpp
+/usr/local/include/TGUI/Global.hpp
+/usr/local/include/TGUI/Exception.hpp
+/usr/local/include/TGUI/Filesystem.hpp
+/usr/local/include/TGUI/TextureData.hpp
+/usr/local/include/TGUI/Config.hpp
+/usr/local/include/TGUI/AllWidgets.hpp
+/usr/local/include/TGUI/FileDialogIconLoader.hpp
+/usr/local/include/TGUI/Keyboard.hpp
+/usr/local/share/doc/TGUI/license.txt
+/usr/local/share/doc/TGUI/README.md
+/usr/local/share/tgui-1/themes/BabyBlue.png
+/usr/local/share/tgui-1/themes/More themes.txt
+/usr/local/share/tgui-1/themes/Black.txt
+/usr/local/share/tgui-1/themes/Black.png
+/usr/local/share/tgui-1/themes/development/Black/README.txt
+/usr/local/share/tgui-1/themes/development/Black/generate.py
+/usr/local/share/tgui-1/themes/development/Black/Black.txt.in
+/usr/local/share/tgui-1/themes/development/Black/images/MaximizeButton.png
+/usr/local/share/tgui-1/themes/development/Black/images/SliderThumb.png
+/usr/local/share/tgui-1/themes/development/Black/images/ButtonBackground.png
+/usr/local/share/tgui-1/themes/development/Black/images/RadioButtonUncheckedFocused.png
+/usr/local/share/tgui-1/themes/development/Black/images/ProgressBarForeground.png
+/usr/local/share/tgui-1/themes/development/Black/images/CheckBoxUncheckedFocused.png
+/usr/local/share/tgui-1/themes/development/Black/images/ProgressBarBackground.png
+/usr/local/share/tgui-1/themes/development/Black/images/SliderTrackHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/CheckBoxChecked.png
+/usr/local/share/tgui-1/themes/development/Black/images/MinimizeButtonHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/ScrollbarTrack.png
+/usr/local/share/tgui-1/themes/development/Black/images/RadioButtonCheckedHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/ButtonBackgroundHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/RadioButtonCheckedFocused.png
+/usr/local/share/tgui-1/themes/development/Black/images/TabBackgroundSelected.png
+/usr/local/share/tgui-1/themes/development/Black/images/EditBoxBackgroundFocused.png
+/usr/local/share/tgui-1/themes/development/Black/images/ButtonBackgroundDown.png
+/usr/local/share/tgui-1/themes/development/Black/images/ArrowUp.png
+/usr/local/share/tgui-1/themes/development/Black/images/CheckBoxCheckedFocused.png
+/usr/local/share/tgui-1/themes/development/Black/images/TitleBar.png
+/usr/local/share/tgui-1/themes/development/Black/images/MenuBarItemSelected.png
+/usr/local/share/tgui-1/themes/development/Black/images/SliderTrack.png
+/usr/local/share/tgui-1/themes/development/Black/images/CheckBoxCheckedHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/MaximizeButtonDown.png
+/usr/local/share/tgui-1/themes/development/Black/images/ButtonBackgroundFocused.png
+/usr/local/share/tgui-1/themes/development/Black/images/MinimizeButton.png
+/usr/local/share/tgui-1/themes/development/Black/images/ArrowUpHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/MenuBarMenu.png
+/usr/local/share/tgui-1/themes/development/Black/images/ArrowDownHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/CloseButtonHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/ScrollbarThumbHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/CheckBoxUnchecked.png
+/usr/local/share/tgui-1/themes/development/Black/images/RadioButtonChecked.png
+/usr/local/share/tgui-1/themes/development/Black/images/MaximizeButtonHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/ScrollbarTrackHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/ArrowDown.png
+/usr/local/share/tgui-1/themes/development/Black/images/CloseButton.png
+/usr/local/share/tgui-1/themes/development/Black/images/ComboBoxArrowHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/ComboBoxArrow.png
+/usr/local/share/tgui-1/themes/development/Black/images/RadioButtonUnchecked.png
+/usr/local/share/tgui-1/themes/development/Black/images/MenuBarItem.png
+/usr/local/share/tgui-1/themes/development/Black/images/MinimizeButtonDown.png
+/usr/local/share/tgui-1/themes/development/Black/images/EditBoxBackgroundHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/EditBoxBackground.png
+/usr/local/share/tgui-1/themes/development/Black/images/RadioButtonUncheckedHover.png
+/usr/local/share/tgui-1/themes/development/Black/images/CloseButtonDown.png
+/usr/local/share/tgui-1/themes/development/Black/images/ScrollbarThumb.png
+/usr/local/share/tgui-1/themes/development/Black/images/TabBackground.png
+/usr/local/share/tgui-1/themes/development/Black/images/Background.png
+/usr/local/share/tgui-1/themes/development/Black/images/CheckBoxUncheckedHover.png
+/usr/local/share/tgui-1/themes/development/Black/.gitignore
+/usr/local/share/tgui-1/themes/TransparentGrey.txt
+/usr/local/share/tgui-1/themes/BabyBlue.txt

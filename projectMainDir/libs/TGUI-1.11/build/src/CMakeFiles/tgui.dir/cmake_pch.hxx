@@ -2,5 +2,5 @@
 
 #pragma GCC system_header
 #ifdef __cplusplus
-#include "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/include/TGUI/Widget.hpp"
+#include "/home/maksymilian/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/include/TGUI/Widget.hpp"
 #endif // __cplusplus

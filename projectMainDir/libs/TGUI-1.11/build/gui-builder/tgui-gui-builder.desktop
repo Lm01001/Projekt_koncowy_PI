@@ -3,4 +3,4 @@ Type=Application
 Version=1.11
 Name=TGUI Gui Builder
 Icon=TexusGUI
-Exec=/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/share/tgui-1/gui-builder/gui-builder
+Exec=/usr/local/share/tgui-1/gui-builder/gui-builder
