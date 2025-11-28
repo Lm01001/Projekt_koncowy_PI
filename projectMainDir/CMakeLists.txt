@@ -7,9 +7,11 @@ set(CMAKE_CXX_STANDARD 17)
 include_directories(include)
 include_directories(libs/TGUI-1.11/install/include)
 include_directories(resources)
+include_directories(libs/SFML-win-vc17-64bit/SFML-3.0.2/include)
 
 # Zastepuje -L przy linkowaniu w komendzie
 link_directories(libs/TGUI-1.11/build/lib)
+link_directories(libs/SFML-win-vc17-64bit/SFML-3.0.2/lib)
 
 add_executable(projektGra src/main.cpp src/snakeDetails.cpp src/ButtonCreator.cpp)
 

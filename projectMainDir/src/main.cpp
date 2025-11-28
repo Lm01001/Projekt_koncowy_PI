@@ -1,5 +1,8 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <ctime>
 #include <thread>
 #include <chrono>
 //#include <windows.h>

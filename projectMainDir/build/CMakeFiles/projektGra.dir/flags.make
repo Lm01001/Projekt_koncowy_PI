@@ -4,7 +4,9 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I"/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/include" -I"/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include" -I"/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/resources"
+CXX_INCLUDES = -I/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/libs/SFML-win-vc17-64bit/include -I/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/include -I/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/install/include -I/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/resources
 
-CXX_FLAGS = -std=gnu++17
+CXX_FLAGSarm64 = -std=gnu++17 -arch arm64
+
+CXX_FLAGS = -std=gnu++17 -arch arm64
 

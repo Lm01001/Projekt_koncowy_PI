@@ -17,14 +17,17 @@ class SnakeDetails{
 
         std::vector<sf::Vector2i> wazCialo;
         sf::Vector2i kierunekRuchu;
+        sf::Vector2i pozycjaJedzenia;
         float predkoscRuchu, timerRuchu;
         bool kolizja;
+        int szerokoscPlanszy = 10;
+        int wysokoscPlanszy = 10;
 
         SnakeDetails();
         void ustawKierunek(sf::Vector2i kierunek);
         void movementAktualizujWeza(float czasOdPoprzedniejKlatki);
         void draw(tgui::CanvasSFML& planszaGry);
-        void czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy);
+        void czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy, bool &kolizja);
         void kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama);
         void aktualizujWynik(int wynik);
         void aktualizujDlugosc(int dlugosc);

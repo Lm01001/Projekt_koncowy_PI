@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/buildMac/cmake_install.cmake",
+		"/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/buildMac/src/cmake_install.cmake",
+		"/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/buildMac/gui-builder/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

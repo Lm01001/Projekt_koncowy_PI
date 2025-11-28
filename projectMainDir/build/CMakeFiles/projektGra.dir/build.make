@@ -44,19 +44,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1499/bin/cmake
+CMAKE_COMMAND = /opt/homebrew/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1499/bin/cmake -E rm -f
+RM = /opt/homebrew/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir"
+CMAKE_SOURCE_DIR = /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build"
+CMAKE_BINARY_DIR = /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/projektGra.dir/depend.make
@@ -73,63 +73,62 @@ CMakeFiles/projektGra.dir/codegen:
 .PHONY : CMakeFiles/projektGra.dir/codegen
 
 CMakeFiles/projektGra.dir/src/main.cpp.o: CMakeFiles/projektGra.dir/flags.make
-CMakeFiles/projektGra.dir/src/main.cpp.o: /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/src/main.cpp
+CMakeFiles/projektGra.dir/src/main.cpp.o: /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/main.cpp
 CMakeFiles/projektGra.dir/src/main.cpp.o: CMakeFiles/projektGra.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/projektGra.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projektGra.dir/src/main.cpp.o -MF CMakeFiles/projektGra.dir/src/main.cpp.o.d -o CMakeFiles/projektGra.dir/src/main.cpp.o -c "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/projektGra.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projektGra.dir/src/main.cpp.o -MF CMakeFiles/projektGra.dir/src/main.cpp.o.d -o CMakeFiles/projektGra.dir/src/main.cpp.o -c /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/main.cpp
 
 CMakeFiles/projektGra.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/projektGra.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/main.cpp" > CMakeFiles/projektGra.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/main.cpp > CMakeFiles/projektGra.dir/src/main.cpp.i
 
 CMakeFiles/projektGra.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/projektGra.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/main.cpp" -o CMakeFiles/projektGra.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/main.cpp -o CMakeFiles/projektGra.dir/src/main.cpp.s
 
-CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o: CMakeFiles/projektGra.dir/flags.make
-CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o: /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/src/SnakeDetails.cpp
-CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o: CMakeFiles/projektGra.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o -MF CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o.d -o CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o -c "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/SnakeDetails.cpp"
+CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o: CMakeFiles/projektGra.dir/flags.make
+CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o: /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/snakeDetails.cpp
+CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o: CMakeFiles/projektGra.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o -MF CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o.d -o CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o -c /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/snakeDetails.cpp
 
-CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/SnakeDetails.cpp" > CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.i
+CMakeFiles/projektGra.dir/src/snakeDetails.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/projektGra.dir/src/snakeDetails.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/snakeDetails.cpp > CMakeFiles/projektGra.dir/src/snakeDetails.cpp.i
 
-CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/SnakeDetails.cpp" -o CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.s
+CMakeFiles/projektGra.dir/src/snakeDetails.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/projektGra.dir/src/snakeDetails.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/snakeDetails.cpp -o CMakeFiles/projektGra.dir/src/snakeDetails.cpp.s
 
 CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o: CMakeFiles/projektGra.dir/flags.make
-CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o: /mnt/c/Users/Maksymilian/OneDrive\ -\ Akademia\ Górniczo-Hutnicza\ im.\ Stanisława\ Staszica\ w\ Krakowie/Pulpit/Nowy\ folder\ (2)/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp
+CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o: /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp
 CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o: CMakeFiles/projektGra.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o -MF CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o.d -o CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o -c "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o -MF CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o.d -o CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o -c /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp
 
 CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp" > CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp > CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.i
 
 CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp" -o CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp -o CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.s
 
 # Object files for target projektGra
 projektGra_OBJECTS = \
 "CMakeFiles/projektGra.dir/src/main.cpp.o" \
-"CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o" \
+"CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o" \
 "CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o"
 
 # External object files for target projektGra
 projektGra_EXTERNAL_OBJECTS =
 
 projektGra: CMakeFiles/projektGra.dir/src/main.cpp.o
-projektGra: CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o
+projektGra: CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o
 projektGra: CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o
 projektGra: CMakeFiles/projektGra.dir/build.make
-projektGra: CMakeFiles/projektGra.dir/compiler_depend.ts
 projektGra: CMakeFiles/projektGra.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable projektGra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable projektGra"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/projektGra.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -141,6 +140,6 @@ CMakeFiles/projektGra.dir/clean:
 .PHONY : CMakeFiles/projektGra.dir/clean
 
 CMakeFiles/projektGra.dir/depend:
-	cd "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir" "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir" "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build" "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build" "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles/projektGra.dir/DependInfo.cmake" "--color=$(COLOR)" projektGra
+	cd /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles/projektGra.dir/DependInfo.cmake "--color=$(COLOR)" projektGra
 .PHONY : CMakeFiles/projektGra.dir/depend
 
