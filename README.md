@@ -36,7 +36,13 @@ Ewentualnie, opcjonalnie można zrobić kolejno:<br>    `make` <br>    `./projek
     * Kolejno przejść do folderu **~/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/build** i wpisać:<br>`cmake -DTGUI_SHARED_LIBS=ON -DTGUI_BACKEND=SFML_GRAPHICS ..`<br>
     * Następnie:<br>`sudo make install`
     * Po wykonaniu powyższych instrukcji przejść do folderu **~/Projekt_koncowy_PI/projectMainDir/buildLinux** i wykonać:<br>    `cmake ..`    `make`    `./projektGra`
-    * Gra powinna zostać uruchomiona bez problemu, w przypadku problemu usunąć folder *buildLinux* i utworzyć ponownie i tam instrukcje z powyższego punktu:<br>    `rm -rf buildLinux`    `mkdir buildLinux`    `cd buildLinux`    i wewnątrz wszystkie instrukcje po kolei z powyższego punktu.
+    * Gra powinna zostać uruchomiona bez problemu, w przypadku problemu usunąć folder *buildLinux* i utworzyć ponownie i tam instrukcje z powyższego punktu:<br>    `rm -rf buildLinux`    `mkdir buildLinux`    `cd buildLinux`    i wewnątrz wszystkie instrukcje po kolei z powyższego punktu.<br>
+* W przypadku chęci odpalenia gry na urządzeniu z macOS:<br>
+    * Trzeba zainstalować, wpisać kolejno poniższe komendy<br>
+    `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`<br>`brew install cmake`<br>`brew install sfml tgui`<br>
+    * Następnie po instalacji wykonujemy kroki tak jak w każdym z poprzednich kroków.<br> Na początku przechodzimy do folderu ze ścieżką  **~/Projekt_koncowy_PI/projectMainDir/libs/TGUI-1.11/buildMac**, czyli<br>`cd projectMainDir/buildMac`
+      <br>i następnie kolejno:<br>    `cmake ..`    `make`    `./projektGra`
+    
 
 <div align="left">
         Autorzy:<br>
