@@ -14,7 +14,7 @@
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
 
-#include "snakeDetails.h"
+#include "SnakeDetails.h"
 #include "SnakeGUI.h"
 #include "ButtonScenesPropertiesClass.h"
 #include "SlidersAndCheckbox.h"
@@ -28,13 +28,13 @@ int main() {
 	/*
 	* Zmienna typu RenderWindow - wyswietlane okno, RectangleShape pod stworzenie przycisku
 	*/
-	RenderWindow window(VideoMode(550, 650), "Gra Snake", Style::Default);
+	RenderWindow window(VideoMode({550, 650}), "Gra Snake", Style::Default);
 	window.setFramerateLimit(60);
-	VideoMode desktopScreen = VideoMode::getDesktopMode();
-	int x = (desktopScreen.width - 550) / 2;
-	int y = (desktopScreen.height - 650) / 2;
+	auto desktopScreen = VideoMode::getDesktopMode();
+	int x = (desktopScreen.size.x - 550) / 2;
+	int y = (desktopScreen.size.y - 650) / 2;
 	window.setPosition(sf::Vector2i(x, y));
-	window.setVerticalSyncEnabled(true);
+	window.setVerticalSyncEnabled(false);
 	
 	tgui::Gui gui{window};
 
@@ -100,7 +100,12 @@ int main() {
 		circle.setOutlineThickness(5);
 		float circleXPos = circle.getRadius() * 2;
 		float circleYPos = circle.getRadius() * 2;
-		circle.setPosition((winSize.x - circleXPos) / 2, (winSize.y - circleYPos) / 2);		
+		/*
+		*	Dla CircleShape .setPosition() musi byc Vector2f, wiec dodatkowo
+		*	tworzymy ten vector poza dla przejrzystosci wiekszej kodu. 
+		*/
+		sf::Vector2f positionHelper((winSize.x - circleXPos) / 2.f, (winSize.y - circleYPos) / 2.f);
+		circle.setPosition(positionHelper);		
 
 	/*
 	*	Ustawianie wszystkie przygotowujacego do rozgrywki
@@ -186,14 +191,21 @@ int main() {
 	*	zmiany w ustawieniach, czy pauzowanie gry.
 	*/
 	while(window.isOpen()){
-		Event event;
-		while(window.pollEvent(event)){
+		/*
+		*	Dzieki zmianie na SFML 3 i braku domyslnego konstruktora dla event
+		*	trzeba przekazac jako warunek zmienna tu np. - pollEventVarHelper
+		*	zeby przy kazdym przejsciu petli byla odswiezana
+		*/
+		while(auto pollEventVarHelper = window.pollEvent()){
+			Event event = *pollEventVarHelper;
 			gui.handleEvent(event);
-
-			if(event.type == Event::Closed)
+			if(event.is<Event::Closed>())
 				window.close();
-			if(event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
-				window.close();
+			if(event.is<Event::KeyPressed>()){
+				if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Escape){
+					window.close();
+				}
+			} 	
 		}
 		gui.draw();
 		window.display();

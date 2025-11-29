@@ -45,19 +45,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1499/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/bin/cmake -E rm -f
+RM = /snap/cmake/1499/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build
+CMAKE_BINARY_DIR = "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build"
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -85,14 +85,14 @@ clean: CMakeFiles/projektGra.dir/clean
 CMakeFiles/projektGra.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles --progress-num=1,2,3,4 "Built target projektGra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=1,2,3,4 "Built target projektGra"
 .PHONY : CMakeFiles/projektGra.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/projektGra.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/projektGra.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" 0
 .PHONY : CMakeFiles/projektGra.dir/rule
 
 # Convenience name for target.
@@ -102,7 +102,7 @@ projektGra: CMakeFiles/projektGra.dir/rule
 # codegen rule for target.
 CMakeFiles/projektGra.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target projektGra"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" --progress-num=1,2,3,4 "Finished codegen for target projektGra"
 .PHONY : CMakeFiles/projektGra.dir/codegen
 
 # clean rule for target.

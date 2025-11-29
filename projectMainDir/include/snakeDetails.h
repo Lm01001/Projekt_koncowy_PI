@@ -10,12 +10,10 @@
 
 class SnakeDetails{
     public:
+        std::vector<sf::Vector2i> wazCialo;
+
         int wynik, dlugosc, lvl, zjedzonePrzedmioty;
         std::string powerUp;
-        SnakeDetails(int wynik, int dlugosc, int lvl, std::string powerUp); // ???????
-
-
-        std::vector<sf::Vector2i> wazCialo;
         sf::Vector2i kierunekRuchu;
         sf::Vector2i pozycjaJedzenia;
         float predkoscRuchu, timerRuchu;
@@ -32,7 +30,7 @@ class SnakeDetails{
         void aktualizujWynik(int wynik);
         void aktualizujDlugosc(int dlugosc);
         void kolejnyEtap(int lvl);
-        int losowaniePowerUpa();
+        void losowaniePowerUpa();
         void przegranaGracza(int wynik, int dlugosc, int lvl); //???
         void wyswietlStatystyki(int wynik, int dlugosc, int lvl);
 
@@ -42,6 +40,8 @@ class SnakeDetails{
         sf::Sound eatSound;
         sf::Sound hitSound;
         sf::Sound nextLevelSound;
+
+        void soundEffectsSetup();
         void playEatSound();
         void playHitSound();
         void playNextLevelSound();

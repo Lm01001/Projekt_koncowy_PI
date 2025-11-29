@@ -2,10 +2,12 @@
 #include "SlidersAndCheckbox.h"
 
 #include <iostream>
+#include <string>
+
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
 #include <SFML/Graphics.hpp>
-#include <string>
+
 
     /*
     *   Konstruktor do szybszego tworzenia przycisku i od razu przypisywanie
@@ -173,13 +175,13 @@
             planszaCanvas->moveToBack();
             gui.add(planszaCanvas);
             sf::RectangleShape linia(sf::Vector2f(550, 1));
-            linia.setPosition(0, 550);
+            linia.setPosition(sf::Vector2f(0, 550));
             linia.setOutlineColor(sf::Color::Black);
             linia.setOutlineThickness(2);
             planszaCanvas->draw(linia);
             
             sf::RectangleShape planszaGry(sf::Vector2f(400, 400));
-            planszaGry.setPosition(75, 50);
+            planszaGry.setPosition(sf::Vector2f(75, 50));
             planszaGry.setFillColor(sf::Color(25, 153, 39));
             planszaGry.setOutlineColor(sf::Color(7, 43, 11));
             planszaGry.setOutlineThickness(9);

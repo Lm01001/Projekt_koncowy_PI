@@ -48,19 +48,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /opt/homebrew/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1499/bin/cmake
 
 # The command to remove a file.
-RM = /opt/homebrew/bin/cmake -E rm -f
+RM = /snap/cmake/1499/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir
+CMAKE_SOURCE_DIR = "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build
+CMAKE_BINARY_DIR = "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDi
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
-	/opt/homebrew/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/cmake/1499/bin/ccmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/opt/homebrew/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/cmake/1499/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ src/ButtonCreator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.s
 .PHONY : src/ButtonCreator.cpp.s
 
+src/SnakeDetails.o: src/SnakeDetails.cpp.o
+.PHONY : src/SnakeDetails.o
+
+# target to build an object file
+src/SnakeDetails.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o
+.PHONY : src/SnakeDetails.cpp.o
+
+src/SnakeDetails.i: src/SnakeDetails.cpp.i
+.PHONY : src/SnakeDetails.i
+
+# target to preprocess a source file
+src/SnakeDetails.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.i
+.PHONY : src/SnakeDetails.cpp.i
+
+src/SnakeDetails.s: src/SnakeDetails.cpp.s
+.PHONY : src/SnakeDetails.s
+
+# target to generate assembly for a file
+src/SnakeDetails.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.s
+.PHONY : src/SnakeDetails.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -177,30 +201,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/snakeDetails.o: src/snakeDetails.cpp.o
-.PHONY : src/snakeDetails.o
-
-# target to build an object file
-src/snakeDetails.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/snakeDetails.cpp.o
-.PHONY : src/snakeDetails.cpp.o
-
-src/snakeDetails.i: src/snakeDetails.cpp.i
-.PHONY : src/snakeDetails.i
-
-# target to preprocess a source file
-src/snakeDetails.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/snakeDetails.cpp.i
-.PHONY : src/snakeDetails.cpp.i
-
-src/snakeDetails.s: src/snakeDetails.cpp.s
-.PHONY : src/snakeDetails.s
-
-# target to generate assembly for a file
-src/snakeDetails.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/projektGra.dir/build.make CMakeFiles/projektGra.dir/src/snakeDetails.cpp.s
-.PHONY : src/snakeDetails.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -213,12 +213,12 @@ help:
 	@echo "... src/ButtonCreator.o"
 	@echo "... src/ButtonCreator.i"
 	@echo "... src/ButtonCreator.s"
+	@echo "... src/SnakeDetails.o"
+	@echo "... src/SnakeDetails.i"
+	@echo "... src/SnakeDetails.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/snakeDetails.o"
-	@echo "... src/snakeDetails.i"
-	@echo "... src/snakeDetails.s"
 .PHONY : help
 
 
