@@ -144,9 +144,9 @@
         //wywolanie wewnatrz funkcji losowaniePowerUpa
     }
 
-    void SnakeDetails::draw(tgui::CanvasSFML& planszaGry){
+    void SnakeDetails::draw(tgui::CanvasSFML& planszaGryCanvas){
         // 1. Wyczyść canvasa (tło planszy)
-        planszaGry.clear(sf::Color(30, 30, 30)); // ciemne tło 
+        planszaGryCanvas.clear(sf::Color(25, 153, 39)); // ciemne tło 
         // 2. Stała – rozmiar jednego „kafelka” planszy w pikselach
         const float tileSize = 20.f;
         // 3. Rysowanie ciała węża
@@ -155,13 +155,13 @@
         for (std::size_t i = 0; i < wazCialo.size(); ++i){
             // głowa inny kolor
             if(i == 0)
-                segmentShape.setFillColor(sf::Color::Green);
+                segmentShape.setFillColor(sf::Color::Black);
             else
-                segmentShape.setFillColor(sf::Color(0, 150, 0));
+                segmentShape.setFillColor(sf::Color(56, 56, 56));
 
             sf::Vector2f segmentShapePosVar((wazCialo[i].x) * tileSize, (wazCialo[i].y) * tileSize);
             segmentShape.setPosition(segmentShapePosVar);
-            planszaGry.draw(segmentShape);
+            planszaGryCanvas.draw(segmentShape);
         }
 
         // 4. Rysowanie jedzenia
@@ -169,10 +169,10 @@
         foodShape.setFillColor(sf::Color::Red);
         sf::Vector2f foodPosVar((pozycjaJedzenia.x) * tileSize, (pozycjaJedzenia.y) * tileSize);
         foodShape.setPosition(foodPosVar);
-        planszaGry.draw(foodShape);
+        planszaGryCanvas.draw(foodShape);
 
         // 5. Zaktualizowanie zawartości canvasa
-        planszaGry.display();
+        planszaGryCanvas.display();
     }
 
     

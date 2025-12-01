@@ -24,7 +24,7 @@ class SnakeDetails{
         SnakeDetails();
         void ustawKierunek(sf::Vector2i kierunek);
         void movementAktualizujWeza(float czasOdPoprzedniejKlatki);
-        void draw(tgui::CanvasSFML& planszaGry);
+        void draw(tgui::CanvasSFML& planszaGryCanvas);
         void czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy, bool &kolizja);
         void kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama);
         void aktualizujWynik(int wynik);

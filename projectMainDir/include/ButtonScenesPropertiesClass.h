@@ -32,6 +32,9 @@ class ButtonScenesPropertiesClass{
         tgui::Label::Ptr timeLabelGame;
         int gameInProgressTimeVar;
 
+        sf::RectangleShape planszaGry;
+        tgui::CanvasSFML::Ptr planszaGryCanvas;
+
         void appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton);
         void appendBackToMainMenuButton(tgui::Panel::Ptr panel);
         tgui::Button::Ptr createNewBackToMainMenuButton();

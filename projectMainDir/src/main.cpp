@@ -38,6 +38,12 @@ int main() {
 	
 	tgui::Gui gui{window};
 
+	SnakeDetails snakeInstance;
+	// Zegar służący do obliczania czasu między klatkami (Delta Time)
+    // Niezbędny do zapewnienia płynności ruchu niezależnie od wydajności komputera
+    Clock physicsClock; 
+
+
 	/*
 	*	Glowny przycisk do przejscia do ekranu gry.
 	*/
@@ -69,6 +75,7 @@ int main() {
 	sceneManager.updateAllScenes(mainButton, settingsButton, pauseButton, sceneManager.menuPanel, sceneManager.pausePanel,
 			sceneManager.resultPanel, sceneManager.settingsPanel, sceneManager.gamePanel);
 	
+
 	/*
 	*	Wznawianie gry z menu pauzy, przycisk sluzacy do tego.
 	*/
@@ -206,6 +213,22 @@ int main() {
 					window.close();
 				}
 			} 	
+
+			/*
+			*	Zmiana kierunku mozliwa tylko podczas trwajacej, aktywnej rozgrywki
+			*/
+			if(roundInProgress && !gamePaused) {
+				/*	Przekazanie wektora kierunku do obiektu klasy z wezem	*/
+                if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Up)    
+					snakeInstance.ustawKierunek(sf::Vector2i(0, -1));
+                if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Down)  
+					snakeInstance.ustawKierunek(sf::Vector2i(0, 1));
+               	if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Left)  
+					snakeInstance.ustawKierunek(sf::Vector2i(-1, 0));
+                if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Right) 
+					snakeInstance.ustawKierunek(sf::Vector2i(1, 0));
+            }
+
 		}
 		gui.draw();
 		window.display();
@@ -269,6 +292,36 @@ int main() {
 		*	pasku w trakcie rozgrywki.
 		*/
 		if(roundInProgress && !gamePaused){
+			 // 1. OBLICZANIE DELTA TIME
+            // Pobranie czasu od ostatniej klatki dla płynności ruchu
+            float dt = physicsClock.restart().asSeconds();
+            
+            // 2. AKTUALIZACJA LOGIKI WĘŻA
+            // Przesunięcie węża zgodnie z jego prędkością i kierunkiem
+            snakeInstance.movementAktualizujWeza(dt);
+            
+            // 3. WYKRYWANIE KOLIZJI
+            bool czyUderzyl = false;
+            // Sprawdzenie czy wąż nie wyszedł poza obszar planszy (wymiary planszy w kratkach)
+            snakeInstance.czyKolizjaZeSciana(55, 60, czyUderzyl); 
+            
+            if (czyUderzyl) {
+                // Obsługa końca gry (Game Over)
+                roundInProgress = false; 
+                std::cout << "[SYSTEM] Wykryto kolizję ze ścianą. Koniec gry." << std::endl;
+            }
+
+            // 4. RYSOWANIE OBIEKTÓW GRY
+            // Wyczyszczenie płótna przed narysowaniem nowej klatki
+            sceneManager.planszaGryCanvas->clear(sf::Color::Transparent);
+			//sceneManager.planszaGryCanvas->moveToFront();
+            
+            // Wywołanie metody rysującej z klasy węża
+            snakeInstance.draw(*sceneManager.planszaGryCanvas);
+            
+            // Wyświetlenie zaktualizowanego płótna
+            sceneManager.planszaGryCanvas->display();
+
 			/*
 			*	static_cast sluzy do konwersji z float na int tutaj.
 			*	c.getElapsedTime() przypisuje do zmiennej typu float, 
