@@ -24,7 +24,6 @@
         wazCialo.push_back(sf::Vector2i(10, 10)); 
         wazCialo.push_back(sf::Vector2i(9, 10)); 
         wazCialo.push_back(sf::Vector2i(8, 10));
-
         /*
         *   Ustawianie poczatkowych wartosci dla wlasnosci weza 
         *   i zmiennych dla logik juz w grze.
@@ -38,13 +37,13 @@
         predkoscRuchu = 0.2f; 
         timerRuchu = 0.f;  
         kolizja = false;  
-
         /*
         *   Przypisanie wartosci do wektora z kierunkiem ruchu,
         *   defaultowo kierunek w prawo
         */
         kierunekRuchu = sf::Vector2i(1, 0); 
         pozycjaJedzenia = sf::Vector2i(5, 5);
+        direction = 'r';
     }
 
     void SnakeDetails::soundEffectsSetup(){
@@ -74,7 +73,7 @@
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
             this->kolizja = true;
-            playHitSound();
+            przegranaGracza(wynik, dlugosc, lvl);
         }else{
             kolizja = false;
             this->kolizja = false;
@@ -116,7 +115,6 @@
         /*  Sprawdzenie wystapienia kolizji ze sciana   */
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
-            playHitSound();
             przegranaGracza(wynik, dlugosc, lvl);
             return;
         }
@@ -150,7 +148,6 @@
         for(int i = 1; i < (int)wazCialo.size(); ++i){
             if(wazCialo[i] == head){
                 kolizja = true;
-                playHitSound();
                 przegranaGracza(wynik, dlugosc, lvl);
                 return;
             }
@@ -217,6 +214,26 @@
 
         kolizja = true;
         playHitSound();
+
+        /*
+            Potrzeba ustawic ze przy kazdym z przypadkow gra jest zatrzymywana
+            prz ykazdym rodzaju kolizji dzwiek wywolywany tylko w metodzie przegrana
+            ustawic/zainicjalizowac od razu rozmiar planszy zeby miala wartosc 
+            wieksza od zera bo wywali od razu. Najlepiej bedzie jeszcze wywolac
+            konstruktor weza przed wyswietleniem np jeszcze podczas  odliczania
+                                                                                    */
+                                                                                
+        /*  zaktualizowac tez pojawianie sie owocow zeby nie pokrywaly sie 
+            z cialem weza
+                                            */                                                                        
+                                                                                   
+        /*
+	- Do zrobienia warunek sprawdzajacy zmiane wyniku jakos ze zmienna pomocnicza czy cos
+	- Zderzenia z samym soba
+	- Mozna zmienic ilosc serduszek na aktywny powerup
+	-Po przegranej reset planszy usuniecie labellu przegrana i weza, reset wszystkiego
+	
+	*/
         //reset wartosci aktualnego weza
         //mozliwe ze usuniecie weza, niekoniecznie
         //po prostu reset bo ekran po przegranej przenosi

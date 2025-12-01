@@ -20,6 +20,7 @@ class SnakeDetails{
         bool kolizja;
         int szerokoscPlanszy = 10;
         int wysokoscPlanszy = 10;
+        char direction;
 
         SnakeDetails();
         void ustawKierunek(sf::Vector2i kierunek);

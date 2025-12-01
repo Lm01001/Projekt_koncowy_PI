@@ -41,7 +41,7 @@ int main() {
 	SnakeDetails snakeInstance;
 	// Zegar służący do obliczania czasu między klatkami (Delta Time)
     // Niezbędny do zapewnienia płynności ruchu niezależnie od wydajności komputera
-    Clock physicsClock; 
+    Clock movementHelperClock; 
 
 
 	/*
@@ -173,8 +173,10 @@ int main() {
 	*	zakonczenia gry przed jej ukonczeniem jeszcze
 	*	lub przegrana => to to jedyne miejsce.
 	*/
+	auto gameLostLabel = tgui::Label::create("Przegrana!");
+	gameLostLabel->setWidgetName("przegrana");
 	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
-	pauseButton->onPress([&sceneManager, &c, &gamePaused](){
+	pauseButton->onPress([&sceneManager, &c, &gamePaused, &gameLostLabel](){
 		gamePaused = true;
 		sceneManager.gameInProgressTimeVar += c.getElapsedTime().asSeconds();
 		c.restart();
@@ -215,18 +217,38 @@ int main() {
 			} 	
 
 			/*
-			*	Zmiana kierunku mozliwa tylko podczas trwajacej, aktywnej rozgrywki
+			*	Zmiana kierunku mozliwa tylko podczas trwajacej, aktywnej rozgrywki.
 			*/
 			if(roundInProgress && !gamePaused) {
-				/*	Przekazanie wektora kierunku do obiektu klasy z wezem	*/
-                if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Up)    
-					snakeInstance.ustawKierunek(sf::Vector2i(0, -1));
-                if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Down)  
-					snakeInstance.ustawKierunek(sf::Vector2i(0, 1));
-               	if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Left)  
-					snakeInstance.ustawKierunek(sf::Vector2i(-1, 0));
-                if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Right) 
-					snakeInstance.ustawKierunek(sf::Vector2i(1, 0));
+				/*	
+				*	Dodanie instrukcji, czy jakikolwiek przycisk jest wcisniety,
+				*	bo brak generowal bledy i ciagle program wchodzil w sprawdzanie
+				*	warunkow, i tak kazdego z czterech, bo solo if'y a nie if..else
+				*/
+				if(event.is<Event::KeyPressed>()){
+					auto keyPressedEventHelper = event.getIf<Event::KeyPressed>();
+					if(keyPressedEventHelper){
+						/*	
+						*	Zmienna pomocnicza, zmniejszajaca ilosc kodu i wygode (zamiast)
+						*	ciaglego -> 
+						*/
+						auto code = keyPressedEventHelper->code;
+						/*	Przekazanie wektora kierunku do obiektu klasy z wezem	*/
+						if(code == Keyboard::Key::Up && snakeInstance.direction != 'd' && snakeInstance.direction != 'u'){
+							snakeInstance.ustawKierunek(sf::Vector2i(0, -1));
+							snakeInstance.direction = 'u';
+						}else if(code == Keyboard::Key::Down && snakeInstance.direction != 'u' && snakeInstance.direction != 'd'){
+							snakeInstance.ustawKierunek(sf::Vector2i(0, 1));
+							snakeInstance.direction = 'd';
+						}else if(code == Keyboard::Key::Left && snakeInstance.direction != 'r' && snakeInstance.direction != 'l'){
+							snakeInstance.ustawKierunek(sf::Vector2i(-1, 0));
+							snakeInstance.direction = 'l';
+						}else if(code == Keyboard::Key::Right && snakeInstance.direction != 'l' && snakeInstance.direction != 'r'){
+							snakeInstance.direction = 'r';
+							snakeInstance.ustawKierunek(sf::Vector2i(1, 0));
+						}
+					}
+				}			
             }
 
 		}
@@ -247,7 +269,6 @@ int main() {
 				sceneManager.showNextRoundPopup();
 				counterHelper--;
 			}
-			
 			if(c.getElapsedTime().asSeconds() > 1.5 && counterHelper == 2){
 				labelCount->setText("2");
 				labelCount->moveToFront();
@@ -256,7 +277,6 @@ int main() {
 				sceneManager.showNextRoundPopup();					
 				counterHelper--;
 			}
-
 			if(c.getElapsedTime().asSeconds() > 3 && counterHelper == 1){
 				labelCount->setText("1");
 				labelCount->moveToFront();
@@ -265,7 +285,6 @@ int main() {
 				sceneManager.showNextRoundPopup();
 				counterHelper--;
 			}
-
 			if(c.getElapsedTime().asSeconds() > 4){
 				if(counterHelper == 0){
 					gameStartClick = false;
@@ -294,11 +313,11 @@ int main() {
 		if(roundInProgress && !gamePaused){
 			 // 1. OBLICZANIE DELTA TIME
             // Pobranie czasu od ostatniej klatki dla płynności ruchu
-            float dt = physicsClock.restart().asSeconds();
+            float lastFrameTime = movementHelperClock.restart().asSeconds();
             
             // 2. AKTUALIZACJA LOGIKI WĘŻA
             // Przesunięcie węża zgodnie z jego prędkością i kierunkiem
-            snakeInstance.movementAktualizujWeza(dt);
+            snakeInstance.movementAktualizujWeza(lastFrameTime);
             
             // 3. WYKRYWANIE KOLIZJI
             bool czyUderzyl = false;
@@ -307,8 +326,19 @@ int main() {
             
             if (czyUderzyl) {
                 // Obsługa końca gry (Game Over)
+				/*
+				Ustawic znikanie labelu lub po prostu ustawic wtedy scene z rezultatem wynikiem i opcja tylkjo
+				wyjscia do menu i usunac
+				*/ 
                 roundInProgress = false; 
-                std::cout << "[SYSTEM] Wykryto kolizję ze ścianą. Koniec gry." << std::endl;
+                //std::cout << "[SYSTEM] Wykryto kolizję ze ścianą. Koniec gry." << std::endl;
+        		gameLostLabel->setTextSize(65);
+        		gameLostLabel->getRenderer()->setTextColor(sf::Color::Red);
+        		gameLostLabel->setPosition(105, 180);
+				gameLostLabel->getRenderer()->setTextOutlineThickness(2);
+				gameLostLabel->getRenderer()->setBackgroundColor(sf::Color::Transparent);
+				sceneManager.gamePanel->add(gameLostLabel);
+				sceneManager.showGameScene();
             }
 
             // 4. RYSOWANIE OBIEKTÓW GRY
@@ -345,6 +375,5 @@ int main() {
 			sceneManager.gamePanel->add(sceneManager.timeLabelGame);
 		}
 	}
-
 	return 0;
 }
