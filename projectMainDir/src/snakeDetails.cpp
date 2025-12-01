@@ -60,56 +60,74 @@
     }
 
     void SnakeDetails::ustawKierunek(sf::Vector2i kierunek){
-        //zmienna z klasy SnakeDetails - przypisanie jej wartosci
+        /*
+        *   Zmienna z zadeklarowana w headerFile tej klasy
+        *   przypisanie jej wartosci w celu ustawienia kierunku ruchu
+        *   , wartosc przekazana jako parametr w postaci wektora int'ow
+        */
         this->kierunekRuchu = kierunek;
-        //przekazanego jako parametr wektora
     }
 
     void SnakeDetails::czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy, bool &kolizja){
-        sf::Vector2i head = wazCialo[0];  //pozycja glowy weza
+        /*  Ustawienie pozycji glowy  */
+        sf::Vector2i head = wazCialo[0];  
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
             this->kolizja = true;
             playHitSound();
-        } else {
+        }else{
             kolizja = false;
             this->kolizja = false;
-        }
-        //sprawdzanie czy kolizja ze sciana, zobaczyc na pozycje
-        //planszy i rozmiar i odpowiednio dodac marginesy 
+        } 
     }
 
     void SnakeDetails::kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama){
-        //dodanie ciemniejszego koloru na brame do kolejnego etapu
-        //mozna tez dodac strzalke gdzie wejsc
-        //podac szerokosc bramy
-        playNextLevelSound();//ew po przejsciu, ale chwilowo
+        /*
+            Dodanie bramy (png) jako wyjscia z poziomu
+            ustawianie albo linii pod albo czegos
+            ze po kontakcie wczytanie nowego poziomu
+                                                        */
+        playNextLevelSound();
     }
 
     void SnakeDetails::movementAktualizujWeza(float czasOdPoprzedniejKlatki){
-        //waz rusza sie tylko co predkoscRuchu sekund
+        /*  
+        *   Waz porusza sie co wartosc zmiennej predkoscRuchu
+        *   ustawionej w konstruktorze (0.2f) defaultowo,
+        *   jest to predkosc dla latwego poziomu trudnosci.
+        */
         timerRuchu += czasOdPoprzedniejKlatki;
         if(timerRuchu < predkoscRuchu)
         return;
         timerRuchu = 0.f;
 
-        //ruch segmentow od ogona do glowy
+        /*
+        *   Ruch segmentow, blokow z ktorych sklada
+        *   sie waz. Od ogona do glowy.
+        */
         for(int i = wazCialo.size() - 1; i > 0; i--) {
             wazCialo[i] = wazCialo[i - 1];
         }
-        //przesuniecie glowy na podstawie kierunku
+        
+        /*  Przesuniecie glowy na bazie kierunku ruchu  */
         wazCialo[0] += kierunekRuchu;
         sf::Vector2i head = wazCialo[0];
-        //sprawdzanie kolizji ze sciana
+        
+        /*  Sprawdzenie wystapienia kolizji ze sciana   */
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
             playHitSound();
             przegranaGracza(wynik, dlugosc, lvl);
             return;
         }
-        //sprawdzanie zjedzenia przedmiotu
+
+        /*  Sprawdzenie zjedzenia przedmiotu*/
+
+        /*      Ustawic wydluzenie weza nie co kazdy zjedzony
+                tylko np 2, ze modulo z dzielenia wyniku przez
+                cos     
+                                                                */
         if(head == pozycjaJedzenia){
-            playEatSound();
             //1. wydluzanie weza
             wazCialo.push_back(wazCialo.back());
             dlugosc = (int)wazCialo.size();
@@ -126,27 +144,22 @@
             //5. dzwiek zjadania
             playEatSound();
         }
-        //kolizja z wlasnym ciałem
+
+        /*  Sprawdzenie wystapienia kolizji z wlasnym cialem   */
+        /*  Wywolanie funkcji do dzwieku zderzenia i przegranej gracza  */
         for(int i = 1; i < (int)wazCialo.size(); ++i){
             if(wazCialo[i] == head){
                 kolizja = true;
                 playHitSound();
-                //wywolanie logiki przegranej
                 przegranaGracza(wynik, dlugosc, lvl);
                 return;
             }
         }
-        //aktualizacja timera i przesuniecie weza
-        //mozna dodac warunek ze gdy zmienna ze zjedzonymi
-        //przedmiotami ma jakas wartosc
-        //np. co (200) losowany jest 1 z 4 powerupow
-        //warunek jesli osiagniety prog wyniku zwieksza sie waz
-        //wywolanie wewnatrz funkcji losowaniePowerUpa
     }
 
     void SnakeDetails::draw(tgui::CanvasSFML& planszaGryCanvas){
         // 1. Wyczyść canvasa (tło planszy)
-        planszaGryCanvas.clear(sf::Color(25, 153, 39)); // ciemne tło 
+        planszaGryCanvas.clear(sf::Color(25, 153, 39)); 
         // 2. Stała – rozmiar jednego „kafelka” planszy w pikselach
         const float tileSize = 20.f;
         // 3. Rysowanie ciała węża
@@ -177,7 +190,6 @@
 
     
     void SnakeDetails::aktualizujWynik(int wynik){
-            //Zwiekszanie wynik np po zjedzeniu przedmiotu np. o 10
         this->wynik += wynik;
     }
 
