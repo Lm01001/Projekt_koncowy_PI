@@ -32,8 +32,9 @@ class SnakeDetails{
         void aktualizujDlugosc(int dlugosc);
         void kolejnyEtap(int lvl);
         void losowaniePowerUpa();
-        void przegranaGracza(int wynik, int dlugosc, int lvl); //???
+        void przegranaGracza(int wynik, int dlugosc, int lvl);
         void wyswietlStatystyki(int wynik, int dlugosc, int lvl);
+        void przejscieDoNastepnegoPoziomu(float predkoscRuchu);
 
         sf::SoundBuffer loadEatSoundBuffer;
         sf::SoundBuffer loadHitSoundBuffer;

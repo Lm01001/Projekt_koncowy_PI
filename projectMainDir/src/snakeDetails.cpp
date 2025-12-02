@@ -85,6 +85,7 @@
             Dodanie bramy (png) jako wyjscia z poziomu
             ustawianie albo linii pod albo czegos
             ze po kontakcie wczytanie nowego poziomu
+                !!!!!!!!!!!!!!!!!!!!!!
                                                         */
         playNextLevelSound();
     }
@@ -124,22 +125,45 @@
         /*      Ustawic wydluzenie weza nie co kazdy zjedzony
                 tylko np 2, ze modulo z dzielenia wyniku przez
                 cos     
+                        !!!!!!!!!!!!!!!!!!!!!!!
                                                                 */
+
+        
+        /*
+        *   Instrukcja sprawdzajaca, obslugujaca zjadanie
+        *   przedmiotow przez weza.
+        *   W przypadku pokrycia sie pozycji glowy z 
+        *   przedmiotem wydluza sie cialo weza.
+        *   Po zjedzeniu wynik sie zwieksza, a jesli zostaly
+        *   zjedzone 3 to losowany jest powerup - wywolanie
+        *   funkcji obslugujacej losowanie.
+        */
         if(head == pozycjaJedzenia){
-            //1. wydluzanie weza
             wazCialo.push_back(wazCialo.back());
             dlugosc = (int)wazCialo.size();
-            //2. zwiekszenie wyniku
-            aktualizujWynik(10);  //+10 punktow za zjedzenie
+            aktualizujWynik(10); 
             zjedzonePrzedmioty++;
-            // co 3 zjedzone przedmioty losujemy power-up
             if(zjedzonePrzedmioty % 3 == 0){
                 losowaniePowerUpa();
             }
-            //4. ustawienie nowej pozycji jedzenia
+            /*
+            *   Po zjedzeniu losowanie nowej pozycji
+            *   dla nowego przedmiotu i wywolanie
+            *   funkcji do wydania dzwieku oznaczajacego
+            *   zjedzenie przedmiotu.
+            */
+
+
+            /*
+                dodac warunek ktory ma na celu sprawdzenie
+                zeby nowy przedmiot nie pojawial sie tam gdzie znajduje
+                sie waz czyli unikniecie pojawiania sie przedmiotu
+                na wezu
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                                                        */
+
             pozycjaJedzenia.x = rand() % szerokoscPlanszy;
             pozycjaJedzenia.y = rand() % wysokoscPlanszy;
-            //5. dzwiek zjadania
             playEatSound();
         }
 
@@ -155,15 +179,28 @@
     }
 
     void SnakeDetails::draw(tgui::CanvasSFML& planszaGryCanvas){
-        // 1. Wyczyść canvasa (tło planszy)
+        /*
+        *   Czyszczenie planszy - tla.
+        *   Kolejno ustawienie rozmiaru jednego kafelka
+        *   skaladajacego sie na plansze.
+        *   Deklaracja zmiennej do kazdego z fragmentow
+        *   ciala weza, a nastepnie rysowanie ciala
+        *   w petli, gdzie glowa jest ciemniejsza
+        */
         planszaGryCanvas.clear(sf::Color(25, 153, 39)); 
-        // 2. Stała – rozmiar jednego „kafelka” planszy w pikselach
         const float tileSize = 20.f;
-        // 3. Rysowanie ciała węża
         sf::RectangleShape segmentShape(sf::Vector2f(tileSize, tileSize));
 
-        for (std::size_t i = 0; i < wazCialo.size(); ++i){
-            // głowa inny kolor
+        /*
+        
+            Zmiana tego zeby glowa byla po prostu od razu rysowana
+            i unikniecie ciaglego sprawdzania tego instrukcja
+            if - zwyczajnie przed petla ustawic i zaktualizowac
+            petle
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                                                    */
+
+        for(std::size_t i = 0; i < wazCialo.size(); ++i){
             if(i == 0)
                 segmentShape.setFillColor(sf::Color::Black);
             else
@@ -174,14 +211,17 @@
             planszaGryCanvas.draw(segmentShape);
         }
 
-        // 4. Rysowanie jedzenia
+        /*
+        *   Rysowanie przedmiotu - jedzenia, dla weza ktore
+        *   bedzie zwiekszac wynik o 10 oraz rozmiar weza
+        *   o jeden kafelek.
+        *   Na koncu aktualizacja canvasu - planszy
+        */
         sf::RectangleShape foodShape(sf::Vector2f(tileSize, tileSize));
         foodShape.setFillColor(sf::Color::Red);
         sf::Vector2f foodPosVar((pozycjaJedzenia.x) * tileSize, (pozycjaJedzenia.y) * tileSize);
         foodShape.setPosition(foodPosVar);
         planszaGryCanvas.draw(foodShape);
-
-        // 5. Zaktualizowanie zawartości canvasa
         planszaGryCanvas.display();
     }
 
@@ -195,7 +235,16 @@
     }
 
     void SnakeDetails::kolejnyEtap(int lvl){
-        //ustawiamy nowy poziom
+        /*
+            Doprecyzowac zwiekszanie predkosci (chyba)
+            bo w takiej sytuacji waz zostanie przyspieszony
+            po osiagnieciu pewnego wyniku konczacego
+            lvl, ale przejscie do kolejnego etapu nie
+            jest automatyczne wiec prawdopodobnie dodac
+            w innej funkcji     
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                                        */
+
         this->lvl = lvl;
         //lekko przyspieszamy weaz przy kazdym etapie
         if(predkoscRuchu > 0.05f)  //zeby nie bylo nieskonczenie szybko
@@ -205,6 +254,8 @@
         //zatrzymanie stopera - dodac dodatkowy argument albo
         //typu float przetrzymujacej czas lub Clock
     }
+
+    //void SnakeDetails::przejscieDoNastepnegoPoziomu(float predkoscRuchu){}
 
     void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl){
         //zapamietujemy statystyki z momentu przegranej
@@ -221,10 +272,12 @@
             ustawic/zainicjalizowac od razu rozmiar planszy zeby miala wartosc 
             wieksza od zera bo wywali od razu. Najlepiej bedzie jeszcze wywolac
             konstruktor weza przed wyswietleniem np jeszcze podczas  odliczania
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                                                                                     */
                                                                                 
         /*  zaktualizowac tez pojawianie sie owocow zeby nie pokrywaly sie 
             z cialem weza
+                !!!!!!!!!!!!!!!!!!!!!!!!!
                                             */                                                                        
                                                                                    
         /*

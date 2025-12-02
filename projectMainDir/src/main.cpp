@@ -5,7 +5,6 @@
 #include <ctime>
 #include <thread>
 #include <chrono>
-//#include <windows.h>
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -38,9 +37,14 @@ int main() {
 	
 	tgui::Gui gui{window};
 
+	/*
+	*	Na poczatku tworzymy obiekt, instancje klasy obslugujacej
+	*	wszystko zwiazane z wezem.
+	*	Ponizej deklaracja zmiennej typu Clock (jednej z dwoch w programie)
+	*	Wykorzystywana i wlasciwie niezbedna do zapewnienia plynnosci
+	*	ruchu weza
+	*/
 	SnakeDetails snakeInstance;
-	// Zegar służący do obliczania czasu między klatkami (Delta Time)
-    // Niezbędny do zapewnienia płynności ruchu niezależnie od wydajności komputera
     Clock movementHelperClock; 
 
 
@@ -145,12 +149,14 @@ int main() {
 	bool inSettingsMenu = false;
 		SlidersAndCheckbox settingsVolumeSlider(195, 250);
 		settingsVolumeSlider.createSlider(0, 100);
+
 	/*
 	*	Tworzenie checkbox'ow sluzacych do wyboru,
 	*	zaznaczenia poziomu trudnosci.
 	*/
 	SlidersAndCheckbox checkboxy(200, 400, 20);
 	checkboxy.customLabelCreator(185, 360);
+
 	/*
 	*	Przycisk ustawien z ikona z dir z zasobami
 	*	po nacisnieciu otwiera okno gdzie mozna ustawic
@@ -167,6 +173,7 @@ int main() {
 		sceneManager.showSettingsScene();
 
 	});
+
 	/*
 	*	Zatrzymuje rozgrywke i timer, mozna albo wznowic
 	*	rozgrywke albo wyjsc do menu. W celu przerwania
@@ -176,7 +183,7 @@ int main() {
 	auto gameLostLabel = tgui::Label::create("Przegrana!");
 	gameLostLabel->setWidgetName("przegrana");
 	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
-	pauseButton->onPress([&sceneManager, &c, &gamePaused, &gameLostLabel](){
+	pauseButton->onPress([&sceneManager, &c, &gamePaused](){
 		gamePaused = true;
 		sceneManager.gameInProgressTimeVar += c.getElapsedTime().asSeconds();
 		c.restart();
@@ -311,17 +318,21 @@ int main() {
 		*	pasku w trakcie rozgrywki.
 		*/
 		if(roundInProgress && !gamePaused){
-			 // 1. OBLICZANIE DELTA TIME
-            // Pobranie czasu od ostatniej klatki dla płynności ruchu
+			/*
+			*	Zmienna lastFrameTime przechowuje czas (w sekundach),
+			*	pobiera czas jaki uplynal od ostatniej klatki, co
+			*	sluzy do utrzymania plynnosci ruchu weza.
+			*/
             float lastFrameTime = movementHelperClock.restart().asSeconds();
             
-            // 2. AKTUALIZACJA LOGIKI WĘŻA
-            // Przesunięcie węża zgodnie z jego prędkością i kierunkiem
+			/*
+			*	Przesuniecie, aktualizacja - przesuniecie weza, zgodnie
+			*	z jego predkoscia i kierunkiem ruchu.
+			*/
             snakeInstance.movementAktualizujWeza(lastFrameTime);
-            
-            // 3. WYKRYWANIE KOLIZJI
+            /*	Zmienna pomocnicza do sprawdzania kolizji.	*/
             bool czyUderzyl = false;
-            // Sprawdzenie czy wąż nie wyszedł poza obszar planszy (wymiary planszy w kratkach)
+            /*	Wywolanie funkcji sprawdzajacej czy wystapila kolizja ze sciana.	*/
             snakeInstance.czyKolizjaZeSciana(55, 60, czyUderzyl); 
             
             if (czyUderzyl) {
@@ -329,9 +340,10 @@ int main() {
 				/*
 				Ustawic znikanie labelu lub po prostu ustawic wtedy scene z rezultatem wynikiem i opcja tylkjo
 				wyjscia do menu i usunac
+				
+					!!!!!!!!!!!!	
 				*/ 
                 roundInProgress = false; 
-                //std::cout << "[SYSTEM] Wykryto kolizję ze ścianą. Koniec gry." << std::endl;
         		gameLostLabel->setTextSize(65);
         		gameLostLabel->getRenderer()->setTextColor(sf::Color::Red);
         		gameLostLabel->setPosition(105, 180);
@@ -341,15 +353,15 @@ int main() {
 				sceneManager.showGameScene();
             }
 
-            // 4. RYSOWANIE OBIEKTÓW GRY
-            // Wyczyszczenie płótna przed narysowaniem nowej klatki
+			/*
+			*	Ustawienie przezroczystego tla, zeby nie bylo
+			*	nakladania sie klatek na siebie i rozmycia obrazu.
+			*	Nastepnie wywolanie metody rysujacej z klasy weza,
+			*	ktora rysuje weza na przekazanym do niej canvasie.
+			*	Po czym wyswietlenie zaktualizowanego obrazu.
+			*/
             sceneManager.planszaGryCanvas->clear(sf::Color::Transparent);
-			//sceneManager.planszaGryCanvas->moveToFront();
-            
-            // Wywołanie metody rysującej z klasy węża
             snakeInstance.draw(*sceneManager.planszaGryCanvas);
-            
-            // Wyświetlenie zaktualizowanego płótna
             sceneManager.planszaGryCanvas->display();
 
 			/*
