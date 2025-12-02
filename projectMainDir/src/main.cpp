@@ -338,11 +338,11 @@ int main() {
             if (czyUderzyl) {
                 // Obsługa końca gry (Game Over)
 				/*
-				Ustawic znikanie labelu lub po prostu ustawic wtedy scene z rezultatem wynikiem i opcja tylkjo
-				wyjscia do menu i usunac
-				
-					!!!!!!!!!!!!	
-				*/ 
+						Ustawic znikanie labelu lub po prostu ustawic wtedy scene z rezultatem wynikiem i opcja tylkjo
+						wyjscia do menu i usunac
+						
+							!!!!!!!!!!!!	
+																				*/ 
                 roundInProgress = false; 
         		gameLostLabel->setTextSize(65);
         		gameLostLabel->getRenderer()->setTextColor(sf::Color::Red);
