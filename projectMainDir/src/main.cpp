@@ -279,6 +279,11 @@ int main() {
 					gameStartClick = false;
 					roundInProgress = true;
 					c.restart();
+					/*
+					* Reset zegara fizyki przy starcie, zeby waz nie przeskoczyl
+					* po dlugim oczekiwaniu w menu.
+					*/
+					movementHelperClock.restart();
 					sceneManager.showGameScene();
 				}		
 			}
@@ -313,7 +318,7 @@ int main() {
             /*	Zmienna pomocnicza do sprawdzania kolizji.	*/
             bool czyUderzyl = false;
             /*	Wywolanie funkcji sprawdzajacej czy wystapila kolizja ze sciana.	*/
-            snakeInstance.czyKolizjaZeSciana(55, 60, czyUderzyl); 
+            snakeInstance.czyKolizjaZeSciana(snakeInstance.szerokoscPlanszy, snakeInstance.wysokoscPlanszy, czyUderzyl); 
             
             if (czyUderzyl) {
                 // Obsługa końca gry (Game Over)
@@ -331,6 +336,19 @@ int main() {
 				gameLostLabel->getRenderer()->setBackgroundColor(sf::Color::Transparent);
 				sceneManager.gamePanel->add(gameLostLabel);
 				sceneManager.showGameScene();
+            }
+
+			/*
+            * Logika odpowiedzialna za jedzenie (PowerUp).
+            * Sprawdzenie czy glowa weza znajduje sie na tej samej pozycji co jedzenie.
+            * Jesli tak, nastepuje zjedzenie, zwiekszenie wyniku i dlugosci weza
+            * oraz wylosowanie nowej pozycji i odtworzenie dzwieku.
+            */
+            if (!snakeInstance.wazCialo.empty() && snakeInstance.wazCialo[0] == snakeInstance.pozycjaJedzenia) {
+                snakeInstance.aktualizujWynik(snakeInstance.wynik + 10);
+                snakeInstance.aktualizujDlugosc(snakeInstance.dlugosc + 1);
+                snakeInstance.losowaniePowerUpa(); 
+                snakeInstance.playEatSound();
             }
 
 			/*
