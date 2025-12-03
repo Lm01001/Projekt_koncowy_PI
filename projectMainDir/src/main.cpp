@@ -205,7 +205,7 @@ int main() {
 				if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Escape){
 					window.close();
 				}
-			} 	
+			}
 		}
 		gui.draw();
 		window.display();

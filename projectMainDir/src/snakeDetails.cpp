@@ -13,8 +13,7 @@
     * 
     */
     
-    SnakeDetails::SnakeDetails() : eatSound(loadEatSoundBuffer), 
-    hitSound(loadHitSoundBuffer), nextLevelSound(loadNextLevelSoundBuffer){
+    SnakeDetails::SnakeDetails() {
         soundEffectsSetup();
         /*
         *   Ustawianie ciala weza, glowa(22) i nastepnie reszta ciala(23-24)
@@ -54,6 +53,7 @@
             std::cerr << "Blad - wczytywanie dzwieku uderzenia!\n";
         if(!loadNextLevelSoundBuffer.loadFromFile("../resources/soundEffects/nextLevelSound.wav"))
             std::cerr << "Blad - wczytywanie dzwieku nowego poziomu!\n";
+        
         eatSound.setBuffer(loadEatSoundBuffer);
         hitSound.setBuffer(loadHitSoundBuffer); 
         nextLevelSound.setBuffer(loadNextLevelSoundBuffer);
@@ -65,25 +65,11 @@
         //przekazanego jako parametr wektora
     }
 
-    void SnakeDetails::czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy, bool &kolizja){
-        sf::Vector2i head = wazCialo[0];  //pozycja glowy weza
-        if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
-            kolizja = true;
-            this->kolizja = true;
-            playHitSound();
-        } else {
-            kolizja = false;
-            this->kolizja = false;
-        }
-        //sprawdzanie czy kolizja ze sciana, zobaczyc na pozycje
-        //planszy i rozmiar i odpowiednio dodac marginesy 
-    }
-
     void SnakeDetails::kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama){
         //dodanie ciemniejszego koloru na brame do kolejnego etapu
         //mozna tez dodac strzalke gdzie wejsc
         //podac szerokosc bramy
-        playNextLevelSound();//ew po przejsciu, ale chwilowo
+        
     }
 
     void SnakeDetails::movementAktualizujWeza(float czasOdPoprzedniejKlatki){
@@ -123,8 +109,7 @@
             //4. ustawienie nowej pozycji jedzenia
             pozycjaJedzenia.x = rand() % szerokoscPlanszy;
             pozycjaJedzenia.y = rand() % wysokoscPlanszy;
-            //5. dzwiek zjadania
-            playEatSound();
+            
         }
         //kolizja z wlasnym ciałem
         for(int i = 1; i < (int)wazCialo.size(); ++i){
@@ -204,7 +189,6 @@
         this->lvl = lvl;
 
         kolizja = true;
-        playHitSound();
         //reset wartosci aktualnego weza
         //mozliwe ze usuniecie weza, niekoniecznie
         //po prostu reset bo ekran po przegranej przenosi

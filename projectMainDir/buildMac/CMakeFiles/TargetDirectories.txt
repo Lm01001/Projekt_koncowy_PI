@@ -1,3 +1,0 @@
-/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/buildMac/CMakeFiles/projektGra.dir
-/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/buildMac/CMakeFiles/edit_cache.dir
-/Users/zofiamikoda/Documents/Projekt_koncowy_PI/projectMainDir/buildMac/CMakeFiles/rebuild_cache.dir
