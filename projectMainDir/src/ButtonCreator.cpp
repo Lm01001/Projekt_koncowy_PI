@@ -180,13 +180,19 @@
             linia.setOutlineThickness(2);
             planszaCanvas->draw(linia);
             
-            sf::RectangleShape planszaGry(sf::Vector2f(400, 400));
+            planszaGry = sf::RectangleShape(sf::Vector2f(400, 400));
             planszaGry.setPosition(sf::Vector2f(75, 50));
             planszaGry.setFillColor(sf::Color(25, 153, 39));
             planszaGry.setOutlineColor(sf::Color(7, 43, 11));
             planszaGry.setOutlineThickness(9);
             planszaCanvas->draw(planszaGry);
             panel->add(planszaCanvas);
+
+            planszaGryCanvas = tgui::CanvasSFML::create();
+            planszaGryCanvas->setSize(400, 400);
+            planszaGryCanvas->setPosition(75, 200);
+            planszaGryCanvas->moveToFront();
+            panel->add(planszaGryCanvas);
 
             timeLabelGame = tgui::Label::create("Time: 0:00");
             timeLabelGame->setWidgetName("timeLabelGame");

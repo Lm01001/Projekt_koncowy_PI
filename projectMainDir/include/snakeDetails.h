@@ -20,19 +20,21 @@ class SnakeDetails{
         bool kolizja;
         int szerokoscPlanszy = 10;
         int wysokoscPlanszy = 10;
+        char direction;
 
         SnakeDetails();
         void ustawKierunek(sf::Vector2i kierunek);
         void movementAktualizujWeza(float czasOdPoprzedniejKlatki);
-        void draw(tgui::CanvasSFML& planszaGry);
+        void draw(tgui::CanvasSFML& planszaGryCanvas);
         void czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy, bool &kolizja);
         void kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama);
         void aktualizujWynik(int wynik);
         void aktualizujDlugosc(int dlugosc);
         void kolejnyEtap(int lvl);
         void losowaniePowerUpa();
-        void przegranaGracza(int wynik, int dlugosc, int lvl); //???
+        void przegranaGracza(int wynik, int dlugosc, int lvl);
         void wyswietlStatystyki(int wynik, int dlugosc, int lvl);
+        void przejscieDoNastepnegoPoziomu(float predkoscRuchu);
 
         sf::SoundBuffer loadEatSoundBuffer;
         sf::SoundBuffer loadHitSoundBuffer;

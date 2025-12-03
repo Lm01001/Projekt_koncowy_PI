@@ -24,7 +24,6 @@
         wazCialo.push_back(sf::Vector2i(10, 10)); 
         wazCialo.push_back(sf::Vector2i(9, 10)); 
         wazCialo.push_back(sf::Vector2i(8, 10));
-
         /*
         *   Ustawianie poczatkowych wartosci dla wlasnosci weza 
         *   i zmiennych dla logik juz w grze.
@@ -38,13 +37,13 @@
         predkoscRuchu = 0.2f; 
         timerRuchu = 0.f;  
         kolizja = false;  
-
         /*
         *   Przypisanie wartosci do wektora z kierunkiem ruchu,
         *   defaultowo kierunek w prawo
         */
         kierunekRuchu = sf::Vector2i(1, 0); 
         pozycjaJedzenia = sf::Vector2i(5, 5);
+        direction = 'r';
     }
 
     void SnakeDetails::soundEffectsSetup(){
@@ -60,124 +59,174 @@
     }
 
     void SnakeDetails::ustawKierunek(sf::Vector2i kierunek){
-        //zmienna z klasy SnakeDetails - przypisanie jej wartosci
+        /*
+        *   Zmienna z zadeklarowana w headerFile tej klasy
+        *   przypisanie jej wartosci w celu ustawienia kierunku ruchu
+        *   , wartosc przekazana jako parametr w postaci wektora int'ow
+        */
         this->kierunekRuchu = kierunek;
-        //przekazanego jako parametr wektora
     }
 
     void SnakeDetails::czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy, bool &kolizja){
-        sf::Vector2i head = wazCialo[0];  //pozycja glowy weza
+        /*  Ustawienie pozycji glowy  */
+        sf::Vector2i head = wazCialo[0];  
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
             this->kolizja = true;
-            playHitSound();
-        } else {
+            przegranaGracza(wynik, dlugosc, lvl);
+        }else{
             kolizja = false;
             this->kolizja = false;
-        }
-        //sprawdzanie czy kolizja ze sciana, zobaczyc na pozycje
-        //planszy i rozmiar i odpowiednio dodac marginesy 
+        } 
     }
 
     void SnakeDetails::kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama){
-        //dodanie ciemniejszego koloru na brame do kolejnego etapu
-        //mozna tez dodac strzalke gdzie wejsc
-        //podac szerokosc bramy
-        playNextLevelSound();//ew po przejsciu, ale chwilowo
+        /*
+            Dodanie bramy (png) jako wyjscia z poziomu
+            ustawianie albo linii pod albo czegos
+            ze po kontakcie wczytanie nowego poziomu
+                !!!!!!!!!!!!!!!!!!!!!!
+                                                        */
+        playNextLevelSound();
     }
 
     void SnakeDetails::movementAktualizujWeza(float czasOdPoprzedniejKlatki){
-        //waz rusza sie tylko co predkoscRuchu sekund
+        /*  
+        *   Waz porusza sie co wartosc zmiennej predkoscRuchu
+        *   ustawionej w konstruktorze (0.2f) defaultowo,
+        *   jest to predkosc dla latwego poziomu trudnosci.
+        */
         timerRuchu += czasOdPoprzedniejKlatki;
         if(timerRuchu < predkoscRuchu)
         return;
         timerRuchu = 0.f;
 
-        //ruch segmentow od ogona do glowy
+        /*
+        *   Ruch segmentow, blokow z ktorych sklada
+        *   sie waz. Od ogona do glowy.
+        */
         for(int i = wazCialo.size() - 1; i > 0; i--) {
             wazCialo[i] = wazCialo[i - 1];
         }
-        //przesuniecie glowy na podstawie kierunku
+        
+        /*  Przesuniecie glowy na bazie kierunku ruchu  */
         wazCialo[0] += kierunekRuchu;
         sf::Vector2i head = wazCialo[0];
-        //sprawdzanie kolizji ze sciana
+        
+        /*  Sprawdzenie wystapienia kolizji ze sciana   */
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
-            playHitSound();
             przegranaGracza(wynik, dlugosc, lvl);
             return;
         }
-        //sprawdzanie zjedzenia przedmiotu
+
+        /*  Sprawdzenie zjedzenia przedmiotu*/
+
+        /*      Ustawic wydluzenie weza nie co kazdy zjedzony
+                tylko np 2, ze modulo z dzielenia wyniku przez
+                cos     
+                        !!!!!!!!!!!!!!!!!!!!!!!
+                                                                */
+
+        
+        /*
+        *   Instrukcja sprawdzajaca, obslugujaca zjadanie
+        *   przedmiotow przez weza.
+        *   W przypadku pokrycia sie pozycji glowy z 
+        *   przedmiotem wydluza sie cialo weza.
+        *   Po zjedzeniu wynik sie zwieksza, a jesli zostaly
+        *   zjedzone 3 to losowany jest powerup - wywolanie
+        *   funkcji obslugujacej losowanie.
+        */
         if(head == pozycjaJedzenia){
-            playEatSound();
-            //1. wydluzanie weza
             wazCialo.push_back(wazCialo.back());
             dlugosc = (int)wazCialo.size();
-            //2. zwiekszenie wyniku
-            aktualizujWynik(10);  //+10 punktow za zjedzenie
+            aktualizujWynik(10); 
             zjedzonePrzedmioty++;
-            // co 3 zjedzone przedmioty losujemy power-up
             if(zjedzonePrzedmioty % 3 == 0){
                 losowaniePowerUpa();
             }
-            //4. ustawienie nowej pozycji jedzenia
+            /*
+            *   Po zjedzeniu losowanie nowej pozycji
+            *   dla nowego przedmiotu i wywolanie
+            *   funkcji do wydania dzwieku oznaczajacego
+            *   zjedzenie przedmiotu.
+            */
+
+
+            /*
+                dodac warunek ktory ma na celu sprawdzenie
+                zeby nowy przedmiot nie pojawial sie tam gdzie znajduje
+                sie waz czyli unikniecie pojawiania sie przedmiotu
+                na wezu
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                                                        */
+
             pozycjaJedzenia.x = rand() % szerokoscPlanszy;
             pozycjaJedzenia.y = rand() % wysokoscPlanszy;
-            //5. dzwiek zjadania
             playEatSound();
         }
-        //kolizja z wlasnym ciałem
+
+        /*  Sprawdzenie wystapienia kolizji z wlasnym cialem   */
+        /*  Wywolanie funkcji do dzwieku zderzenia i przegranej gracza  */
         for(int i = 1; i < (int)wazCialo.size(); ++i){
             if(wazCialo[i] == head){
                 kolizja = true;
-                playHitSound();
-                //wywolanie logiki przegranej
                 przegranaGracza(wynik, dlugosc, lvl);
                 return;
             }
         }
-        //aktualizacja timera i przesuniecie weza
-        //mozna dodac warunek ze gdy zmienna ze zjedzonymi
-        //przedmiotami ma jakas wartosc
-        //np. co (200) losowany jest 1 z 4 powerupow
-        //warunek jesli osiagniety prog wyniku zwieksza sie waz
-        //wywolanie wewnatrz funkcji losowaniePowerUpa
     }
 
-    void SnakeDetails::draw(tgui::CanvasSFML& planszaGry){
-        // 1. Wyczyść canvasa (tło planszy)
-        planszaGry.clear(sf::Color(30, 30, 30)); // ciemne tło 
-        // 2. Stała – rozmiar jednego „kafelka” planszy w pikselach
+    void SnakeDetails::draw(tgui::CanvasSFML& planszaGryCanvas){
+        /*
+        *   Czyszczenie planszy - tla.
+        *   Kolejno ustawienie rozmiaru jednego kafelka
+        *   skaladajacego sie na plansze.
+        *   Deklaracja zmiennej do kazdego z fragmentow
+        *   ciala weza, a nastepnie rysowanie ciala
+        *   w petli, gdzie glowa jest ciemniejsza
+        */
+        planszaGryCanvas.clear(sf::Color(25, 153, 39)); 
         const float tileSize = 20.f;
-        // 3. Rysowanie ciała węża
         sf::RectangleShape segmentShape(sf::Vector2f(tileSize, tileSize));
 
-        for (std::size_t i = 0; i < wazCialo.size(); ++i){
-            // głowa inny kolor
+        /*
+        
+            Zmiana tego zeby glowa byla po prostu od razu rysowana
+            i unikniecie ciaglego sprawdzania tego instrukcja
+            if - zwyczajnie przed petla ustawic i zaktualizowac
+            petle
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                                                    */
+
+        for(std::size_t i = 0; i < wazCialo.size(); ++i){
             if(i == 0)
-                segmentShape.setFillColor(sf::Color::Green);
+                segmentShape.setFillColor(sf::Color::Black);
             else
-                segmentShape.setFillColor(sf::Color(0, 150, 0));
+                segmentShape.setFillColor(sf::Color(56, 56, 56));
 
             sf::Vector2f segmentShapePosVar((wazCialo[i].x) * tileSize, (wazCialo[i].y) * tileSize);
             segmentShape.setPosition(segmentShapePosVar);
-            planszaGry.draw(segmentShape);
+            planszaGryCanvas.draw(segmentShape);
         }
 
-        // 4. Rysowanie jedzenia
+        /*
+        *   Rysowanie przedmiotu - jedzenia, dla weza ktore
+        *   bedzie zwiekszac wynik o 10 oraz rozmiar weza
+        *   o jeden kafelek.
+        *   Na koncu aktualizacja canvasu - planszy
+        */
         sf::RectangleShape foodShape(sf::Vector2f(tileSize, tileSize));
         foodShape.setFillColor(sf::Color::Red);
         sf::Vector2f foodPosVar((pozycjaJedzenia.x) * tileSize, (pozycjaJedzenia.y) * tileSize);
         foodShape.setPosition(foodPosVar);
-        planszaGry.draw(foodShape);
-
-        // 5. Zaktualizowanie zawartości canvasa
-        planszaGry.display();
+        planszaGryCanvas.draw(foodShape);
+        planszaGryCanvas.display();
     }
 
     
     void SnakeDetails::aktualizujWynik(int wynik){
-            //Zwiekszanie wynik np po zjedzeniu przedmiotu np. o 10
         this->wynik += wynik;
     }
 
@@ -186,7 +235,16 @@
     }
 
     void SnakeDetails::kolejnyEtap(int lvl){
-        //ustawiamy nowy poziom
+        /*
+            Doprecyzowac zwiekszanie predkosci (chyba)
+            bo w takiej sytuacji waz zostanie przyspieszony
+            po osiagnieciu pewnego wyniku konczacego
+            lvl, ale przejscie do kolejnego etapu nie
+            jest automatyczne wiec prawdopodobnie dodac
+            w innej funkcji     
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                                        */
+
         this->lvl = lvl;
         //lekko przyspieszamy weaz przy kazdym etapie
         if(predkoscRuchu > 0.05f)  //zeby nie bylo nieskonczenie szybko
@@ -197,6 +255,8 @@
         //typu float przetrzymujacej czas lub Clock
     }
 
+    //void SnakeDetails::przejscieDoNastepnegoPoziomu(float predkoscRuchu){}
+
     void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl){
         //zapamietujemy statystyki z momentu przegranej
         this->wynik = wynik;
@@ -205,6 +265,28 @@
 
         kolizja = true;
         playHitSound();
+
+        /*
+            Potrzeba ustawic ze przy kazdym z przypadkow gra jest zatrzymywana
+            prz ykazdym rodzaju kolizji dzwiek wywolywany tylko w metodzie przegrana
+            ustawic/zainicjalizowac od razu rozmiar planszy zeby miala wartosc 
+            wieksza od zera bo wywali od razu. Najlepiej bedzie jeszcze wywolac
+            konstruktor weza przed wyswietleniem np jeszcze podczas  odliczania
+                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                                                                                    */
+                                                                                
+        /*  zaktualizowac tez pojawianie sie owocow zeby nie pokrywaly sie 
+            z cialem weza
+                !!!!!!!!!!!!!!!!!!!!!!!!!
+                                            */                                                                        
+                                                                                   
+        /*
+	- Do zrobienia warunek sprawdzajacy zmiane wyniku jakos ze zmienna pomocnicza czy cos
+	- Zderzenia z samym soba
+	- Mozna zmienic ilosc serduszek na aktywny powerup
+	-Po przegranej reset planszy usuniecie labellu przegrana i weza, reset wszystkiego
+	
+	*/
         //reset wartosci aktualnego weza
         //mozliwe ze usuniecie weza, niekoniecznie
         //po prostu reset bo ekran po przegranej przenosi
