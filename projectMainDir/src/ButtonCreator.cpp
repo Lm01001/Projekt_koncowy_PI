@@ -223,7 +223,11 @@
             label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
             label->setPosition(150, 45);
             panel->add(label);
-        }
+        }else if(panel->getWidgetName() == "Result panel"){
+            auto backButton = createNewBackToMainMenuButton();
+            backButton->moveToFront();
+            panel->add(backButton);
+        }    
     }
 
 

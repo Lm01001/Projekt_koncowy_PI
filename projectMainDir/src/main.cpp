@@ -356,7 +356,8 @@ int main() {
 					
 					auto panelHelper = snakeInstance.wyswietlStatystyki(sceneManager.resultPanel, snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
 					sceneManager.resultPanel->add(panelHelper);
-					
+					auto backButton = sceneManager.createNewBackToMainMenuButton();
+					sceneManager.resultPanel->add(backButton);
 					sceneManager.resultPanel->moveToFront();
 					
 					gui.add(sceneManager.resultPanel);
