@@ -42,8 +42,9 @@ class SnakeDetails{
         tgui::Label::Ptr resultPanelLength;
         tgui::Label::Ptr resultPanelLvl;
         bool gameOver;
+        sf::Clock clockForWaiting;
 
-        void przegranaGracza(int wynik, int dlugosc, int lvl);
+        void przegranaGracza(int wynik, int dlugosc, int lvl, sf::Clock clockForWaiting);
         tgui::Panel::Ptr wyswietlStatystyki(tgui::Panel::Ptr resultPanel, int wynik, int dlugosc, int lvl);
         
 

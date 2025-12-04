@@ -78,7 +78,8 @@
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
             this->kolizja = true;
-            przegranaGracza(wynik, dlugosc, lvl);
+            gameOver = true;
+            przegranaGracza(wynik, dlugosc, lvl, clockForWaiting);
         }else{
             kolizja = false;
             this->kolizja = false;
@@ -147,7 +148,7 @@
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
             gameOver = true;
-            przegranaGracza(wynik, dlugosc, lvl);
+            przegranaGracza(wynik, dlugosc, lvl, clockForWaiting);
             return;
         }
 
@@ -206,7 +207,8 @@
         for(int i = 1; i < (int)wazCialo.size(); ++i){
             if(wazCialo[i] == head){
                 kolizja = true;
-                przegranaGracza(wynik, dlugosc, lvl);
+                gameOver = true;
+                przegranaGracza(wynik, dlugosc, lvl, clockForWaiting);
                 return;
             }
         }
@@ -273,6 +275,7 @@
 
     void SnakeDetails::kolejnyEtap(int lvl){
       this->lvl = lvl;
+      direction='r';
         //Przyspieszenie
         if(predkoscRuchu > 0.05f)
         predkoscRuchu *= 0.9f;
@@ -302,13 +305,18 @@
 
     //void SnakeDetails::przejscieDoNastepnegoPoziomu(float predkoscRuchu){}
 
-    void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl){
+    void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl, sf::Clock clockForWaiting){
         /*
             !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
                                                                         */
         this->kolizja = true;
         playHitSound();
-
+        gameOver = true;
+        clockForWaiting.restart();
+        
+  
+ 
+       
 
          // Reset wyniku i poziomu
     this->wynik = 0;

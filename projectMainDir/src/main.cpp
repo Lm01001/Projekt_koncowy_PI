@@ -182,8 +182,6 @@ int main() {
 	*/
 	auto gameLostLabel = tgui::Label::create("Przegrana!");
 	gameLostLabel->setWidgetName("przegrana");
-	bool gameOverTimerHelper = false;
-	sf::Clock gameOverWait;
 	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
 	pauseButton->onPress([&sceneManager, &c, &gamePaused](){
 		gamePaused = true;
@@ -208,6 +206,8 @@ int main() {
 	*	za wszystkie interakcje typu rozpoczecie gry,
 	*	zmiany w ustawieniach, czy pauzowanie gry.
 	*/
+	bool helper=false;
+	sf::Clock clockhelper;
 	while(window.isOpen()){
 		/*
 		*	Dzieki zmianie na SFML 3 i braku domyslnego konstruktora dla event
@@ -320,54 +320,38 @@ int main() {
 		*	Obsluga timera znajdujacego sie na gornym
 		*	pasku w trakcie rozgrywki.
 		*/
-		if(roundInProgress && !gamePaused && !snakeInstance.gameOver){
+		if(roundInProgress && !gamePaused){
 			/*
 			*	Zmienna lastFrameTime przechowuje czas (w sekundach),
 			*	pobiera czas jaki uplynal od ostatniej klatki, co
 			*	sluzy do utrzymania plynnosci ruchu weza.
 			*/
             float lastFrameTime = movementHelperClock.restart().asSeconds();
-            
+            snakeInstance.clockForWaiting.restart();
 			/*
 			*	Przesuniecie, aktualizacja - przesuniecie weza, zgodnie
 			*	z jego predkoscia i kierunkiem ruchu.
 			*/
             snakeInstance.movementAktualizujWeza(lastFrameTime);
             /*	Zmienna pomocnicza do sprawdzania kolizji.	*/
-            bool czyUderzyl = false;
+            //bool czyUderzyl = false;
             /*	Wywolanie funkcji sprawdzajacej czy wystapila kolizja ze sciana.	*/
-            snakeInstance.czyKolizjaZeSciana(snakeInstance.szerokoscPlanszy, snakeInstance.wysokoscPlanszy, czyUderzyl); 
+            snakeInstance.czyKolizjaZeSciana(snakeInstance.szerokoscPlanszy, snakeInstance.wysokoscPlanszy, snakeInstance.kolizja); 
 
-            if(czyUderzyl || snakeInstance.gameOver){
-                roundInProgress = false; 
+            if(snakeInstance.kolizja || snakeInstance.gameOver){
+				roundInProgress = false; 
         		gameLostLabel->setTextSize(65);
         		gameLostLabel->getRenderer()->setTextColor(sf::Color::Red);
         		gameLostLabel->setPosition(105, 180);
 				gameLostLabel->getRenderer()->setTextOutlineThickness(2);
 				gameLostLabel->getRenderer()->setBackgroundColor(sf::Color::Transparent);
 				sceneManager.gamePanel->add(gameLostLabel);
-				snakeInstance.przegranaGracza(snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
-				if(!gameOverTimerHelper){
-					gameOverWait.restart();
-					gameOverTimerHelper = true;
-				}
 				
-				//if(gameOverWait.getElapsedTime().asSeconds() >= 3.0){
-					
-					auto panelHelper = snakeInstance.wyswietlStatystyki(sceneManager.resultPanel, snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
-					sceneManager.resultPanel->add(panelHelper);
-					auto backButton = sceneManager.createNewBackToMainMenuButton();
-					sceneManager.resultPanel->add(backButton);
-					sceneManager.resultPanel->moveToFront();
-					
-					gui.add(sceneManager.resultPanel);
-					gameOverTimerHelper = false;
-					sceneManager.showResultScene();
-				//}
+				if(!helper){
+					snakeInstance.przegranaGracza(snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl, snakeInstance.clockForWaiting);
+					helper = true;
+				}
             }
-			gui.draw();
-					window.display();
-	
 			
 
 			/*
@@ -413,6 +397,19 @@ int main() {
 			streamTimeUpdate << std::fixed <<  "Time: "<< minuty << ":" <<std::setw(2) << std::setfill('0') << sekundySkrocone;
 			sceneManager.timeLabelGame->setText(streamTimeUpdate.str());
 			sceneManager.gamePanel->add(sceneManager.timeLabelGame);
+		}
+
+		if(snakeInstance.gameOver && snakeInstance.clockForWaiting.getElapsedTime().asSeconds() >= 2.25){
+			sceneManager.gamePanel->remove(gameLostLabel);
+			auto panelHelper = snakeInstance.wyswietlStatystyki(sceneManager.resultPanel, snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
+			sceneManager.resultPanel->add(panelHelper);
+			auto backButton = sceneManager.createNewBackToMainMenuButton();				
+			sceneManager.resultPanel->add(backButton);
+			sceneManager.resultPanel->moveToFront();
+					
+			gui.add(sceneManager.resultPanel);
+			sceneManager.showResultScene();
+			snakeInstance.gameOver = false;
 		}
 	}
 	return 0;
