@@ -182,6 +182,8 @@ int main() {
 	*/
 	auto gameLostLabel = tgui::Label::create("Przegrana!");
 	gameLostLabel->setWidgetName("przegrana");
+	bool gameOverTimerHelper = false;
+	sf::Clock gameOverWait;
 	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
 	pauseButton->onPress([&sceneManager, &c, &gamePaused](){
 		gamePaused = true;
@@ -335,16 +337,8 @@ int main() {
             bool czyUderzyl = false;
             /*	Wywolanie funkcji sprawdzajacej czy wystapila kolizja ze sciana.	*/
             snakeInstance.czyKolizjaZeSciana(snakeInstance.szerokoscPlanszy, snakeInstance.wysokoscPlanszy, czyUderzyl); 
-            
+
             if(czyUderzyl || snakeInstance.gameOver){
-				//sceneManager.planszaGryCanvas->setVisible(false);
-                // Obsługa końca gry (Game Over)
-				/*
-						Ustawic znikanie labelu lub po prostu ustawic wtedy scene z rezultatem wynikiem i opcja tylkjo
-						wyjscia do menu i usunac
-						
-							!!!!!!!!!!!!	
-																				*/ 
                 roundInProgress = false; 
         		gameLostLabel->setTextSize(65);
         		gameLostLabel->getRenderer()->setTextColor(sf::Color::Red);
@@ -353,12 +347,25 @@ int main() {
 				gameLostLabel->getRenderer()->setBackgroundColor(sf::Color::Transparent);
 				sceneManager.gamePanel->add(gameLostLabel);
 				snakeInstance.przegranaGracza(snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
-				auto panelHelper = snakeInstance.wyswietlStatystyki(sceneManager.resultPanel, snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
-				sceneManager.resultPanel->add(panelHelper);
-
-				//sceneManager.showResultScene();
+				if(!gameOverTimerHelper){
+					gameOverWait.restart();
+					gameOverTimerHelper = true;
+				}
+				
+				//if(gameOverWait.getElapsedTime().asSeconds() >= 3.0){
+					
+					auto panelHelper = snakeInstance.wyswietlStatystyki(sceneManager.resultPanel, snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
+					sceneManager.resultPanel->add(panelHelper);
+					
+					sceneManager.resultPanel->moveToFront();
+					
+					gui.add(sceneManager.resultPanel);
+					gameOverTimerHelper = false;
+					sceneManager.showResultScene();
+				//}
             }
-			
+			gui.draw();
+					window.display();
 	
 			
 

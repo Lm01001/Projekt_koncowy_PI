@@ -344,22 +344,13 @@
         //                 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         //                                                                             */
                                                     
-        /*  zaktualizowac tez pojawianie sie owocow zeby nie pokrywaly sie 
-            z cialem weza
-                !!!!!!!!!!!!!!!!!!!!!!!!!
-                                            */                                                                        
-                                                                                   
-        /*
+    /*
 	- Do zrobienia warunek sprawdzajacy zmiane wyniku jakos ze zmienna pomocnicza czy cos
 	- Zderzenia z samym soba
 	- Mozna zmienic ilosc serduszek na aktywny powerup
 	-Po przegranej reset planszy usuniecie labellu przegrana i weza, reset wszystkiego
 	
 	*/
-        //reset wartosci aktualnego weza
-        //mozliwe ze usuniecie weza, niekoniecznie
-        //po prostu reset bo ekran po przegranej przenosi
-        //do menu i tak
     }
 
     tgui::Panel::Ptr SnakeDetails::wyswietlStatystyki(tgui::Panel::Ptr resultPanel, int wynik, int dlugosc, int lvl){
@@ -379,24 +370,24 @@
             resultCanvas->setPosition(75, 50);
             resultCanvas->moveToBack();
             resultPanel->add(resultCanvas);
-            //gui.add(resultCanvas);
-
+            
         resultPanelTitle = tgui::Label::create("===STATYSTYKI GRY===");
-            resultPanelTitle->setTextSize(50);
+            resultPanelTitle->setTextSize(20);
             resultPanelTitle->setPosition(125, 75);
             resultPanel->add(resultPanelTitle);
-        resultPanelScore = tgui::Label::create("Wynik:  " + std::to_string(wynik));
-            resultPanelScore->setTextSize(35);
-            resultPanelScore->setPosition(100, 125);
+        resultPanelScore = tgui::Label::create("Wynik:      " + std::to_string(wynik));
+            resultPanelScore->setTextSize(25);
+            resultPanelScore->setPosition(100, 130);
             resultPanel->add(resultPanelScore);
-        resultPanelLvl = tgui::Label::create("Poziom:  " + std::to_string(lvl));
-            resultPanelLvl->setTextSize(35);
-            resultPanelLvl->setPosition(100, 150);
+        resultPanelLvl = tgui::Label::create("Poziom:   " + std::to_string(lvl));
+            resultPanelLvl->setTextSize(25);
+            resultPanelLvl->setPosition(100, 180);
             resultPanel->add(resultPanelLvl);
-        resultPanelLength = tgui::Label::create("Dlugosc:  " + std::to_string(dlugosc));
-            resultPanelLength->setTextSize(35);
-            resultPanelLength->setPosition(100, 175);
+        resultPanelLength = tgui::Label::create("Dlugosc:   " + std::to_string(dlugosc));
+            resultPanelLength->setTextSize(25);
+            resultPanelLength->setPosition(100, 230);
             resultPanel->add(resultPanelLength);
+        resultPanel->getRenderer()->setBackgroundColor(sf::Color::Green);
         return resultPanel;
     }
 
