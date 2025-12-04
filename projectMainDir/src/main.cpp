@@ -226,7 +226,7 @@ int main() {
 			/*
 			*	Zmiana kierunku mozliwa tylko podczas trwajacej, aktywnej rozgrywki.
 			*/
-			if(roundInProgress && !gamePaused) {
+			if(roundInProgress && !gamePaused && !snakeInstance.gameOver) {
 				/*	
 				*	Dodanie instrukcji, czy jakikolwiek przycisk jest wcisniety,
 				*	bo brak generowal bledy i ciagle program wchodzil w sprawdzanie
@@ -259,6 +259,7 @@ int main() {
             }
 
 		}
+
 		gui.draw();
 		window.display();
 		
@@ -317,7 +318,7 @@ int main() {
 		*	Obsluga timera znajdujacego sie na gornym
 		*	pasku w trakcie rozgrywki.
 		*/
-		if(roundInProgress && !gamePaused){
+		if(roundInProgress && !gamePaused && !snakeInstance.gameOver){
 			/*
 			*	Zmienna lastFrameTime przechowuje czas (w sekundach),
 			*	pobiera czas jaki uplynal od ostatniej klatki, co
@@ -333,9 +334,10 @@ int main() {
             /*	Zmienna pomocnicza do sprawdzania kolizji.	*/
             bool czyUderzyl = false;
             /*	Wywolanie funkcji sprawdzajacej czy wystapila kolizja ze sciana.	*/
-            snakeInstance.czyKolizjaZeSciana(55, 60, czyUderzyl); 
+            snakeInstance.czyKolizjaZeSciana(snakeInstance.szerokoscPlanszy, snakeInstance.wysokoscPlanszy, czyUderzyl); 
             
-            if (czyUderzyl) {
+            if(czyUderzyl || snakeInstance.gameOver){
+				//sceneManager.planszaGryCanvas->setVisible(false);
                 // Obsługa końca gry (Game Over)
 				/*
 						Ustawic znikanie labelu lub po prostu ustawic wtedy scene z rezultatem wynikiem i opcja tylkjo
@@ -350,8 +352,26 @@ int main() {
 				gameLostLabel->getRenderer()->setTextOutlineThickness(2);
 				gameLostLabel->getRenderer()->setBackgroundColor(sf::Color::Transparent);
 				sceneManager.gamePanel->add(gameLostLabel);
-				sceneManager.showGameScene();
+				snakeInstance.przegranaGracza(snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
+				auto panelHelper = snakeInstance.wyswietlStatystyki(sceneManager.resultPanel, snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
+				sceneManager.resultPanel->add(panelHelper);
+
+				//sceneManager.showResultScene();
             }
+			
+	
+			
+
+			/*
+            * Logika odpowiedzialna za jedzenie (PowerUp).
+            * Sprawdzenie czy glowa weza znajduje sie na tej samej pozycji co jedzenie.
+            * Jesli tak, nastepuje zjedzenie, zwiekszenie wyniku i dlugosci weza
+            * oraz wylosowanie nowej pozycji i odtworzenie dzwieku.
+            */
+           /*if (!snakeInstance.wazCialo.empty() && snakeInstance.wazCialo[0] == snakeInstance.pozycjaJedzenia) {
+                snakeInstance.aktualizujWynik(snakeInstance.wynik + 10);
+                snakeInstance.aktualizujDlugosc(snakeInstance.dlugosc + 1);
+            }*/
 
 			/*
 			*	Ustawienie przezroczystego tla, zeby nie bylo

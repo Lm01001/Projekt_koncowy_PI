@@ -216,12 +216,6 @@
             label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
             label->setPosition(200, 90);
             panel->add(label);
-        }else if(panel->getWidgetName() == "Result panel"){
-            panel->getRenderer()->setBackgroundColor(sf::Color(136, 0, 23));
-            auto label = tgui::Label::create("Wynik:");
-            label->setTextSize(30);
-            label->setPosition(100, 45);
-            panel->add(label);
         }else if(panel->getWidgetName() == "Settings panel"){
             panel->getRenderer()->setBackgroundColor(sf::Color(136, 89, 102));
             auto label = tgui::Label::create("Ustawienia");

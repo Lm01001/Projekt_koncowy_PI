@@ -16,10 +16,11 @@ class SnakeDetails{
         std::string powerUp;
         sf::Vector2i kierunekRuchu;
         sf::Vector2i pozycjaJedzenia;
+        sf::Vector2i pozycjaBramy;
         float predkoscRuchu, timerRuchu;
         bool kolizja;
-        int szerokoscPlanszy = 10;
-        int wysokoscPlanszy = 10;
+        int szerokoscPlanszy;
+        int wysokoscPlanszy;
         char direction;
 
         SnakeDetails();
@@ -32,9 +33,19 @@ class SnakeDetails{
         void aktualizujDlugosc(int dlugosc);
         void kolejnyEtap(int lvl);
         void losowaniePowerUpa();
+        sf::Vector2i generujNowaPozycjeJedzenia(int szerokoscPlanszy, int wysokoscPlanszy);
+
+        tgui::CanvasSFML::Ptr resultCanvas;
+        tgui::Panel::Ptr resultPanel;
+        tgui::Label::Ptr resultPanelTitle;
+        tgui::Label::Ptr resultPanelScore;
+        tgui::Label::Ptr resultPanelLength;
+        tgui::Label::Ptr resultPanelLvl;
+        bool gameOver;
+
         void przegranaGracza(int wynik, int dlugosc, int lvl);
-        void wyswietlStatystyki(int wynik, int dlugosc, int lvl);
-        void przejscieDoNastepnegoPoziomu(float predkoscRuchu);
+        tgui::Panel::Ptr wyswietlStatystyki(tgui::Panel::Ptr resultPanel, int wynik, int dlugosc, int lvl);
+        
 
         sf::SoundBuffer loadEatSoundBuffer;
         sf::SoundBuffer loadHitSoundBuffer;

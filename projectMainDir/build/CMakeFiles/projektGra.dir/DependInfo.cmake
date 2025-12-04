@@ -11,7 +11,6 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/ButtonCreator.cpp" "CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o" "gcc" "CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o.d"
   "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/SnakeDetails.cpp" "CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o" "gcc" "CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o.d"
   "/mnt/c/Users/Maksymilian/OneDrive - Akademia Górniczo-Hutnicza im. Stanisława Staszica w Krakowie/Pulpit/Nowy folder (2)/Projekt_koncowy_PI/projectMainDir/src/main.cpp" "CMakeFiles/projektGra.dir/src/main.cpp.o" "gcc" "CMakeFiles/projektGra.dir/src/main.cpp.o.d"
-  "" "projektGra" "gcc" "CMakeFiles/projektGra.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

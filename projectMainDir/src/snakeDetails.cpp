@@ -16,6 +16,8 @@
     SnakeDetails::SnakeDetails() : eatSound(loadEatSoundBuffer), 
     hitSound(loadHitSoundBuffer), nextLevelSound(loadNextLevelSoundBuffer){
         soundEffectsSetup();
+        this->szerokoscPlanszy = 20;
+        this->wysokoscPlanszy = 20;
         /*
         *   Ustawianie ciala weza, glowa(22) i nastepnie reszta ciala(23-24)
         *   
@@ -42,7 +44,10 @@
         *   defaultowo kierunek w prawo
         */
         kierunekRuchu = sf::Vector2i(1, 0); 
-        pozycjaJedzenia = sf::Vector2i(5, 5);
+        // Brama w prawym górnym rogu
+        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0); 
+        // Generowanie pozycji z uwzględnieniem węża i bramy
+        pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy); 
         direction = 'r';
     }
 
@@ -80,6 +85,30 @@
         } 
     }
 
+    sf::Vector2i SnakeDetails::generujNowaPozycjeJedzenia(int szerokosc, int wysokosc){
+         sf::Vector2i nowaPozycja;
+        bool pozycjaZajeta = true;
+
+        while (pozycjaZajeta) {
+            // Losowanie pozycji
+            nowaPozycja.x = rand() % szerokosc;
+            nowaPozycja.y = rand() % wysokosc;
+            pozycjaZajeta = false;
+
+            // 1. Sprawdzenie czy nie na ciele węża
+            for(const auto& segment : wazCialo){
+                if(segment == nowaPozycja){
+                    pozycjaZajeta = true;
+                    break;
+                }
+            }
+            // 2. Sprawdzenie czy nie na bramie wyjściowej
+                if(nowaPozycja == pozycjaBramy) 
+                    pozycjaZajeta = true;
+        }
+        return nowaPozycja;
+    }
+
     void SnakeDetails::kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama){
         /*
             Dodanie bramy (png) jako wyjscia z poziomu
@@ -96,9 +125,10 @@
         *   ustawionej w konstruktorze (0.2f) defaultowo,
         *   jest to predkosc dla latwego poziomu trudnosci.
         */
+        gameOver = false;
         timerRuchu += czasOdPoprzedniejKlatki;
         if(timerRuchu < predkoscRuchu)
-        return;
+            return;
         timerRuchu = 0.f;
 
         /*
@@ -116,7 +146,16 @@
         /*  Sprawdzenie wystapienia kolizji ze sciana   */
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
+            gameOver = true;
             przegranaGracza(wynik, dlugosc, lvl);
+            return;
+        }
+
+        // Sprawdzenie kolizji z bramą
+
+        if (head == pozycjaBramy) {
+            // Przejście do następnego poziomu
+            kolejnyEtap(lvl + 1);
             return;
         }
 
@@ -139,10 +178,15 @@
         *   funkcji obslugujacej losowanie.
         */
         if(head == pozycjaJedzenia){
-            wazCialo.push_back(wazCialo.back());
-            dlugosc = (int)wazCialo.size();
             aktualizujWynik(10); 
             zjedzonePrzedmioty++;
+
+            if(zjedzonePrzedmioty % 2 == 0){
+                // Dodajemy nowy segment
+                wazCialo.push_back(wazCialo.back());
+                dlugosc = (int)wazCialo.size();
+                aktualizujDlugosc(1);
+            }
             if(zjedzonePrzedmioty % 3 == 0){
                 losowaniePowerUpa();
             }
@@ -152,18 +196,8 @@
             *   funkcji do wydania dzwieku oznaczajacego
             *   zjedzenie przedmiotu.
             */
+            pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
 
-
-            /*
-                dodac warunek ktory ma na celu sprawdzenie
-                zeby nowy przedmiot nie pojawial sie tam gdzie znajduje
-                sie waz czyli unikniecie pojawiania sie przedmiotu
-                na wezu
-                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                                                                        */
-
-            pozycjaJedzenia.x = rand() % szerokoscPlanszy;
-            pozycjaJedzenia.y = rand() % wysokoscPlanszy;
             playEatSound();
         }
 
@@ -191,21 +225,16 @@
         const float tileSize = 20.f;
         sf::RectangleShape segmentShape(sf::Vector2f(tileSize, tileSize));
 
-        /*
-        
-            Zmiana tego zeby glowa byla po prostu od razu rysowana
-            i unikniecie ciaglego sprawdzania tego instrukcja
-            if - zwyczajnie przed petla ustawic i zaktualizowac
-            petle
-                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                                                                    */
+        // 1. Rysowanie głowy (Indeks 0)
+        if(!wazCialo.empty()){
+            segmentShape.setFillColor(sf::Color::Black);
+            sf::Vector2f glowaWezaVect(wazCialo[0].x * tileSize, wazCialo[0].y * tileSize);
+            segmentShape.setPosition(glowaWezaVect);
+            planszaGryCanvas.draw(segmentShape);
+        }
 
-        for(std::size_t i = 0; i < wazCialo.size(); ++i){
-            if(i == 0)
-                segmentShape.setFillColor(sf::Color::Black);
-            else
-                segmentShape.setFillColor(sf::Color(56, 56, 56));
-
+        segmentShape.setFillColor(sf::Color(56, 56, 56));
+        for(std::size_t i = 1; i < wazCialo.size(); ++i){
             sf::Vector2f segmentShapePosVar((wazCialo[i].x) * tileSize, (wazCialo[i].y) * tileSize);
             segmentShape.setPosition(segmentShapePosVar);
             planszaGryCanvas.draw(segmentShape);
@@ -222,6 +251,14 @@
         sf::Vector2f foodPosVar((pozycjaJedzenia.x) * tileSize, (pozycjaJedzenia.y) * tileSize);
         foodShape.setPosition(foodPosVar);
         planszaGryCanvas.draw(foodShape);
+
+        /*   */
+        sf::RectangleShape gateShape(sf::Vector2f(tileSize, tileSize));
+        gateShape.setFillColor(sf::Color::Yellow); // Kolor bramy
+        sf::Vector2f pozycjaBramyHelper(pozycjaBramy.x * tileSize, pozycjaBramy.y * tileSize);
+        gateShape.setPosition(pozycjaBramyHelper);
+        planszaGryCanvas.draw(gateShape);
+
         planszaGryCanvas.display();
     }
 
@@ -231,50 +268,82 @@
     }
 
     void SnakeDetails::aktualizujDlugosc(int dlugosc){
-        this->dlugosc = dlugosc;
+        this->dlugosc += dlugosc;
     }
 
     void SnakeDetails::kolejnyEtap(int lvl){
-        /*
-            Doprecyzowac zwiekszanie predkosci (chyba)
-            bo w takiej sytuacji waz zostanie przyspieszony
-            po osiagnieciu pewnego wyniku konczacego
-            lvl, ale przejscie do kolejnego etapu nie
-            jest automatyczne wiec prawdopodobnie dodac
-            w innej funkcji     
-                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                                                        */
-
-        this->lvl = lvl;
-        //lekko przyspieszamy weaz przy kazdym etapie
-        if(predkoscRuchu > 0.05f)  //zeby nie bylo nieskonczenie szybko
-        predkoscRuchu *= 0.9f;  //10% szybciej na nastepnych levelach
+      this->lvl = lvl;
+        //Przyspieszenie
+        if(predkoscRuchu > 0.05f)
+        predkoscRuchu *= 0.9f;
+    
         playNextLevelSound();
-        //jesli zostanie osiagniety wymagany wynik to etap inkrementacja
-        //zatrzymanie stopera - dodac dodatkowy argument albo
-        //typu float przetrzymujacej czas lub Clock
+        // Reset licznika przedmiotów na nowym poziomie
+        zjedzonePrzedmioty = 0;
+
+        // Reset pozycji węża na startową
+        wazCialo.clear();
+        wazCialo.push_back(sf::Vector2i(10, 10)); 
+        wazCialo.push_back(sf::Vector2i(9, 10)); 
+        wazCialo.push_back(sf::Vector2i(8, 10));
+        dlugosc = (int)wazCialo.size();
+        kierunekRuchu = sf::Vector2i(1, 0); // Reset kierunku
+
+        // Zmiana pozycji bramy na nowym poziomie
+        // Np. parzyste poziomy: lewy dół, nieparzyste: prawy góra
+        if (lvl % 2 == 0)
+        pozycjaBramy = sf::Vector2i(0, wysokoscPlanszy - 1);
+        else
+        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
+
+        // Wygenerowanie jedzenia w nowym, bezpiecznym miejscu
+        pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
     }
 
     //void SnakeDetails::przejscieDoNastepnegoPoziomu(float predkoscRuchu){}
 
     void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl){
-        //zapamietujemy statystyki z momentu przegranej
-        this->wynik = wynik;
-        this->dlugosc = dlugosc;
-        this->lvl = lvl;
-
-        kolizja = true;
+        /*
+            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
+                                                                        */
+        this->kolizja = true;
         playHitSound();
 
-        /*
-            Potrzeba ustawic ze przy kazdym z przypadkow gra jest zatrzymywana
-            prz ykazdym rodzaju kolizji dzwiek wywolywany tylko w metodzie przegrana
-            ustawic/zainicjalizowac od razu rozmiar planszy zeby miala wartosc 
-            wieksza od zera bo wywali od razu. Najlepiej bedzie jeszcze wywolac
-            konstruktor weza przed wyswietleniem np jeszcze podczas  odliczania
-                        !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-                                                                                    */
-                                                                                
+
+         // Reset wyniku i poziomu
+    this->wynik = 0;
+    this->lvl = 1;
+    this->zjedzonePrzedmioty = 0;
+    this->powerUp = "";
+    
+    // Reset prędkości do domyślnej
+    this->predkoscRuchu = 0.2f;
+    this->timerRuchu = 0.f;
+
+    // Reset ciała węża do pozycji startowej (np. 10,10)
+    wazCialo.clear();
+    wazCialo.push_back(sf::Vector2i(10, 10)); 
+    wazCialo.push_back(sf::Vector2i(9, 10)); 
+    wazCialo.push_back(sf::Vector2i(8, 10));
+    
+    // Reset długości zmiennej pomocniczej
+    this->dlugosc = (int)wazCialo.size();
+
+    // Reset kierunku
+    this->kierunekRuchu = sf::Vector2i(1, 0);
+
+    // Reset pozycji bramy i jedzenia na startowe
+    pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
+    pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
+        // /*
+        //     Potrzeba ustawic ze przy kazdym z przypadkow gra jest zatrzymywana
+        //     prz ykazdym rodzaju kolizji dzwiek wywolywany tylko w metodzie przegrana
+        //     ustawic/zainicjalizowac od razu rozmiar planszy zeby miala wartosc 
+        //     wieksza od zera bo wywali od razu. Najlepiej bedzie jeszcze wywolac
+        //     konstruktor weza przed wyswietleniem np jeszcze podczas  odliczania
+        //                 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        //                                                                             */
+                                                    
         /*  zaktualizowac tez pojawianie sie owocow zeby nie pokrywaly sie 
             z cialem weza
                 !!!!!!!!!!!!!!!!!!!!!!!!!
@@ -293,7 +362,7 @@
         //do menu i tak
     }
 
-    void SnakeDetails::wyswietlStatystyki(int wynik, int dlugosc, int lvl){
+    tgui::Panel::Ptr SnakeDetails::wyswietlStatystyki(tgui::Panel::Ptr resultPanel, int wynik, int dlugosc, int lvl){
         std::cout << "===STATYSTYKI GRY===" << std::endl;
         std::cout << "Wynik: " << wynik << std::endl;
         std::cout << "Dlugosc: " << dlugosc << std::endl;
@@ -303,6 +372,32 @@
         //przekazanie gdzies tych przypisanie, zeby wykorzystac
         //do dodania do sceny
         //bedzie wywolywana i po przegranej i koncu gry
+
+        resultPanel->removeAllWidgets();
+        resultCanvas = tgui::CanvasSFML::create();
+            resultCanvas->setSize(400, 550);
+            resultCanvas->setPosition(75, 50);
+            resultCanvas->moveToBack();
+            resultPanel->add(resultCanvas);
+            //gui.add(resultCanvas);
+
+        resultPanelTitle = tgui::Label::create("===STATYSTYKI GRY===");
+            resultPanelTitle->setTextSize(50);
+            resultPanelTitle->setPosition(125, 75);
+            resultPanel->add(resultPanelTitle);
+        resultPanelScore = tgui::Label::create("Wynik:  " + std::to_string(wynik));
+            resultPanelScore->setTextSize(35);
+            resultPanelScore->setPosition(100, 125);
+            resultPanel->add(resultPanelScore);
+        resultPanelLvl = tgui::Label::create("Poziom:  " + std::to_string(lvl));
+            resultPanelLvl->setTextSize(35);
+            resultPanelLvl->setPosition(100, 150);
+            resultPanel->add(resultPanelLvl);
+        resultPanelLength = tgui::Label::create("Dlugosc:  " + std::to_string(dlugosc));
+            resultPanelLength->setTextSize(35);
+            resultPanelLength->setPosition(100, 175);
+            resultPanel->add(resultPanelLength);
+        return resultPanel;
     }
 
     void SnakeDetails::losowaniePowerUpa(){
