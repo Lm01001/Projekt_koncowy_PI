@@ -142,6 +142,7 @@ int main() {
 		snakeInstance.gameMode = 'f';
 		counterHelper = 3;
 		c.restart();
+
 		sceneManager.showGameScene();
 	});
 	mainButtonEndless->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
@@ -417,7 +418,7 @@ int main() {
 			auto backButton = sceneManager.createNewBackToMainMenuButton();				
 			sceneManager.resultPanel->add(backButton);
 			sceneManager.resultPanel->moveToFront();
-					
+			
 			gui.add(sceneManager.resultPanel);
 			sceneManager.showResultScene();
 			snakeInstance.gameOver = false;
