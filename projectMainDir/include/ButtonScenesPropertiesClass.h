@@ -35,7 +35,7 @@ class ButtonScenesPropertiesClass{
         sf::RectangleShape planszaGry;
         tgui::CanvasSFML::Ptr planszaGryCanvas;
 
-        void appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton);
+        void appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr startButtonEndless, tgui::Button::Ptr settingsButton);
         void appendBackToMainMenuButton(tgui::Panel::Ptr panel);
         tgui::Button::Ptr createNewBackToMainMenuButton();
         void appendToNextRoundPopup();
@@ -54,7 +54,7 @@ class ButtonScenesPropertiesClass{
         void showSettingsScene();
         void showNextRoundPopup();
 
-        void updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,tgui::Panel::Ptr menuPanel, 
+        void updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr startButtonEndless,tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,tgui::Panel::Ptr menuPanel, 
                 tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel, tgui::Panel::Ptr gamePanel);
 };
 

@@ -51,9 +51,12 @@ int main() {
 	/*
 	*	Glowny przycisk do przejscia do ekranu gry.
 	*/
-	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass(gui ,"Graj", 190, 435, 170, 70, 
+	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass(gui ,"Graj", 90, 435, 170, 70, 
 		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
 	auto mainButton = buttonObj1.getButton();
+	ButtonScenesPropertiesClass buttonObj2 = ButtonScenesPropertiesClass(gui ,"Endless\n  Mode", 300, 435, 170, 70, 
+		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
+	auto mainButtonEndless = buttonObj2.getButton();
 	
 	/*
 	*	Przycisk do przejscia do ustawien rozgrywki w
@@ -76,7 +79,7 @@ int main() {
 	*	ze w konstruktorze sa funkcje bez argumentow.
 	*/
 	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
-	sceneManager.updateAllScenes(mainButton, settingsButton, pauseButton, sceneManager.menuPanel, sceneManager.pausePanel,
+	sceneManager.updateAllScenes(mainButton, mainButtonEndless,settingsButton, pauseButton, sceneManager.menuPanel, sceneManager.pausePanel,
 			sceneManager.resultPanel, sceneManager.settingsPanel, sceneManager.gamePanel);
 	
 
@@ -130,12 +133,24 @@ int main() {
 	bool roundInProgress = false, gamePaused = false;
 	int czasWSekundach, sekundySkrocone;
 	sceneManager.gameInProgressTimeVar = 0;
-	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper, &c]() {
+	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
 		/*
 		* 	Miejsce na reszte kodu do dodania juz
 		*	po implementacji funkcjonalnosci weza
 		*/	
 		gameStartClick = true;
+		snakeInstance.gameMode = 'f';
+		counterHelper = 3;
+		c.restart();
+		sceneManager.showGameScene();
+	});
+	mainButtonEndless->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
+		/*
+		* 	Miejsce na reszte kodu do dodania juz
+		*	po implementacji funkcjonalnosci weza
+		*/	
+		gameStartClick = true;
+		snakeInstance.gameMode = 'e';
 		counterHelper = 3;
 		c.restart();
 		sceneManager.showGameScene();
@@ -360,10 +375,6 @@ int main() {
             * Jesli tak, nastepuje zjedzenie, zwiekszenie wyniku i dlugosci weza
             * oraz wylosowanie nowej pozycji i odtworzenie dzwieku.
             */
-           /*if (!snakeInstance.wazCialo.empty() && snakeInstance.wazCialo[0] == snakeInstance.pozycjaJedzenia) {
-                snakeInstance.aktualizujWynik(snakeInstance.wynik + 10);
-                snakeInstance.aktualizujDlugosc(snakeInstance.dlugosc + 1);
-            }*/
 
 			/*
 			*	Ustawienie przezroczystego tla, zeby nie bylo

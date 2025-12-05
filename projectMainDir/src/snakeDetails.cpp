@@ -49,6 +49,8 @@
         // Generowanie pozycji z uwzględnieniem węża i bramy
         pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy); 
         direction = 'r';
+        gameOver = false;
+        gameMode = 'f';
     }
 
     void SnakeDetails::soundEffectsSetup(){
@@ -255,11 +257,13 @@
         planszaGryCanvas.draw(foodShape);
 
         /*   */
-        sf::RectangleShape gateShape(sf::Vector2f(tileSize, tileSize));
-        gateShape.setFillColor(sf::Color::Yellow); // Kolor bramy
-        sf::Vector2f pozycjaBramyHelper(pozycjaBramy.x * tileSize, pozycjaBramy.y * tileSize);
-        gateShape.setPosition(pozycjaBramyHelper);
-        planszaGryCanvas.draw(gateShape);
+        if(gameMode == 'f'){
+            sf::RectangleShape gateShape(sf::Vector2f(tileSize, tileSize));
+            gateShape.setFillColor(sf::Color::Yellow); // Kolor bramy
+            sf::Vector2f pozycjaBramyHelper(pozycjaBramy.x * tileSize, pozycjaBramy.y * tileSize);
+            gateShape.setPosition(pozycjaBramyHelper);
+            planszaGryCanvas.draw(gateShape);
+        }
 
         planszaGryCanvas.display();
     }
@@ -274,8 +278,8 @@
     }
 
     void SnakeDetails::kolejnyEtap(int lvl){
-      this->lvl = lvl;
-      direction='r';
+        this->lvl = lvl;
+        direction='r';
         //Przyspieszenie
         if(predkoscRuchu > 0.05f)
         predkoscRuchu *= 0.9f;
@@ -306,51 +310,37 @@
     //void SnakeDetails::przejscieDoNastepnegoPoziomu(float predkoscRuchu){}
 
     void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl, sf::Clock clockForWaiting){
-        /*
-            !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!1
-                                                                        */
         this->kolizja = true;
         playHitSound();
         gameOver = true;
         clockForWaiting.restart();
-        
-  
- 
        
 
          // Reset wyniku i poziomu
-    this->wynik = 0;
-    this->lvl = 1;
-    this->zjedzonePrzedmioty = 0;
-    this->powerUp = "";
+        this->wynik = 0;
+        this->lvl = 1;
+        this->zjedzonePrzedmioty = 0;
+        this->powerUp = "";
     
-    // Reset prędkości do domyślnej
-    this->predkoscRuchu = 0.2f;
-    this->timerRuchu = 0.f;
+        // Reset prędkości do domyślnej
+        this->predkoscRuchu = 0.2f;
+        this->timerRuchu = 0.f;
 
-    // Reset ciała węża do pozycji startowej (np. 10,10)
-    wazCialo.clear();
-    wazCialo.push_back(sf::Vector2i(10, 10)); 
-    wazCialo.push_back(sf::Vector2i(9, 10)); 
-    wazCialo.push_back(sf::Vector2i(8, 10));
+        // Reset ciała węża do pozycji startowej (np. 10,10)
+        wazCialo.clear();
+        wazCialo.push_back(sf::Vector2i(10, 10)); 
+        wazCialo.push_back(sf::Vector2i(9, 10)); 
+        wazCialo.push_back(sf::Vector2i(8, 10));
     
-    // Reset długości zmiennej pomocniczej
-    this->dlugosc = (int)wazCialo.size();
+        // Reset długości zmiennej pomocniczej
+        this->dlugosc = (int)wazCialo.size();
 
-    // Reset kierunku
-    this->kierunekRuchu = sf::Vector2i(1, 0);
+        // Reset kierunku
+        this->kierunekRuchu = sf::Vector2i(1, 0);
 
-    // Reset pozycji bramy i jedzenia na startowe
-    pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
-    pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
-        // /*
-        //     Potrzeba ustawic ze przy kazdym z przypadkow gra jest zatrzymywana
-        //     prz ykazdym rodzaju kolizji dzwiek wywolywany tylko w metodzie przegrana
-        //     ustawic/zainicjalizowac od razu rozmiar planszy zeby miala wartosc 
-        //     wieksza od zera bo wywali od razu. Najlepiej bedzie jeszcze wywolac
-        //     konstruktor weza przed wyswietleniem np jeszcze podczas  odliczania
-        //                 !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        //                                                                             */
+        // Reset pozycji bramy i jedzenia na startowe
+        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
+        pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
                                                     
     /*
 	- Do zrobienia warunek sprawdzajacy zmiane wyniku jakos ze zmienna pomocnicza czy cos

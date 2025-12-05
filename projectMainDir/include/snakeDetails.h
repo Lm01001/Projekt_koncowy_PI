@@ -22,6 +22,7 @@ class SnakeDetails{
         int szerokoscPlanszy;
         int wysokoscPlanszy;
         char direction;
+        char gameMode;
 
         SnakeDetails();
         void ustawKierunek(sf::Vector2i kierunek);

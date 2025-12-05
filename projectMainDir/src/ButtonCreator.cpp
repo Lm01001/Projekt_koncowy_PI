@@ -83,8 +83,9 @@
     *   przejscia do ustawien oraz rozpoczecia
     *   gry.
     */
-    void ButtonScenesPropertiesClass::appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton){
+    void ButtonScenesPropertiesClass::appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr startButtonEndless, tgui::Button::Ptr settingsButton){
         menuPanel->add(startButton);
+        menuPanel->add(startButtonEndless);
         menuPanel->add(settingsButton);
         auto label = tgui::Label::create("Snake");
         label->setTextSize(60);
@@ -302,10 +303,10 @@
     *   wizualnych bazujac na wczesnie utworzonych
     *   samplach.
     */
-    void ButtonScenesPropertiesClass::updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,
+    void ButtonScenesPropertiesClass::updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr startButtonEndless, tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,
         tgui::Panel::Ptr menuPanel, 
             tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel, tgui::Panel::Ptr gamePanel){
-                appendToMenuScene(menuPanel, startButton, settingsButton);
+                appendToMenuScene(menuPanel, startButton, startButtonEndless, settingsButton);
                 
                 appendBackToMainMenuButton(gamePanel);
                 gamePanel->add(pauseButton);
