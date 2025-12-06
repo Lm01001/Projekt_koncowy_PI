@@ -30,6 +30,8 @@ class ButtonScenesPropertiesClass{
         tgui::Panel::Ptr nextRoundPopup;
 
         tgui::Label::Ptr timeLabelGame;
+        tgui::Label::Ptr wynikLabel;
+        tgui::Label::Ptr powerupLabel;
         int gameInProgressTimeVar;
 
         sf::RectangleShape planszaGry;

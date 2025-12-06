@@ -197,18 +197,20 @@
 
             timeLabelGame = tgui::Label::create("Time: 0:00");
             timeLabelGame->setWidgetName("timeLabelGame");
-            auto wynik = tgui::Label::create("Wynik:");
-            std::string serceE = u8"♡";
-            auto zycia = tgui::Label::create("n x " + serceE);
+            wynikLabel = tgui::Label::create("Wynik: 0");
+            //std::string serceE = u8"♡";
+            //auto zycia = tgui::Label::create("n x " + serceE);
+            powerupLabel = tgui::Label::create("Ostatni powerUp:\nbrak");
+            powerupLabel->setWidgetName("powerupLabel");
             timeLabelGame->setPosition(30, 70);
-            wynik->setPosition(210, 70);
-            zycia->setPosition(440, 70);
+            wynikLabel->setPosition(225, 70);
+            powerupLabel->setPosition(375, 60);
             timeLabelGame->setTextSize(14);
-            wynik->setTextSize(14);
-            wynik->setTextSize(14);
+            wynikLabel->setTextSize(14);
+            wynikLabel->setTextSize(14);
             panel->add(timeLabelGame);
-            panel->add(wynik);
-            panel->add(zycia);
+            panel->add(wynikLabel);
+            panel->add(powerupLabel);
 
         }else if(panel->getWidgetName() == "Pause panel"){
             panel->getRenderer()->setBackgroundColor(sf::Color(122, 113, 101));

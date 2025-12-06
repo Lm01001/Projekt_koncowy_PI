@@ -34,7 +34,7 @@
         lvl = 1;
         zjedzonePrzedmioty = 0;
         dlugosc = (int)wazCialo.size();
-        powerUp = "";
+        powerUp = "brak";
         /*  Predkosc weza, timer na starcie, brak kolizji na starcie  */
         predkoscRuchu = 0.2f; 
         timerRuchu = 0.f;  
@@ -55,6 +55,10 @@
         /*  Ustawianie wartosci dla zmiennych pomocniczych  */
         direction = 'r';
         gameOver = false;
+        /*  Ustawianie przeszkody  */
+        if(!texture.loadFromFile("../resources/bombObstacleIcon.png")){
+            std::cerr<<"Blad z wczytaniem przeszkody\n";
+        }
     }
 
     void SnakeDetails::soundEffectsSetup(){
@@ -104,8 +108,13 @@
     void SnakeDetails::generujPrzeszkody(){
         /*  Co 20 pkt dodajemy dodatkowo nowa przeszkode  */
         int docelowaIloscPrzeszkod = wynik / 20; 
+        /*  Zeby nie zasypac planszy przeszkodami  */
+        int maksymalnaIloscPrzeszkod = szerokoscPlanszy * wysokoscPlanszy / 3;
 
-        while(przeszkody.size() < docelowaIloscPrzeszkod){
+        if(docelowaIloscPrzeszkod > maksymalnaIloscPrzeszkod)
+            docelowaIloscPrzeszkod = maksymalnaIloscPrzeszkod;
+
+        while((int)przeszkody.size() < docelowaIloscPrzeszkod){
             /*
             *   Wywolanie funkcji generujNowaPozycjeJedzenia() pomocniczo,
             *   bo pomoze ona sprawdzic czy dane pole na ustawienie nie
@@ -123,7 +132,7 @@
             kolizja = true;
             this->kolizja = true;
             gameOver = true;
-            przegranaGracza(wynik, dlugosc, lvl, clockForWaiting);
+            przegranaGracza(wynik, dlugosc, lvl);
         }else{
             kolizja = false;
             this->kolizja = false;
@@ -131,10 +140,10 @@
     }
 
     sf::Vector2i SnakeDetails::generujNowaPozycjeJedzenia(int szerokosc, int wysokosc){
-         sf::Vector2i nowaPozycja;
+        sf::Vector2i nowaPozycja;
         bool pozycjaZajeta = true;
 
-        while (pozycjaZajeta) {
+        while(pozycjaZajeta){
             /*  Losowanie pozycji dla owocu */
             nowaPozycja.x = rand() % szerokosc;
             nowaPozycja.y = rand() % wysokosc;
@@ -147,15 +156,24 @@
                     break;
                 }
             }
+            /*  
+            *   Zeby oszczedzic sobie reszty czesci petli
+            *   skoro i tak pozycja jest juz zajeta,
+            *   I poza petla, bo wewnatrz to inny efekt by byl
+            */
+            if(pozycjaZajeta)
+                continue;
 
             /*  Sprawdzenie, czy nie na bramie  */
             if(nowaPozycja == pozycjaBramy){
                 pozycjaZajeta = true;
+                continue;
             }
                 
             /*  Sprawdzenie bramy, TYLKO w momencie, gdy jestesmy w trybie endless  */
             if(!trybEndless && nowaPozycja == pozycjaBramy){
                 pozycjaZajeta = true;
+                continue;
             }   
 
             /*
@@ -190,7 +208,6 @@
         *   ustawionej w konstruktorze (0.2f) defaultowo,
         *   jest to predkosc dla latwego poziomu trudnosci.
         */
-        gameOver = false;
         timerRuchu += czasOdPoprzedniejKlatki;
         if(timerRuchu < predkoscRuchu)
             return;
@@ -200,7 +217,7 @@
         *   Ruch segmentow, blokow z ktorych sklada
         *   sie waz. Od ogona do glowy.
         */
-        for(int i = wazCialo.size() - 1; i > 0; i--) {
+        for(int i = wazCialo.size() - 1; i > 0; --i) {
             wazCialo[i] = wazCialo[i - 1];
         }
         
@@ -212,7 +229,7 @@
         if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
             kolizja = true;
             gameOver = true;
-            przegranaGracza(wynik, dlugosc, lvl, clockForWaiting);
+            przegranaGracza(wynik, dlugosc, lvl);
             return;
         }
 
@@ -235,7 +252,7 @@
                 if (head == przeszkoda) {
                     kolizja = true;
                     gameOver = true;
-                    przegranaGracza(wynik, dlugosc, lvl, clockForWaiting);
+                    przegranaGracza(wynik, dlugosc, lvl);
                     return;
                 }
             }   
@@ -281,7 +298,7 @@
             if(wazCialo[i] == head){
                 kolizja = true;
                 gameOver = true;
-                przegranaGracza(wynik, dlugosc, lvl, clockForWaiting);
+                przegranaGracza(wynik, dlugosc, lvl);
                 return;
             }
         }
@@ -310,8 +327,7 @@
 
         segmentShape.setFillColor(sf::Color(56, 56, 56));
         for(std::size_t i = 1; i < wazCialo.size(); ++i){
-            sf::Vector2f segmentShapePosVar((wazCialo[i].x) * tileSize, (wazCialo[i].y) * tileSize);
-            segmentShape.setPosition(segmentShapePosVar);
+            segmentShape.setPosition(sf::Vector2f(wazCialo[i].x * tileSize, wazCialo[i].y * tileSize));
             planszaGryCanvas.draw(segmentShape);
         }
 
@@ -340,14 +356,10 @@
         }
 
         /*  Rysowanie przeszkod (TYLKO t. Endless)  */
-        if (trybEndless) {
+        if(trybEndless){
             sf::RectangleShape obstacleShape(sf::Vector2f(tileSize, tileSize));
             //obstacleShape.setFillColor(sf::Color(100, 100, 100)); // Szary kolor przeszkód
             obstacleShape.setFillColor(sf::Color::Transparent);
-            sf::Texture texture;
-            if(!texture.loadFromFile("../resources/bombObstacleIcon.png")){
-                std::cerr<<"Blad z wczytaniem przeszkody\n";
-            }
             obstacleShape.setTexture(&texture);
             for (const auto& przeszkoda : przeszkody) {
                 obstacleShape.setPosition(sf::Vector2f(przeszkoda.x * tileSize, przeszkoda.y * tileSize));
@@ -399,11 +411,11 @@
         pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
     }
 
-    void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl, sf::Clock clockForWaiting){
+    void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl){
         this->kolizja = true;
         playHitSound();
-        gameOver = true;
-        clockForWaiting.restart();
+        this->gameOver = true;
+        this->clockForWaiting.restart();
 
         // Reset wyniku i poziomu
         this->wynik = 0;
@@ -429,8 +441,10 @@
         this->kierunekRuchu = sf::Vector2i(1, 0);
 
         // Reset pozycji bramy i jedzenia na startowe
-        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
-        pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
+
+        //??????????????????????????????????????????????????
+        //pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
+        //pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
                                                     
     /*
 	- Do zrobienia warunek sprawdzajacy zmiane wyniku jakos ze zmienna pomocnicza czy cos
@@ -486,19 +500,19 @@
     }
 
     void SnakeDetails::losowaniePowerUpa(){
-        int r = rand() % 4; //losuje 0,1,2,3
-        if(r == 0) {
+        int r = rand() % 8; //losuje 0,1,2,3,4,5,6,7
+        if(r >= 0 && r <= 3){
             //+50 punktow
             powerUp = "bonus +50 pkt";
             wynik += 50;
-        } else if(r == 1) {
+        }else if(r == 4 || r == 5){
             //skrocenie weza (jesli jest dlugi)
             powerUp = "Skrocenie weza";
             if(wazCialo.size() > 3){
                 wazCialo.pop_back();
             }
             dlugosc = (int)wazCialo.size();
-        } else if(r == 2) {
+        } else if(r == 6) {
             //przyspieszenie
             powerUp = "Przyspieszenie";
             predkoscRuchu *= 0.8f;
@@ -506,7 +520,7 @@
             predkoscRuchu = 0.05f;
         } else {
             //zwolnienie
-            powerUp = "Zwolnienie";
+            powerUp = "Spowolnienie";
             predkoscRuchu *= 1.2f;  //wieksza wartosc = wolniej
             if(predkoscRuchu > 0.6f)
             predkoscRuchu = 0.6f; //limit predkosci

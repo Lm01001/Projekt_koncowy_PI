@@ -334,7 +334,6 @@ int main() {
 			*	sluzy do utrzymania plynnosci ruchu weza.
 			*/
             float lastFrameTime = movementHelperClock.restart().asSeconds();
-            snakeInstance.clockForWaiting.restart();
 			/*
 			*	Przesuniecie, aktualizacja - przesuniecie weza, zgodnie
 			*	z jego predkoscia i kierunkiem ruchu.
@@ -355,7 +354,7 @@ int main() {
 				sceneManager.gamePanel->add(gameLostLabel);
 				
 				if(!helper){
-					snakeInstance.przegranaGracza(snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl, snakeInstance.clockForWaiting);
+					snakeInstance.przegranaGracza(snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
 					helper = true;
 				}
             }
@@ -400,6 +399,14 @@ int main() {
 			streamTimeUpdate << std::fixed <<  "Time: "<< minuty << ":" <<std::setw(2) << std::setfill('0') << sekundySkrocone;
 			sceneManager.timeLabelGame->setText(streamTimeUpdate.str());
 			sceneManager.gamePanel->add(sceneManager.timeLabelGame);
+			std::stringstream resultUpdateDisplay;
+			resultUpdateDisplay << std::fixed << "Wynik: " << snakeInstance.wynik;
+			sceneManager.wynikLabel->setText(resultUpdateDisplay.str());
+			sceneManager.gamePanel->add(sceneManager.wynikLabel);
+			std::stringstream powerupUpdateDisplay;
+			powerupUpdateDisplay << std::fixed << "Ostatni powerUp:\n" << snakeInstance.powerUp;
+			sceneManager.powerupLabel->setText(powerupUpdateDisplay.str());
+			sceneManager.gamePanel->add(sceneManager.powerupLabel);
 		}
 
 		if(snakeInstance.gameOver && snakeInstance.clockForWaiting.getElapsedTime().asSeconds() >= 2.25){
