@@ -136,6 +136,8 @@ int main() {
 	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
 		gameStartClick = true;
 		snakeInstance.ustawTrybEndless(false);
+		snakeInstance.lvl=1;
+		snakeInstance.wynik=0;
 		counterHelper = 3;
 		c.restart();
 		sceneManager.showGameScene();
@@ -143,6 +145,8 @@ int main() {
 	mainButtonEndless->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
 		gameStartClick = true;
 		snakeInstance.ustawTrybEndless(true);
+		snakeInstance.lvl=1;
+		snakeInstance.wynik=0;
 		counterHelper = 3;
 		c.restart();
 		sceneManager.showGameScene();

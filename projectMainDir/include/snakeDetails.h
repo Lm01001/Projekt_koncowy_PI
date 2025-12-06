@@ -14,7 +14,7 @@ class SnakeDetails{
         std::vector<sf::Vector2i> wazCialo;
         std::vector<sf::Vector2i> przeszkody;
 
-        int wynik, dlugosc, lvl, zjedzonePrzedmioty;
+        int wynik, wynikHelperVar, dlugosc, lvl, zjedzonePrzedmioty;
         int progPunktowyBramy;
         int szerokoscPlanszy, wysokoscPlanszy;
         std::string powerUp;
@@ -47,7 +47,6 @@ class SnakeDetails{
         tgui::Label::Ptr resultPanelLvl;
         bool gameOver;
         sf::Clock clockForWaiting;
-        sf::Texture texture;
 
         void przegranaGracza(int wynik, int dlugosc, int lvl);
         tgui::Panel::Ptr wyswietlStatystyki(tgui::Panel::Ptr resultPanel, int wynik, int dlugosc, int lvl);

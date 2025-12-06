@@ -31,6 +31,7 @@
         *   i zmiennych dla logik juz w grze.
         */
         wynik = 0;
+        wynikHelperVar = 0;
         lvl = 1;
         zjedzonePrzedmioty = 0;
         dlugosc = (int)wazCialo.size();
@@ -45,7 +46,7 @@
         */
         kierunekRuchu = sf::Vector2i(1, 0); 
         /*  Brama w prawym gornym rogu  */
-        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 10, -10);
+        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
         /*  Ustawienie trybu fabularnego jako default  */
         trybEndless = false; 
         progPunktowyBramy = 50; 
@@ -55,10 +56,6 @@
         /*  Ustawianie wartosci dla zmiennych pomocniczych  */
         direction = 'r';
         gameOver = false;
-        /*  Ustawianie przeszkody  */
-        if(!texture.loadFromFile("../resources/bombObstacleIcon.png")){
-            std::cerr<<"Blad z wczytaniem przeszkody\n";
-        }
     }
 
     void SnakeDetails::soundEffectsSetup(){
@@ -238,8 +235,8 @@
         *   w przypadku odpowiedniego wyniku, dla wyjscia
         *   z poziomu
         */
-        if (!trybEndless && wynik >= progPunktowyBramy) { 
-            if (head == pozycjaBramy) {
+        if(wynik >= progPunktowyBramy){ 
+            if(head == pozycjaBramy){
                 /*  Przejscie do kolejnego poziomu  */
                 kolejnyEtap(lvl + 1);
                 return;
@@ -247,9 +244,9 @@
         }
 
         /*  Sprawdzenie kolizji z przeszkodami (TYLKO t. Endless)   */
-        if (trybEndless) {
-            for (const auto& przeszkoda : przeszkody) {
-                if (head == przeszkoda) {
+        if(trybEndless){
+            for(const auto& przeszkoda : przeszkody){
+                if(head == przeszkoda){
                     kolizja = true;
                     gameOver = true;
                     przegranaGracza(wynik, dlugosc, lvl);
@@ -278,7 +275,7 @@
             if(zjedzonePrzedmioty % 3 == 0)
                 losowaniePowerUpa();
 
-            if (trybEndless) 
+            if(trybEndless) 
                 generujPrzeszkody();
             /*
             *   Po zjedzeniu losowanie nowej pozycji
@@ -347,7 +344,7 @@
         *   Rysowanie bramy (TYLKO t. fabularny) przy osiagnieciu
         *   minimalnego wymaganego wyniku, progu 
         */
-        if(!trybEndless && wynik >= progPunktowyBramy){
+        if(wynikHelperVar >= progPunktowyBramy){
             sf::RectangleShape gateShape(sf::Vector2f(tileSize, tileSize));
             gateShape.setFillColor(sf::Color::Yellow); // Kolor bramy
             sf::Vector2f pozycjaBramyHelper(pozycjaBramy.x * tileSize, pozycjaBramy.y * tileSize);
@@ -358,12 +355,15 @@
         /*  Rysowanie przeszkod (TYLKO t. Endless)  */
         if(trybEndless){
             sf::RectangleShape obstacleShape(sf::Vector2f(tileSize, tileSize));
-            //obstacleShape.setFillColor(sf::Color(100, 100, 100)); // Szary kolor przeszkód
-            obstacleShape.setFillColor(sf::Color::Transparent);
-            obstacleShape.setTexture(&texture);
-            for (const auto& przeszkoda : przeszkody) {
-                obstacleShape.setPosition(sf::Vector2f(przeszkoda.x * tileSize, przeszkoda.y * tileSize));
-                planszaGryCanvas.draw(obstacleShape);
+            obstacleShape.setFillColor(sf::Color(25, 153, 39));
+            sf::CircleShape obstacle(8.0);
+		    obstacle.setFillColor(sf::Color::Black);
+            obstacle.setOutlineColor(sf::Color(89, 23, 27));
+            obstacle.setOutlineThickness(2);
+            
+            for(const auto& przeszkoda : przeszkody){
+                obstacle.setPosition(sf::Vector2f(przeszkoda.x * tileSize, przeszkoda.y * tileSize));
+                planszaGryCanvas.draw(obstacle);
             }
         }
 
@@ -382,6 +382,7 @@
     void SnakeDetails::kolejnyEtap(int lvl){
         this->lvl = lvl;
         direction='r';
+        this->wynikHelperVar = 0;
         /*  Przyspieszenie weza*/
         if(predkoscRuchu > 0.05f)
             predkoscRuchu *= 0.9f;
@@ -418,8 +419,6 @@
         this->clockForWaiting.restart();
 
         // Reset wyniku i poziomu
-        this->wynik = 0;
-        this->lvl = 1;
         this->zjedzonePrzedmioty = 0;
         this->powerUp = "";
         this->przeszkody.clear();
@@ -442,9 +441,8 @@
 
         // Reset pozycji bramy i jedzenia na startowe
 
-        //??????????????????????????????????????????????????
-        //pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
-        //pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
+        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
+        pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
                                                     
     /*
 	- Do zrobienia warunek sprawdzajacy zmiane wyniku jakos ze zmienna pomocnicza czy cos
