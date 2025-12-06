@@ -2,10 +2,12 @@
 #include "SlidersAndCheckbox.h"
 
 #include <iostream>
+#include <string>
+
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
 #include <SFML/Graphics.hpp>
-#include <string>
+
 
     /*
     *   Konstruktor do szybszego tworzenia przycisku i od razu przypisywanie
@@ -81,8 +83,9 @@
     *   przejscia do ustawien oraz rozpoczecia
     *   gry.
     */
-    void ButtonScenesPropertiesClass::appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton){
+    void ButtonScenesPropertiesClass::appendToMenuScene(tgui::Panel::Ptr menuPanel, tgui::Button::Ptr startButton, tgui::Button::Ptr startButtonEndless, tgui::Button::Ptr settingsButton){
         menuPanel->add(startButton);
+        menuPanel->add(startButtonEndless);
         menuPanel->add(settingsButton);
         auto label = tgui::Label::create("Snake");
         label->setTextSize(60);
@@ -173,33 +176,41 @@
             planszaCanvas->moveToBack();
             gui.add(planszaCanvas);
             sf::RectangleShape linia(sf::Vector2f(550, 1));
-            linia.setPosition(0, 550);
+            linia.setPosition(sf::Vector2f(0, 550));
             linia.setOutlineColor(sf::Color::Black);
             linia.setOutlineThickness(2);
             planszaCanvas->draw(linia);
             
-            sf::RectangleShape planszaGry(sf::Vector2f(400, 400));
-            planszaGry.setPosition(75, 50);
+            planszaGry = sf::RectangleShape(sf::Vector2f(400, 400));
+            planszaGry.setPosition(sf::Vector2f(75, 50));
             planszaGry.setFillColor(sf::Color(25, 153, 39));
             planszaGry.setOutlineColor(sf::Color(7, 43, 11));
             planszaGry.setOutlineThickness(9);
             planszaCanvas->draw(planszaGry);
             panel->add(planszaCanvas);
 
+            planszaGryCanvas = tgui::CanvasSFML::create();
+            planszaGryCanvas->setSize(400, 400);
+            planszaGryCanvas->setPosition(75, 200);
+            planszaGryCanvas->moveToFront();
+            panel->add(planszaGryCanvas);
+
             timeLabelGame = tgui::Label::create("Time: 0:00");
             timeLabelGame->setWidgetName("timeLabelGame");
-            auto wynik = tgui::Label::create("Wynik:");
-            std::string serceE = u8"♡";
-            auto zycia = tgui::Label::create("n x " + serceE);
+            wynikLabel = tgui::Label::create("Wynik: 0");
+            //std::string serceE = u8"♡";
+            //auto zycia = tgui::Label::create("n x " + serceE);
+            powerupLabel = tgui::Label::create("Ostatni powerUp:\nbrak");
+            powerupLabel->setWidgetName("powerupLabel");
             timeLabelGame->setPosition(30, 70);
-            wynik->setPosition(210, 70);
-            zycia->setPosition(440, 70);
+            wynikLabel->setPosition(225, 70);
+            powerupLabel->setPosition(375, 60);
             timeLabelGame->setTextSize(14);
-            wynik->setTextSize(14);
-            wynik->setTextSize(14);
+            wynikLabel->setTextSize(14);
+            wynikLabel->setTextSize(14);
             panel->add(timeLabelGame);
-            panel->add(wynik);
-            panel->add(zycia);
+            panel->add(wynikLabel);
+            panel->add(powerupLabel);
 
         }else if(panel->getWidgetName() == "Pause panel"){
             panel->getRenderer()->setBackgroundColor(sf::Color(122, 113, 101));
@@ -208,12 +219,6 @@
             label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
             label->setPosition(200, 90);
             panel->add(label);
-        }else if(panel->getWidgetName() == "Result panel"){
-            panel->getRenderer()->setBackgroundColor(sf::Color(136, 0, 23));
-            auto label = tgui::Label::create("Wynik:");
-            label->setTextSize(30);
-            label->setPosition(100, 45);
-            panel->add(label);
         }else if(panel->getWidgetName() == "Settings panel"){
             panel->getRenderer()->setBackgroundColor(sf::Color(136, 89, 102));
             auto label = tgui::Label::create("Ustawienia");
@@ -221,7 +226,11 @@
             label->getRenderer()->setTextColor(sf::Color(0, 0, 0));
             label->setPosition(150, 45);
             panel->add(label);
-        }
+        }else if(panel->getWidgetName() == "Result panel"){
+            auto backButton = createNewBackToMainMenuButton();
+            backButton->moveToFront();
+            panel->add(backButton);
+        }    
     }
 
 
@@ -296,10 +305,10 @@
     *   wizualnych bazujac na wczesnie utworzonych
     *   samplach.
     */
-    void ButtonScenesPropertiesClass::updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,
+    void ButtonScenesPropertiesClass::updateAllScenes(tgui::Button::Ptr startButton, tgui::Button::Ptr startButtonEndless, tgui::Button::Ptr settingsButton, tgui::Button::Ptr pauseButton,
         tgui::Panel::Ptr menuPanel, 
             tgui::Panel::Ptr pausePanel, tgui::Panel::Ptr resultPanel, tgui::Panel::Ptr settingsPanel, tgui::Panel::Ptr gamePanel){
-                appendToMenuScene(menuPanel, startButton, settingsButton);
+                appendToMenuScene(menuPanel, startButton, startButtonEndless, settingsButton);
                 
                 appendBackToMainMenuButton(gamePanel);
                 gamePanel->add(pauseButton);

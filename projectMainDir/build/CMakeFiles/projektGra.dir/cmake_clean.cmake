@@ -1,5 +1,4 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/projektGra.dir/link.d"
   "CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o"
   "CMakeFiles/projektGra.dir/src/ButtonCreator.cpp.o.d"
   "CMakeFiles/projektGra.dir/src/SnakeDetails.cpp.o"

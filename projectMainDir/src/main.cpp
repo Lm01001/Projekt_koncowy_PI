@@ -1,8 +1,10 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <vector>
+#include <string>
+#include <cstdlib>
+#include <ctime>
 #include <thread>
 #include <chrono>
-//#include <windows.h>
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -11,7 +13,7 @@
 #include <TGUI/TGUI.hpp>
 #include <TGUI/Backend/SFML-Graphics.hpp>
 
-#include "snakeDetails.h"
+#include "SnakeDetails.h"
 #include "SnakeGUI.h"
 #include "ButtonScenesPropertiesClass.h"
 #include "SlidersAndCheckbox.h"
@@ -25,22 +27,36 @@ int main() {
 	/*
 	* Zmienna typu RenderWindow - wyswietlane okno, RectangleShape pod stworzenie przycisku
 	*/
-	RenderWindow window(VideoMode(550, 650), "Gra Snake", Style::Default);
+	RenderWindow window(VideoMode({550, 650}), "Gra Snake", Style::Default);
 	window.setFramerateLimit(60);
-	VideoMode desktopScreen = VideoMode::getDesktopMode();
-	int x = (desktopScreen.width - 550) / 2;
-	int y = (desktopScreen.height - 650) / 2;
+	auto desktopScreen = VideoMode::getDesktopMode();
+	int x = (desktopScreen.size.x - 550) / 2;
+	int y = (desktopScreen.size.y - 650) / 2;
 	window.setPosition(sf::Vector2i(x, y));
-	window.setVerticalSyncEnabled(true);
+	window.setVerticalSyncEnabled(false);
 	
 	tgui::Gui gui{window};
 
 	/*
+	*	Na poczatku tworzymy obiekt, instancje klasy obslugujacej
+	*	wszystko zwiazane z wezem.
+	*	Ponizej deklaracja zmiennej typu Clock (jednej z dwoch w programie)
+	*	Wykorzystywana i wlasciwie niezbedna do zapewnienia plynnosci
+	*	ruchu weza
+	*/
+	SnakeDetails snakeInstance;
+    Clock movementHelperClock; 
+
+
+	/*
 	*	Glowny przycisk do przejscia do ekranu gry.
 	*/
-	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass(gui ,"Graj", 190, 435, 170, 70, 
+	ButtonScenesPropertiesClass buttonObj1 = ButtonScenesPropertiesClass(gui ,"Graj", 90, 435, 170, 70, 
 		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
 	auto mainButton = buttonObj1.getButton();
+	ButtonScenesPropertiesClass buttonObj2 = ButtonScenesPropertiesClass(gui ,"Endless\n  Mode", 300, 435, 170, 70, 
+		tgui::Color(192, 192, 192), tgui::Color(200, 200, 200), tgui::Color(89, 43, 66), 5, 28);
+	auto mainButtonEndless = buttonObj2.getButton();
 	
 	/*
 	*	Przycisk do przejscia do ustawien rozgrywki w
@@ -63,9 +79,10 @@ int main() {
 	*	ze w konstruktorze sa funkcje bez argumentow.
 	*/
 	ButtonScenesPropertiesClass sceneManager = ButtonScenesPropertiesClass(gui);
-	sceneManager.updateAllScenes(mainButton, settingsButton, pauseButton, sceneManager.menuPanel, sceneManager.pausePanel,
+	sceneManager.updateAllScenes(mainButton, mainButtonEndless,settingsButton, pauseButton, sceneManager.menuPanel, sceneManager.pausePanel,
 			sceneManager.resultPanel, sceneManager.settingsPanel, sceneManager.gamePanel);
 	
+
 	/*
 	*	Wznawianie gry z menu pauzy, przycisk sluzacy do tego.
 	*/
@@ -97,7 +114,12 @@ int main() {
 		circle.setOutlineThickness(5);
 		float circleXPos = circle.getRadius() * 2;
 		float circleYPos = circle.getRadius() * 2;
-		circle.setPosition((winSize.x - circleXPos) / 2, (winSize.y - circleYPos) / 2);		
+		/*
+		*	Dla CircleShape .setPosition() musi byc Vector2f, wiec dodatkowo
+		*	tworzymy ten vector poza dla przejrzystosci wiekszej kodu. 
+		*/
+		sf::Vector2f positionHelper((winSize.x - circleXPos) / 2.f, (winSize.y - circleYPos) / 2.f);
+		circle.setPosition(positionHelper);		
 
 	/*
 	*	Ustawianie wszystkie przygotowujacego do rozgrywki
@@ -111,12 +133,20 @@ int main() {
 	bool roundInProgress = false, gamePaused = false;
 	int czasWSekundach, sekundySkrocone;
 	sceneManager.gameInProgressTimeVar = 0;
-	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper, &c]() {
-		/*
-		* 	Miejsce na reszte kodu do dodania juz
-		*	po implementacji funkcjonalnosci weza
-		*/	
+	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
 		gameStartClick = true;
+		snakeInstance.ustawTrybEndless(false);
+		snakeInstance.lvl=1;
+		snakeInstance.wynik=0;
+		counterHelper = 3;
+		c.restart();
+		sceneManager.showGameScene();
+	});
+	mainButtonEndless->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
+		gameStartClick = true;
+		snakeInstance.ustawTrybEndless(true);
+		snakeInstance.lvl=1;
+		snakeInstance.wynik=0;
 		counterHelper = 3;
 		c.restart();
 		sceneManager.showGameScene();
@@ -130,12 +160,14 @@ int main() {
 	bool inSettingsMenu = false;
 		SlidersAndCheckbox settingsVolumeSlider(195, 250);
 		settingsVolumeSlider.createSlider(0, 100);
+
 	/*
 	*	Tworzenie checkbox'ow sluzacych do wyboru,
 	*	zaznaczenia poziomu trudnosci.
 	*/
 	SlidersAndCheckbox checkboxy(200, 400, 20);
 	checkboxy.customLabelCreator(185, 360);
+
 	/*
 	*	Przycisk ustawien z ikona z dir z zasobami
 	*	po nacisnieciu otwiera okno gdzie mozna ustawic
@@ -152,12 +184,15 @@ int main() {
 		sceneManager.showSettingsScene();
 
 	});
+
 	/*
 	*	Zatrzymuje rozgrywke i timer, mozna albo wznowic
 	*	rozgrywke albo wyjsc do menu. W celu przerwania
 	*	zakonczenia gry przed jej ukonczeniem jeszcze
 	*	lub przegrana => to to jedyne miejsce.
 	*/
+	auto gameLostLabel = tgui::Label::create("Przegrana!");
+	gameLostLabel->setWidgetName("przegrana");
 	pauseButton->getRenderer()->setTexture("../resources/ikonaPrzyciskuPauzy.png");
 	pauseButton->onPress([&sceneManager, &c, &gamePaused](){
 		gamePaused = true;
@@ -182,16 +217,62 @@ int main() {
 	*	za wszystkie interakcje typu rozpoczecie gry,
 	*	zmiany w ustawieniach, czy pauzowanie gry.
 	*/
+	bool helper=false;
+	sf::Clock clockhelper;
 	while(window.isOpen()){
-		Event event;
-		while(window.pollEvent(event)){
+		/*
+		*	Dzieki zmianie na SFML 3 i braku domyslnego konstruktora dla event
+		*	trzeba przekazac jako warunek zmienna tu np. - pollEventVarHelper
+		*	zeby przy kazdym przejsciu petli byla odswiezana
+		*/
+		while(auto pollEventVarHelper = window.pollEvent()){
+			Event event = *pollEventVarHelper;
 			gui.handleEvent(event);
+			if(event.is<Event::Closed>())
+				window.close();
+			if(event.is<Event::KeyPressed>()){
+				if(event.getIf<Event::KeyPressed>()->code == Keyboard::Key::Escape){
+					window.close();
+				}
+			} 	
 
-			if(event.type == Event::Closed)
-				window.close();
-			if(event.type == Event::KeyPressed && event.key.code == Keyboard::Escape)
-				window.close();
+			/*
+			*	Zmiana kierunku mozliwa tylko podczas trwajacej, aktywnej rozgrywki.
+			*/
+			if(roundInProgress && !gamePaused && !snakeInstance.gameOver) {
+				/*	
+				*	Dodanie instrukcji, czy jakikolwiek przycisk jest wcisniety,
+				*	bo brak generowal bledy i ciagle program wchodzil w sprawdzanie
+				*	warunkow, i tak kazdego z czterech, bo solo if'y a nie if..else
+				*/
+				if(event.is<Event::KeyPressed>()){
+					auto keyPressedEventHelper = event.getIf<Event::KeyPressed>();
+					if(keyPressedEventHelper){
+						/*	
+						*	Zmienna pomocnicza, zmniejszajaca ilosc kodu i wygode (zamiast)
+						*	ciaglego -> 
+						*/
+						auto code = keyPressedEventHelper->code;
+						/*	Przekazanie wektora kierunku do obiektu klasy z wezem	*/
+						if(code == Keyboard::Key::Up && snakeInstance.direction != 'd' && snakeInstance.direction != 'u'){
+							snakeInstance.ustawKierunek(sf::Vector2i(0, -1));
+							snakeInstance.direction = 'u';
+						}else if(code == Keyboard::Key::Down && snakeInstance.direction != 'u' && snakeInstance.direction != 'd'){
+							snakeInstance.ustawKierunek(sf::Vector2i(0, 1));
+							snakeInstance.direction = 'd';
+						}else if(code == Keyboard::Key::Left && snakeInstance.direction != 'r' && snakeInstance.direction != 'l'){
+							snakeInstance.ustawKierunek(sf::Vector2i(-1, 0));
+							snakeInstance.direction = 'l';
+						}else if(code == Keyboard::Key::Right && snakeInstance.direction != 'l' && snakeInstance.direction != 'r'){
+							snakeInstance.direction = 'r';
+							snakeInstance.ustawKierunek(sf::Vector2i(1, 0));
+						}
+					}
+				}			
+            }
+
 		}
+
 		gui.draw();
 		window.display();
 		
@@ -209,7 +290,6 @@ int main() {
 				sceneManager.showNextRoundPopup();
 				counterHelper--;
 			}
-			
 			if(c.getElapsedTime().asSeconds() > 1.5 && counterHelper == 2){
 				labelCount->setText("2");
 				labelCount->moveToFront();
@@ -218,7 +298,6 @@ int main() {
 				sceneManager.showNextRoundPopup();					
 				counterHelper--;
 			}
-
 			if(c.getElapsedTime().asSeconds() > 3 && counterHelper == 1){
 				labelCount->setText("1");
 				labelCount->moveToFront();
@@ -227,7 +306,6 @@ int main() {
 				sceneManager.showNextRoundPopup();
 				counterHelper--;
 			}
-
 			if(c.getElapsedTime().asSeconds() > 4){
 				if(counterHelper == 0){
 					gameStartClick = false;
@@ -255,6 +333,56 @@ int main() {
 		*/
 		if(roundInProgress && !gamePaused){
 			/*
+			*	Zmienna lastFrameTime przechowuje czas (w sekundach),
+			*	pobiera czas jaki uplynal od ostatniej klatki, co
+			*	sluzy do utrzymania plynnosci ruchu weza.
+			*/
+            float lastFrameTime = movementHelperClock.restart().asSeconds();
+			/*
+			*	Przesuniecie, aktualizacja - przesuniecie weza, zgodnie
+			*	z jego predkoscia i kierunkiem ruchu.
+			*/
+            snakeInstance.movementAktualizujWeza(lastFrameTime);
+            /*	Zmienna pomocnicza do sprawdzania kolizji.	*/
+            //bool czyUderzyl = false;
+            /*	Wywolanie funkcji sprawdzajacej czy wystapila kolizja ze sciana.	*/
+            snakeInstance.czyKolizjaZeSciana(snakeInstance.szerokoscPlanszy, snakeInstance.wysokoscPlanszy, snakeInstance.kolizja); 
+
+            if(snakeInstance.kolizja || snakeInstance.gameOver){
+				roundInProgress = false; 
+        		gameLostLabel->setTextSize(65);
+        		gameLostLabel->getRenderer()->setTextColor(sf::Color::Red);
+        		gameLostLabel->setPosition(105, 180);
+				gameLostLabel->getRenderer()->setTextOutlineThickness(2);
+				gameLostLabel->getRenderer()->setBackgroundColor(sf::Color::Transparent);
+				sceneManager.gamePanel->add(gameLostLabel);
+				
+				if(!helper){
+					snakeInstance.przegranaGracza(snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
+					helper = true;
+				}
+            }
+			
+
+			/*
+            * Logika odpowiedzialna za jedzenie (PowerUp).
+            * Sprawdzenie czy glowa weza znajduje sie na tej samej pozycji co jedzenie.
+            * Jesli tak, nastepuje zjedzenie, zwiekszenie wyniku i dlugosci weza
+            * oraz wylosowanie nowej pozycji i odtworzenie dzwieku.
+            */
+
+			/*
+			*	Ustawienie przezroczystego tla, zeby nie bylo
+			*	nakladania sie klatek na siebie i rozmycia obrazu.
+			*	Nastepnie wywolanie metody rysujacej z klasy weza,
+			*	ktora rysuje weza na przekazanym do niej canvasie.
+			*	Po czym wyswietlenie zaktualizowanego obrazu.
+			*/
+            sceneManager.planszaGryCanvas->clear(sf::Color::Transparent);
+            snakeInstance.draw(*sceneManager.planszaGryCanvas);
+            sceneManager.planszaGryCanvas->display();
+
+			/*
 			*	static_cast sluzy do konwersji z float na int tutaj.
 			*	c.getElapsedTime() przypisuje do zmiennej typu float, 
 			*	czyli robimy sobie static_cast co powinno być bezpieczniejsze
@@ -275,8 +403,28 @@ int main() {
 			streamTimeUpdate << std::fixed <<  "Time: "<< minuty << ":" <<std::setw(2) << std::setfill('0') << sekundySkrocone;
 			sceneManager.timeLabelGame->setText(streamTimeUpdate.str());
 			sceneManager.gamePanel->add(sceneManager.timeLabelGame);
+			std::stringstream resultUpdateDisplay;
+			resultUpdateDisplay << std::fixed << "Wynik: " << snakeInstance.wynik;
+			sceneManager.wynikLabel->setText(resultUpdateDisplay.str());
+			sceneManager.gamePanel->add(sceneManager.wynikLabel);
+			std::stringstream powerupUpdateDisplay;
+			powerupUpdateDisplay << std::fixed << "Ostatni powerUp:\n" << snakeInstance.powerUp;
+			sceneManager.powerupLabel->setText(powerupUpdateDisplay.str());
+			sceneManager.gamePanel->add(sceneManager.powerupLabel);
+		}
+
+		if(snakeInstance.gameOver && snakeInstance.clockForWaiting.getElapsedTime().asSeconds() >= 2.25){
+			sceneManager.gamePanel->remove(gameLostLabel);
+			auto panelHelper = snakeInstance.wyswietlStatystyki(sceneManager.resultPanel, snakeInstance.wynik, snakeInstance.dlugosc, snakeInstance.lvl);
+			sceneManager.resultPanel->add(panelHelper);
+			auto backButton = sceneManager.createNewBackToMainMenuButton();				
+			sceneManager.resultPanel->add(backButton);
+			sceneManager.resultPanel->moveToFront();
+			
+			gui.add(sceneManager.resultPanel);
+			sceneManager.showResultScene();
+			snakeInstance.gameOver = false;
 		}
 	}
-
 	return 0;
 }

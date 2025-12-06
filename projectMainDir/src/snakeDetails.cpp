@@ -1,92 +1,530 @@
-#include "snakeDetails.h"
+#include "SnakeDetails.h"
 #include "SnakeGUI.h"
 
 #include <iostream>
 #include <string>
 #include <ctime>
 
-    SnakeDetails::SnakeDetails(int w, int dl, int l, std::string p) : wynik(w), dlugosc(dl), lvl(l), powerUp(p) {} 
-    
-    
     /*
     *
-    *   funkcje do weza, dzialanie, tworzenie aktualizacja
+    *   Funkcje do weza, dzialanie, tworzenie aktualizacja
     *   we wszystkich funkcji mozna zmienic argumenty, zalezy
     *   od potrzeby jakie parametry beda potrzebne do przekazania
     * 
     */
     
-    /*SnakeDetails::SnakeDetails(){
-        //ustawienie ciala weza
-        //przypisanie wartosci do wektora z kierunkiem
-        //przypisanie wartosci zmiennym od predkosci ruchu i ustawienie timera
+    SnakeDetails::SnakeDetails() : eatSound(loadEatSoundBuffer), 
+    hitSound(loadHitSoundBuffer), nextLevelSound(loadNextLevelSoundBuffer){
+        soundEffectsSetup();
+        this->szerokoscPlanszy = 20;
+        this->wysokoscPlanszy = 20;
+        /*
+        *   Ustawianie ciala weza, glowa(22) i nastepnie reszta ciala(23-24)
+        *   
+        */
+        wazCialo.clear();
+        wazCialo.push_back(sf::Vector2i(10, 10)); 
+        wazCialo.push_back(sf::Vector2i(9, 10)); 
+        wazCialo.push_back(sf::Vector2i(8, 10));
+        /*
+        *   Ustawianie poczatkowych wartosci dla wlasnosci weza 
+        *   i zmiennych dla logik juz w grze.
+        */
+        wynik = 0;
+        wynikHelperVar = 0;
+        lvl = 1;
+        zjedzonePrzedmioty = 0;
+        dlugosc = (int)wazCialo.size();
+        powerUp = "brak";
+        /*  Predkosc weza, timer na starcie, brak kolizji na starcie  */
+        predkoscRuchu = 0.2f; 
+        timerRuchu = 0.f;  
+        kolizja = false;  
+        /*
+        *   Przypisanie wartosci do wektora z kierunkiem ruchu,
+        *   defaultowo kierunek w prawo
+        */
+        kierunekRuchu = sf::Vector2i(1, 0); 
+        /*  Brama w prawym gornym rogu  */
+        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
+        /*  Ustawienie trybu fabularnego jako default  */
+        trybEndless = false; 
+        progPunktowyBramy = 50; 
+        przeszkody.clear();
+        /*  Generowanie pozycji jedzenia   */
+        pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy); 
+        /*  Ustawianie wartosci dla zmiennych pomocniczych  */
+        direction = 'r';
+        gameOver = false;
+    }
 
-        //uwzglednic wczytanie dzwiekow plikow z dir resources
-        //.loadFromFile("/")  => SoundBuffer
-        //a nastepnie przypisanie ich
-        //.setBuffer()  => Sound
-
-        loadEatSoundBuffer.loadFromFile("../resources/soundEffects/eatSound.wav");
-        loadHitSoundBuffer.loadFromFile("../resources/soundEffects/hitSound.wav");
-        loadNextLevelSoundBuffer.loadFromFile("../resources/soundEffects/nextLevelSound.wav");
+    void SnakeDetails::soundEffectsSetup(){
+        if(!loadEatSoundBuffer.loadFromFile("../resources/soundEffects/eatSound.wav"))
+            std::cerr << "Blad - wczytywanie dzwieku jedzenia!\n";
+        if(!loadHitSoundBuffer.loadFromFile("../resources/soundEffects/hitSound.wav"))
+            std::cerr << "Blad - wczytywanie dzwieku uderzenia!\n";
+        if(!loadNextLevelSoundBuffer.loadFromFile("../resources/soundEffects/nextLevelSound.wav"))
+            std::cerr << "Blad - wczytywanie dzwieku nowego poziomu!\n";
         eatSound.setBuffer(loadEatSoundBuffer);
-        hitSound.setBuffer(loadHitSoundBuffer);
+        hitSound.setBuffer(loadHitSoundBuffer); 
         nextLevelSound.setBuffer(loadNextLevelSoundBuffer);
     }
 
+    /*   Ustawianie trybu gry   */
+    void SnakeDetails::ustawTrybEndless(bool czyTrybEndless){
+        this->trybEndless = czyTrybEndless;
+        /*  
+        *   Podstawowe resetowanie weza, wywolywane tez
+        *   w innych sytuacjach jako pkt wyjsciowy
+        */
+        wazCialo.clear();
+        wazCialo.push_back(sf::Vector2i(10, 10));
+        wazCialo.push_back(sf::Vector2i(9, 10));
+        wazCialo.push_back(sf::Vector2i(8, 10));
+        przeszkody.clear();
+        wynik = 0;
+        zjedzonePrzedmioty = 0;
+        
+        /*
+        *   Dla trybu fabularnego: Brama po osiagnieciu 50 pkt
+        *   Dla trybu endless: Brak bramy
+        */
+        progPunktowyBramy = 50;
+    }
+
     void SnakeDetails::ustawKierunek(sf::Vector2i kierunek){
-        //zmienna z klasy SnakeDetails - przypisanie jej wartosci
-        //przekazanego jako parametr wektora
+        /*
+        *   Zmienna z zadeklarowana w headerFile tej klasy
+        *   przypisanie jej wartosci w celu ustawienia kierunku ruchu
+        *   , wartosc przekazana jako parametr w postaci wektora int'ow
+        */
+        this->kierunekRuchu = kierunek;
     }
 
-    void czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy, bool kolizja){
-        //sprawdzanie czy kolizja ze sciana, zobaczyc na pozycje
-        //planszy i rozmiar i odpowiednio dodac marginesy 
+    /*  Generowanie przeszkod - tylko dla trybu endless  */
+    void SnakeDetails::generujPrzeszkody(){
+        /*  Co 20 pkt dodajemy dodatkowo nowa przeszkode  */
+        int docelowaIloscPrzeszkod = wynik / 20; 
+        /*  Zeby nie zasypac planszy przeszkodami  */
+        int maksymalnaIloscPrzeszkod = szerokoscPlanszy * wysokoscPlanszy / 3;
+
+        if(docelowaIloscPrzeszkod > maksymalnaIloscPrzeszkod)
+            docelowaIloscPrzeszkod = maksymalnaIloscPrzeszkod;
+
+        while((int)przeszkody.size() < docelowaIloscPrzeszkod){
+            /*
+            *   Wywolanie funkcji generujNowaPozycjeJedzenia() pomocniczo,
+            *   bo pomoze ona sprawdzic czy dane pole na ustawienie nie
+            *   jest juz zajete przez inny obiekt
+            */
+            sf::Vector2i nowaPrzeszkoda = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
+            przeszkody.push_back(nowaPrzeszkoda);
+        }
     }
 
-    void kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama){
-        //dodanie ciemniejszego koloru na brame do kolejnego etapu
-        //mozna tez dodac strzalke gdzie wejsc
-        //podac szerokosc bramy
+    void SnakeDetails::czyKolizjaZeSciana(int szerokoscPlanszy, int wysokoscPlanszy, bool &kolizja){
+        /*  Ustawienie pozycji glowy  */
+        sf::Vector2i head = wazCialo[0];  
+        if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
+            kolizja = true;
+            this->kolizja = true;
+            gameOver = true;
+            przegranaGracza(wynik, dlugosc, lvl);
+        }else{
+            kolizja = false;
+            this->kolizja = false;
+        } 
+    }
+
+    sf::Vector2i SnakeDetails::generujNowaPozycjeJedzenia(int szerokosc, int wysokosc){
+        sf::Vector2i nowaPozycja;
+        bool pozycjaZajeta = true;
+
+        while(pozycjaZajeta){
+            /*  Losowanie pozycji dla owocu */
+            nowaPozycja.x = rand() % szerokosc;
+            nowaPozycja.y = rand() % wysokosc;
+            pozycjaZajeta = false;
+
+            /*  Czy pozycja to nie pkt zajmowany przez weza */
+            for(const auto& segment : wazCialo){
+                if(segment == nowaPozycja){
+                    pozycjaZajeta = true;
+                    break;
+                }
+            }
+            /*  
+            *   Zeby oszczedzic sobie reszty czesci petli
+            *   skoro i tak pozycja jest juz zajeta,
+            *   I poza petla, bo wewnatrz to inny efekt by byl
+            */
+            if(pozycjaZajeta)
+                continue;
+
+            /*  Sprawdzenie, czy nie na bramie  */
+            if(nowaPozycja == pozycjaBramy){
+                pozycjaZajeta = true;
+                continue;
+            }
+                
+            /*  Sprawdzenie bramy, TYLKO w momencie, gdy jestesmy w trybie endless  */
+            if(!trybEndless && nowaPozycja == pozycjaBramy){
+                pozycjaZajeta = true;
+                continue;
+            }   
+
+            /*
+            *   Sprawdzenie (jedynie w trybie endless), czy nie
+            *   na przeszkodzie tworzone/generowane
+            */
+            if(trybEndless) {
+                for(const auto& przeszkoda : przeszkody) {
+                    if(przeszkoda == nowaPozycja){
+                        pozycjaZajeta = true;
+                        break;
+                    }
+                }
+            }
+        }
+        return nowaPozycja;
+    }
+
+    void SnakeDetails::kolejnyLevel(tgui::CanvasSFML& planszaGry, int brama){
+        /*
+            Dodanie bramy (png) jako wyjscia z poziomu
+            ustawianie albo linii pod albo czegos
+            ze po kontakcie wczytanie nowego poziomu
+                !!!!!!!!!!!!!!!!!!!!!!
+                                                        */
+        playNextLevelSound();
     }
 
     void SnakeDetails::movementAktualizujWeza(float czasOdPoprzedniejKlatki){
-        //aktualizacja timera i przesuniecie weza
-        //mozna dodac warunek ze gdy zmienna ze zjedzonymi
-        //przedmiotami ma jakas wartosc
-        //np. co (200) losowany jest 1 z 4 powerupow
-        //warunek jesli osiagniety prog wyniku zwieksza sie waz
-        //wywolanie wewnatrz funkcji losowaniePowerUpa
+        /*  
+        *   Waz porusza sie co wartosc zmiennej predkoscRuchu
+        *   ustawionej w konstruktorze (0.2f) defaultowo,
+        *   jest to predkosc dla latwego poziomu trudnosci.
+        */
+        timerRuchu += czasOdPoprzedniejKlatki;
+        if(timerRuchu < predkoscRuchu)
+            return;
+        timerRuchu = 0.f;
+
+        /*
+        *   Ruch segmentow, blokow z ktorych sklada
+        *   sie waz. Od ogona do glowy.
+        */
+        for(int i = wazCialo.size() - 1; i > 0; --i) {
+            wazCialo[i] = wazCialo[i - 1];
+        }
+        
+        /*  Przesuniecie glowy na bazie kierunku ruchu  */
+        wazCialo[0] += kierunekRuchu;
+        sf::Vector2i head = wazCialo[0];
+        
+        /*  Sprawdzenie wystapienia kolizji ze sciana   */
+        if(head.x < 0 || head.x >= szerokoscPlanszy || head.y < 0 || head.y >= wysokoscPlanszy){
+            kolizja = true;
+            gameOver = true;
+            przegranaGracza(wynik, dlugosc, lvl);
+            return;
+        }
+
+        /*
+        *   Sprawdzenie kolizji z brama (TYLKO w t. fabularnym)
+        *   w przypadku odpowiedniego wyniku, dla wyjscia
+        *   z poziomu
+        */
+        if(wynik >= progPunktowyBramy){ 
+            if(head == pozycjaBramy){
+                /*  Przejscie do kolejnego poziomu  */
+                kolejnyEtap(lvl + 1);
+                return;
+            }
+        }
+
+        /*  Sprawdzenie kolizji z przeszkodami (TYLKO t. Endless)   */
+        if(trybEndless){
+            for(const auto& przeszkoda : przeszkody){
+                if(head == przeszkoda){
+                    kolizja = true;
+                    gameOver = true;
+                    przegranaGracza(wynik, dlugosc, lvl);
+                    return;
+                }
+            }   
+        }
+        /*
+        *   Instrukcja sprawdzajaca, obslugujaca zjadanie
+        *   przedmiotow przez weza.
+        *   W przypadku pokrycia sie pozycji glowy z 
+        *   przedmiotem wydluza sie cialo weza.
+        *   Po zjedzeniu wynik sie zwieksza, a jesli zostaly
+        *   zjedzone 3 to losowany jest powerup - wywolanie
+        *   funkcji obslugujacej losowanie.
+        */
+        if(head == pozycjaJedzenia){
+            aktualizujWynik(10); 
+            zjedzonePrzedmioty++;
+
+            if(zjedzonePrzedmioty % 2 == 0){
+                wazCialo.push_back(wazCialo.back());
+                dlugosc = (int)wazCialo.size();
+                aktualizujDlugosc(1);
+            }
+            if(zjedzonePrzedmioty % 3 == 0)
+                losowaniePowerUpa();
+
+            if(trybEndless) 
+                generujPrzeszkody();
+            /*
+            *   Po zjedzeniu losowanie nowej pozycji
+            *   dla nowego przedmiotu i wywolanie
+            *   funkcji do wydania dzwieku oznaczajacego
+            *   zjedzenie przedmiotu.
+            */
+            pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
+            playEatSound();
+        }
+
+        /*  Sprawdzenie wystapienia kolizji z wlasnym cialem,
+        *   jesli wystapila to Wywolanie funkcji do dzwieku zderzenia 
+        *   i przegranej gracza
+        */
+        for(int i = 1; i < (int)wazCialo.size(); ++i){
+            if(wazCialo[i] == head){
+                kolizja = true;
+                gameOver = true;
+                przegranaGracza(wynik, dlugosc, lvl);
+                return;
+            }
+        }
     }
 
-    void SnakeDetails::draw(tgui::CanvasSFML& planszaGry){
-        //bazowe rysowanie i tworzenie weza
+    void SnakeDetails::draw(tgui::CanvasSFML& planszaGryCanvas){
+        /*
+        *   Czyszczenie planszy - tla.
+        *   Kolejno ustawienie rozmiaru jednego kafelka
+        *   skaladajacego sie na plansze.
+        *   Deklaracja zmiennej do kazdego z fragmentow
+        *   ciala weza, a nastepnie rysowanie ciala
+        *   w petli, gdzie glowa jest ciemniejsza
+        */
+        planszaGryCanvas.clear(sf::Color(25, 153, 39)); 
+        const float tileSize = 20.f;
+        sf::RectangleShape segmentShape(sf::Vector2f(tileSize, tileSize));
+
+        /*  Rysowanie glowy - index 0 (w ciele) */
+        if(!wazCialo.empty()){
+            segmentShape.setFillColor(sf::Color::Black);
+            sf::Vector2f glowaWezaVect(wazCialo[0].x * tileSize, wazCialo[0].y * tileSize);
+            segmentShape.setPosition(glowaWezaVect);
+            planszaGryCanvas.draw(segmentShape);
+        }
+
+        segmentShape.setFillColor(sf::Color(56, 56, 56));
+        for(std::size_t i = 1; i < wazCialo.size(); ++i){
+            segmentShape.setPosition(sf::Vector2f(wazCialo[i].x * tileSize, wazCialo[i].y * tileSize));
+            planszaGryCanvas.draw(segmentShape);
+        }
+
+        /*
+        *   Rysowanie przedmiotu - jedzenia, dla weza ktore
+        *   bedzie zwiekszac wynik o 10 oraz rozmiar weza
+        *   o jeden kafelek.
+        *   Na koncu aktualizacja canvasu - planszy
+        */
+        sf::RectangleShape foodShape(sf::Vector2f(tileSize, tileSize));
+        foodShape.setFillColor(sf::Color::Red);
+        sf::Vector2f foodPosVar((pozycjaJedzenia.x) * tileSize, (pozycjaJedzenia.y) * tileSize);
+        foodShape.setPosition(foodPosVar);
+        planszaGryCanvas.draw(foodShape);
+
+        /*  
+        *   Rysowanie bramy (TYLKO t. fabularny) przy osiagnieciu
+        *   minimalnego wymaganego wyniku, progu 
+        */
+        if(wynikHelperVar >= progPunktowyBramy){
+            sf::RectangleShape gateShape(sf::Vector2f(tileSize, tileSize));
+            gateShape.setFillColor(sf::Color::Yellow); // Kolor bramy
+            sf::Vector2f pozycjaBramyHelper(pozycjaBramy.x * tileSize, pozycjaBramy.y * tileSize);
+            gateShape.setPosition(pozycjaBramyHelper);
+            planszaGryCanvas.draw(gateShape);
+        }
+
+        /*  Rysowanie przeszkod (TYLKO t. Endless)  */
+        if(trybEndless){
+            sf::RectangleShape obstacleShape(sf::Vector2f(tileSize, tileSize));
+            obstacleShape.setFillColor(sf::Color(25, 153, 39));
+            sf::CircleShape obstacle(8.0);
+		    obstacle.setFillColor(sf::Color::Black);
+            obstacle.setOutlineColor(sf::Color(89, 23, 27));
+            obstacle.setOutlineThickness(2);
+            
+            for(const auto& przeszkoda : przeszkody){
+                obstacle.setPosition(sf::Vector2f(przeszkoda.x * tileSize, przeszkoda.y * tileSize));
+                planszaGryCanvas.draw(obstacle);
+            }
+        }
+
+        planszaGryCanvas.display();
     }
+
     
     void SnakeDetails::aktualizujWynik(int wynik){
-            //Zwiekszanie wynik np po zjedzeniu przedmiotu np. o 10
+        this->wynik += wynik;
+    }
+
+    void SnakeDetails::aktualizujDlugosc(int dlugosc){
+        this->dlugosc += dlugosc;
     }
 
     void SnakeDetails::kolejnyEtap(int lvl){
-        //jesli zostanie osiagniety wymagany wynik to etap inkrementacja
-        //zatrzymanie stopera - dodac dodatkowy argument albo
-        //typu float przetrzymujacej czas lub Clock
+        this->lvl = lvl;
+        direction='r';
+        this->wynikHelperVar = 0;
+        /*  Przyspieszenie weza*/
+        if(predkoscRuchu > 0.05f)
+            predkoscRuchu *= 0.9f;
+        playNextLevelSound();
+
+        /*  Reset licznika zjedzonych przedmiotow, bo nowy lvl  */
+        zjedzonePrzedmioty = 0;
+        przeszkody.clear();
+
+        /*  Reset pozycji weza na startowa  */
+        wazCialo.clear();
+        wazCialo.push_back(sf::Vector2i(10, 10)); 
+        wazCialo.push_back(sf::Vector2i(9, 10)); 
+        wazCialo.push_back(sf::Vector2i(8, 10));
+        dlugosc = (int)wazCialo.size();
+        /*  Reset ustawienia, kierunku na default  */
+        kierunekRuchu = sf::Vector2i(1, 0);
+
+        // Zmiana pozycji bramy na nowym poziomie
+        // Np. parzyste poziomy: lewy dół, nieparzyste: prawy góra
+        if (lvl % 2 == 0)
+            pozycjaBramy = sf::Vector2i(0, wysokoscPlanszy - 1);
+        else
+            pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
+
+        // Wygenerowanie jedzenia w nowym, bezpiecznym miejscu
+        pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
     }
 
     void SnakeDetails::przegranaGracza(int wynik, int dlugosc, int lvl){
-        //reset wartosci aktualnego weza
-        //mozliwe ze usuniecie weza, niekoniecznie
-        //po prostu reset bo ekran po przegranej przenosi
-        //do menu i tak
+        this->kolizja = true;
+        playHitSound();
+        this->gameOver = true;
+        this->clockForWaiting.restart();
+
+        // Reset wyniku i poziomu
+        this->zjedzonePrzedmioty = 0;
+        this->powerUp = "";
+        this->przeszkody.clear();
+    
+        // Reset prędkości do domyślnej
+        this->predkoscRuchu = 0.2f;
+        this->timerRuchu = 0.f;
+
+        // Reset ciała węża do pozycji startowej (np. 10,10)
+        wazCialo.clear();
+        wazCialo.push_back(sf::Vector2i(10, 10)); 
+        wazCialo.push_back(sf::Vector2i(9, 10)); 
+        wazCialo.push_back(sf::Vector2i(8, 10));
+    
+        // Reset długości zmiennej pomocniczej
+        this->dlugosc = (int)wazCialo.size();
+
+        // Reset kierunku
+        this->kierunekRuchu = sf::Vector2i(1, 0);
+
+        // Reset pozycji bramy i jedzenia na startowe
+
+        pozycjaBramy = sf::Vector2i(szerokoscPlanszy - 1, 0);
+        pozycjaJedzenia = generujNowaPozycjeJedzenia(szerokoscPlanszy, wysokoscPlanszy);
+                                                    
+    /*
+	- Do zrobienia warunek sprawdzajacy zmiane wyniku jakos ze zmienna pomocnicza czy cos
+	- Zderzenia z samym soba
+	- Mozna zmienic ilosc serduszek na aktywny powerup
+	-Po przegranej reset planszy usuniecie labellu przegrana i weza, reset wszystkiego
+	
+	*/
     }
 
-    void SnakeDetails::wyswietlStatystyki(int wynik, int dlugosc, int lvl){
+    tgui::Panel::Ptr SnakeDetails::wyswietlStatystyki(tgui::Panel::Ptr resultPanel, int wynik, int dlugosc, int lvl){
+        std::cout << "===STATYSTYKI GRY===" << std::endl;
+        std::cout << "Wynik: " << wynik << std::endl;
+        std::cout << "Dlugosc: " << dlugosc << std::endl;
+        std::cout << "Poziom: " << lvl << std::endl;
+        std::cout << "PowerUp: " << powerUp << std::endl;
         //wyswietlanie statystyk
         //przekazanie gdzies tych przypisanie, zeby wykorzystac
         //do dodania do sceny
         //bedzie wywolywana i po przegranej i koncu gry
+
+        resultPanel->removeAllWidgets();
+        resultCanvas = tgui::CanvasSFML::create();
+            resultCanvas->setSize(400, 550);
+            resultCanvas->setPosition(75, 50);
+            resultCanvas->moveToBack();
+            resultPanel->add(resultCanvas);
+            
+        resultPanelTitle = tgui::Label::create("===STATYSTYKI GRY===");
+            resultPanelTitle->setTextSize(20);
+            resultPanelTitle->setPosition(125, 75);
+            resultPanel->add(resultPanelTitle);
+        //Wyświetlanie trybu gry w statystykach
+        std::string trybTekst = trybEndless ? "Tryb: Endless" : "Tryb: Fabularny";
+        auto resultPanelMode = tgui::Label::create(trybTekst);
+            resultPanelMode->setTextSize(20);
+            resultPanelMode->setPosition(125, 100); // Pozycja pod tytułem
+            resultPanel->add(resultPanelMode);
+        resultPanelScore = tgui::Label::create("Wynik:      " + std::to_string(wynik));
+            resultPanelScore->setTextSize(25);
+            resultPanelScore->setPosition(100, 130);
+            resultPanel->add(resultPanelScore);
+        resultPanelLvl = tgui::Label::create("Poziom:   " + std::to_string(lvl));
+            resultPanelLvl->setTextSize(25);
+            resultPanelLvl->setPosition(100, 180);
+            resultPanel->add(resultPanelLvl);
+        resultPanelLength = tgui::Label::create("Dlugosc:   " + std::to_string(dlugosc));
+            resultPanelLength->setTextSize(25);
+            resultPanelLength->setPosition(100, 230);
+            resultPanel->add(resultPanelLength);
+        resultPanel->getRenderer()->setBackgroundColor(sf::Color::Green);
+        return resultPanel;
     }
-    */
+
+    void SnakeDetails::losowaniePowerUpa(){
+        int r = rand() % 8; //losuje 0,1,2,3,4,5,6,7
+        if(r >= 0 && r <= 3){
+            //+50 punktow
+            powerUp = "bonus +50 pkt";
+            wynik += 50;
+        }else if(r == 4 || r == 5){
+            //skrocenie weza (jesli jest dlugi)
+            powerUp = "Skrocenie weza";
+            if(wazCialo.size() > 3){
+                wazCialo.pop_back();
+            }
+            dlugosc = (int)wazCialo.size();
+        } else if(r == 6) {
+            //przyspieszenie
+            powerUp = "Przyspieszenie";
+            predkoscRuchu *= 0.8f;
+            if(predkoscRuchu < 0.05f)
+            predkoscRuchu = 0.05f;
+        } else {
+            //zwolnienie
+            powerUp = "Spowolnienie";
+            predkoscRuchu *= 1.2f;  //wieksza wartosc = wolniej
+            if(predkoscRuchu > 0.6f)
+            predkoscRuchu = 0.6f; //limit predkosci
+        }
+    }
+    
     
     void SnakeDetails::playEatSound(){
         eatSound.play();
@@ -113,14 +551,14 @@
     sf::RectangleShape SnakeGui::stworzPasekOkna(int szerokosc, int wysokosc, sf::Color kolor){
         sf::RectangleShape topBar(sf::Vector2f(szerokosc, wysokosc));
         topBar.setFillColor(kolor);
-        topBar.setPosition(0, 0);
+        topBar.setPosition(sf::Vector2f(0, 0));
         return topBar;
     }   
     
     sf::RectangleShape SnakeGui::stworzPrzycisk(int x, int y, int szerokosc, int wysokosc, sf::Color kolor){
         sf::RectangleShape button(sf::Vector2f(szerokosc, wysokosc));
         button.setFillColor(kolor);
-        button.setPosition(x, y);
+        button.setPosition(sf::Vector2f(x, y));
         return button;
     }
 
