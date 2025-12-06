@@ -2,6 +2,7 @@
 #define SNAKEDETAILS_H
 
 #include <string>
+#include <vector>
 #include <SFML/Audio/Sound.hpp>
 #include <SFML/Audio/SoundBuffer.hpp>
 #include <SFML/Graphics.hpp>
@@ -11,20 +12,22 @@
 class SnakeDetails{
     public:
         std::vector<sf::Vector2i> wazCialo;
+        std::vector<sf::Vector2i> przeszkody;
 
         int wynik, dlugosc, lvl, zjedzonePrzedmioty;
+        int progPunktowyBramy;
+        int szerokoscPlanszy, wysokoscPlanszy;
         std::string powerUp;
         sf::Vector2i kierunekRuchu;
         sf::Vector2i pozycjaJedzenia;
         sf::Vector2i pozycjaBramy;
         float predkoscRuchu, timerRuchu;
-        bool kolizja;
-        int szerokoscPlanszy;
-        int wysokoscPlanszy;
+        bool kolizja, trybEndless;
         char direction;
-        char gameMode;
 
         SnakeDetails();
+        void ustawTrybEndless(bool czyTrybEndless);
+        void generujPrzeszkody();
         void ustawKierunek(sf::Vector2i kierunek);
         void movementAktualizujWeza(float czasOdPoprzedniejKlatki);
         void draw(tgui::CanvasSFML& planszaGryCanvas);

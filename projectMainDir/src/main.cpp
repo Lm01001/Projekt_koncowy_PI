@@ -134,24 +134,15 @@ int main() {
 	int czasWSekundach, sekundySkrocone;
 	sceneManager.gameInProgressTimeVar = 0;
 	mainButton->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
-		/*
-		* 	Miejsce na reszte kodu do dodania juz
-		*	po implementacji funkcjonalnosci weza
-		*/	
 		gameStartClick = true;
-		snakeInstance.gameMode = 'f';
+		snakeInstance.ustawTrybEndless(false);
 		counterHelper = 3;
 		c.restart();
-
 		sceneManager.showGameScene();
 	});
 	mainButtonEndless->onPress([&sceneManager, &gameStartClick, &counterHelper, &c, &snakeInstance]() {
-		/*
-		* 	Miejsce na reszte kodu do dodania juz
-		*	po implementacji funkcjonalnosci weza
-		*/	
 		gameStartClick = true;
-		snakeInstance.gameMode = 'e';
+		snakeInstance.ustawTrybEndless(true);
 		counterHelper = 3;
 		c.restart();
 		sceneManager.showGameScene();
